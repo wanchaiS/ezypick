@@ -1,0 +1,22 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Planning workspace and local git hooks — working notes, not part of the submission
+wayfinder/
+.githooks/
+
+# Secrets
+Secrets.xcconfig
+*.env
