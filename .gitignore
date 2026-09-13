@@ -20,3 +20,6 @@ wayfinder/
 # Secrets
 Secrets.xcconfig
 *.env
+
+# Course material — not ours to redistribute
+lectures/
