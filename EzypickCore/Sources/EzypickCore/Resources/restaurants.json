@@ -1,0 +1,1116 @@
+[
+  {
+    "id": "barometer-lane",
+    "name": "Barometer Lane",
+    "cuisine": "cafe",
+    "pricePerHead": 18,
+    "rating": 4.3,
+    "ratingCount": 540,
+    "walkingMinutes": 5,
+    "opensAt": "07:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Order-at-the-counter cafe doing grain bowls and toasted sandwiches on a sunny laneway terrace.",
+    "reviewSnippets": [
+      "I was back at my desk with a bowl inside twenty minutes.",
+      "Grabbed a table out on the lane and it stayed pleasant the whole break."
+    ]
+  },
+  {
+    "id": "salt-and-sprig",
+    "name": "Salt & Sprig",
+    "cuisine": "salads",
+    "pricePerHead": 19,
+    "rating": 4.4,
+    "ratingCount": 410,
+    "walkingMinutes": 4,
+    "opensAt": "10:30",
+    "closesAt": "15:30",
+    "dietary": [
+      "glutenFree",
+      "vegan",
+      "vegetarian",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "sharedTables"
+    ],
+    "editorialSummary": "Build-your-own salad counter with cold-pressed juices and long communal benches.",
+    "reviewSnippets": [
+      "The line looks long but it moves in a couple of minutes.",
+      "You end up elbow to elbow with strangers and nobody minds."
+    ]
+  },
+  {
+    "id": "nonna-pias-table",
+    "name": "Nonna Pia's Table",
+    "cuisine": "italian",
+    "pricePerHead": 34,
+    "rating": 4.6,
+    "ratingCount": 860,
+    "walkingMinutes": 11,
+    "opensAt": "11:30",
+    "closesAt": "21:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "licensed",
+      "goodForGroups",
+      "hearty"
+    ],
+    "editorialSummary": "Handmade pasta and slow braises served in a warm dining room with a short Italian wine list.",
+    "reviewSnippets": [
+      "We reserved a table for eight and they looked after us all afternoon.",
+      "The ragu portion defeated me, which I count as a win."
+    ]
+  },
+  {
+    "id": "chilli-hawker",
+    "name": "Chilli Hawker",
+    "cuisine": "thai",
+    "pricePerHead": 21,
+    "rating": 4.2,
+    "ratingCount": 620,
+    "walkingMinutes": 7,
+    "opensAt": "11:00",
+    "closesAt": "20:30",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "outdoorSeating",
+      "lively",
+      "counterOrder",
+      "hearty"
+    ],
+    "editorialSummary": "Wok-charred noodles and curries from an open kitchen with a handful of street-side tables.",
+    "reviewSnippets": [
+      "Ordered at the window and the pad see ew landed in five minutes.",
+      "Sat outside with the fans going while the whole place buzzed."
+    ]
+  },
+  {
+    "id": "the-paper-crane",
+    "name": "The Paper Crane",
+    "cuisine": "japanese",
+    "pricePerHead": 27,
+    "rating": 4.5,
+    "ratingCount": 380,
+    "walkingMinutes": 11,
+    "opensAt": "11:30",
+    "closesAt": "21:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "shellfishFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "quiet",
+      "bookingsTaken",
+      "light",
+      "licensed"
+    ],
+    "editorialSummary": "Set-menu donburi and sashimi in a small timber-lined room with sake by the glass.",
+    "reviewSnippets": [
+      "Calm enough that I could actually hear my colleague talk.",
+      "Delicate serves, so I left refreshed rather than stuffed."
+    ]
+  },
+  {
+    "id": "pho-marlowe",
+    "name": "Pho Marlowe",
+    "cuisine": "vietnamese",
+    "pricePerHead": 17,
+    "rating": 4.4,
+    "ratingCount": 910,
+    "walkingMinutes": 8,
+    "opensAt": "10:30",
+    "closesAt": "20:00",
+    "dietary": [
+      "halal",
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "sharedTables",
+      "lively",
+      "takeawayAvailable",
+      "hearty"
+    ],
+    "editorialSummary": "Beef and chicken pho ladled out at long shared tables a block from the station.",
+    "reviewSnippets": [
+      "The bowl hit the table almost before I sat down.",
+      "It is loud and steamy and the broth is enormous."
+    ]
+  },
+  {
+    "id": "jade-sparrow",
+    "name": "Jade Sparrow",
+    "cuisine": "chinese",
+    "pricePerHead": 24,
+    "rating": 4.1,
+    "ratingCount": 1180,
+    "walkingMinutes": 12,
+    "opensAt": "11:00",
+    "closesAt": "21:00",
+    "dietary": [],
+    "dietaryProvenance": "unverified",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "lively",
+      "sharedTables",
+      "bookingsTaken"
+    ],
+    "editorialSummary": "Old-school Cantonese dining hall with trolley dumplings and big round tables.",
+    "reviewSnippets": [
+      "Perfect for a team lunch, we filled a whole table of ten.",
+      "Plenty of clatter and the plates keep arriving."
+    ]
+  },
+  {
+    "id": "bapsang-house",
+    "name": "Bapsang House",
+    "cuisine": "korean",
+    "pricePerHead": 26,
+    "rating": 4.3,
+    "ratingCount": 470,
+    "walkingMinutes": 13,
+    "opensAt": "11:30",
+    "closesAt": "20:30",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "lively",
+      "licensed",
+      "hearty"
+    ],
+    "editorialSummary": "Bibimbap, bubbling stews and grilled pork belly with banchan in a bustling basement room.",
+    "reviewSnippets": [
+      "Great when six of us want six different things.",
+      "I came out full and a little sweaty from the stew."
+    ]
+  },
+  {
+    "id": "turmeric-and-tin",
+    "name": "Turmeric & Tin",
+    "cuisine": "indian",
+    "pricePerHead": 20,
+    "rating": 4.2,
+    "ratingCount": 740,
+    "walkingMinutes": 6,
+    "opensAt": "11:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "halal",
+      "vegetarian",
+      "vegan",
+      "glutenFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "hearty",
+      "sharedTables"
+    ],
+    "editorialSummary": "Counter-service curry house ladling dal, biryani and hot rotis into tins to carry out.",
+    "reviewSnippets": [
+      "There was a queue at noon and I still had food in seven minutes.",
+      "The biryani box is heavy enough to be two meals."
+    ]
+  },
+  {
+    "id": "calle-verde",
+    "name": "Calle Verde",
+    "cuisine": "mexican",
+    "pricePerHead": 23,
+    "rating": 3.8,
+    "ratingCount": 560,
+    "walkingMinutes": 10,
+    "opensAt": "11:00",
+    "closesAt": "22:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "lively",
+      "takeawayAvailable",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Tacos and burritos assembled at the counter, with pavement stools facing the street.",
+    "reviewSnippets": [
+      "Music up, line out the door, tacos out fast.",
+      "Ate mine on a stool in the sun and had no complaints."
+    ]
+  },
+  {
+    "id": "harbourline-dining",
+    "name": "Harbourline Dining",
+    "cuisine": "modernAustralian",
+    "pricePerHead": 44,
+    "rating": 4.7,
+    "ratingCount": 690,
+    "walkingMinutes": 14,
+    "opensAt": "12:00",
+    "closesAt": "22:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "shellfishFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "licensed",
+      "quiet",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Seasonal plates and a considered wine list in a hushed room with a small harbour-facing terrace.",
+    "reviewSnippets": [
+      "We talked business for an hour without once raising our voices.",
+      "Ask for a terrace table when you reserve, it is worth it."
+    ]
+  },
+  {
+    "id": "kiln-and-ember",
+    "name": "Kiln & Ember",
+    "cuisine": "modernAsian",
+    "pricePerHead": 21,
+    "rating": 4.5,
+    "ratingCount": 320,
+    "walkingMinutes": 6,
+    "opensAt": "11:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "outdoorSeating",
+      "lively",
+      "counterOrder",
+      "sharedTables"
+    ],
+    "editorialSummary": "Charcoal-grilled skewers and rice bowls from a walk-up window with bench seating out front.",
+    "reviewSnippets": [
+      "In and out in fifteen minutes.",
+      "Gets noisy around half twelve but the skewers are worth it."
+    ]
+  },
+  {
+    "id": "zaatar-and-zeytoun",
+    "name": "Zaatar & Zeytoun",
+    "cuisine": "middleEastern",
+    "pricePerHead": 19,
+    "rating": 4.4,
+    "ratingCount": 830,
+    "walkingMinutes": 7,
+    "opensAt": "10:30",
+    "closesAt": "20:00",
+    "dietary": [
+      "halal",
+      "vegetarian",
+      "vegan",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "outdoorSeating",
+      "counterOrder",
+      "hearty",
+      "sharedTables"
+    ],
+    "editorialSummary": "Charcoal chicken, falafel and fresh-baked flatbread wrapped to order at the counter.",
+    "reviewSnippets": [
+      "Wraps are rolled in front of you and you are gone in minutes.",
+      "Two of us shared one plate at the footpath bench and still could not finish."
+    ]
+  },
+  {
+    "id": "the-patty-parlour",
+    "name": "The Patty Parlour",
+    "cuisine": "burgers",
+    "pricePerHead": 22,
+    "rating": 4.1,
+    "ratingCount": 1240,
+    "walkingMinutes": 12,
+    "opensAt": "11:00",
+    "closesAt": "21:30",
+    "dietary": [
+      "halal"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "lively",
+      "takeawayAvailable",
+      "hearty"
+    ],
+    "editorialSummary": "Smashed beef and fried chicken burgers from a neon-lit counter with paper-wrapped sides.",
+    "reviewSnippets": [
+      "The buzzer goes off about six minutes after you order.",
+      "The double is a serious amount of lunch."
+    ]
+  },
+  {
+    "id": "greenhouse-bowl",
+    "name": "Greenhouse Bowl",
+    "cuisine": "salads",
+    "pricePerHead": 16,
+    "rating": 3.9,
+    "ratingCount": 290,
+    "walkingMinutes": 3,
+    "opensAt": "10:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "glutenFree",
+      "vegan",
+      "vegetarian",
+      "dairyFree",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "outdoorSeating",
+      "light",
+      "quiet"
+    ],
+    "editorialSummary": "Seasonal grain salads and cold-pressed juices in a plant-filled nook with a few footpath seats.",
+    "reviewSnippets": [
+      "No fuss at the counter, sorted in under ten minutes.",
+      "A calm little corner, I read a chapter over my bowl."
+    ]
+  },
+  {
+    "id": "rye-and-reason",
+    "name": "Rye & Reason",
+    "cuisine": "sandwiches",
+    "pricePerHead": 15,
+    "rating": 4.5,
+    "ratingCount": 1020,
+    "walkingMinutes": 5,
+    "opensAt": "07:30",
+    "closesAt": "15:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "sharedTables",
+      "light",
+      "lively"
+    ],
+    "editorialSummary": "Crusty rye sandwiches cut to order at a small, chattering deli counter.",
+    "reviewSnippets": [
+      "The queue looks bad but it clears in a couple of minutes.",
+      "You share one of the long benches, and the sandwiches are neat rather than huge."
+    ]
+  },
+  {
+    "id": "suzume-sushi",
+    "name": "Suzume Sushi",
+    "cuisine": "sushi",
+    "pricePerHead": 25,
+    "rating": 4.3,
+    "ratingCount": 480,
+    "walkingMinutes": 8,
+    "opensAt": "11:00",
+    "closesAt": "20:00",
+    "dietary": [
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "quiet"
+    ],
+    "editorialSummary": "Hand-rolled maki and sashimi packs made fresh in a quiet arcade shopfront.",
+    "reviewSnippets": [
+      "The packs are ready to grab, so I was out in three minutes.",
+      "Tucked away and peaceful, an easy place to eat alone."
+    ]
+  },
+  {
+    "id": "forno-piccolo",
+    "name": "Forno Piccolo",
+    "cuisine": "pizza",
+    "pricePerHead": 28,
+    "rating": 4.4,
+    "ratingCount": 950,
+    "walkingMinutes": 11,
+    "opensAt": "11:30",
+    "closesAt": "22:00",
+    "dietary": [
+      "vegetarian",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "licensed",
+      "lively",
+      "bookingsTaken"
+    ],
+    "editorialSummary": "Wood-fired Neapolitan pizza and negronis in a loud, tiled room off the arcade.",
+    "reviewSnippets": [
+      "Reserved for six and they squeezed us in near the oven.",
+      "You have to lean in to talk, but the margherita is the real thing."
+    ]
+  },
+  {
+    "id": "ashgrove-coffee-room",
+    "name": "Ashgrove Coffee Room",
+    "cuisine": "cafe",
+    "pricePerHead": 14,
+    "rating": 4.2,
+    "ratingCount": 360,
+    "walkingMinutes": 4,
+    "opensAt": "06:30",
+    "closesAt": "14:00",
+    "dietary": [
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "quiet",
+      "light",
+      "takeawayAvailable"
+    ],
+    "editorialSummary": "Filter coffee, toasties and pastries in a hushed wood-panelled room that shuts by mid-afternoon.",
+    "reviewSnippets": [
+      "About four minutes from order to coffee in hand.",
+      "So still I could hear the grinder from the back table."
+    ]
+  },
+  {
+    "id": "the-marlborough-room",
+    "name": "The Marlborough Room",
+    "cuisine": "modernAustralian",
+    "pricePerHead": 38,
+    "rating": 4.6,
+    "ratingCount": 520,
+    "walkingMinutes": 12,
+    "opensAt": "12:30",
+    "closesAt": "22:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "licensed",
+      "quiet",
+      "goodForGroups"
+    ],
+    "editorialSummary": "Long-lunch dining room doing roasted market fish, dry-aged steak and a proper wine list.",
+    "reviewSnippets": [
+      "Reserved a corner for nine and the whole afternoon ran beautifully.",
+      "Doors do not open until after midday, but the room is serene once you are in."
+    ]
+  },
+  {
+    "id": "bo-and-basil",
+    "name": "Bo & Basil",
+    "cuisine": "vietnamese",
+    "pricePerHead": 20,
+    "rating": 4.3,
+    "ratingCount": 640,
+    "walkingMinutes": 15,
+    "opensAt": "11:00",
+    "closesAt": "20:00",
+    "dietary": [
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "lively",
+      "outdoorSeating",
+      "light"
+    ],
+    "editorialSummary": "Rice-paper rolls, vermicelli bowls and iced coffee in a bright room with courtyard tables.",
+    "reviewSnippets": [
+      "Easy to feed a table of six without anyone waiting on food.",
+      "Fresh rather than heavy, I did not need a nap afterwards."
+    ]
+  },
+  {
+    "id": "saffron-alley",
+    "name": "Saffron Alley",
+    "cuisine": "indian",
+    "pricePerHead": 29,
+    "rating": 4.5,
+    "ratingCount": 410,
+    "walkingMinutes": 16,
+    "opensAt": "11:30",
+    "closesAt": "21:00",
+    "dietary": [
+      "halal",
+      "vegetarian",
+      "glutenFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "goodForGroups",
+      "quiet",
+      "licensed"
+    ],
+    "editorialSummary": "Regional curries and tandoor plates in a softly lit upstairs dining room.",
+    "reviewSnippets": [
+      "We reserved upstairs and could hold a proper conversation.",
+      "A good spot when six of you want completely different dishes."
+    ]
+  },
+  {
+    "id": "mesa-corazon",
+    "name": "Mesa Corazon",
+    "cuisine": "mexican",
+    "pricePerHead": 33,
+    "rating": 4,
+    "ratingCount": 380,
+    "walkingMinutes": 18,
+    "opensAt": "11:30",
+    "closesAt": "23:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "sitDownDining",
+      "licensed",
+      "lively",
+      "goodForGroups",
+      "bookingsTaken"
+    ],
+    "editorialSummary": "Cantina serving slow-cooked barbacoa, ceviche and margaritas under paper lanterns.",
+    "reviewSnippets": [
+      "The music was up and the table beside us was celebrating something.",
+      "Reserved for five, turned up late, still all fine."
+    ]
+  },
+  {
+    "id": "the-quiet-chop",
+    "name": "The Quiet Chop",
+    "cuisine": "sandwiches",
+    "pricePerHead": 17,
+    "rating": 4.7,
+    "ratingCount": 700,
+    "walkingMinutes": 6,
+    "opensAt": "08:00",
+    "closesAt": "14:30",
+    "dietary": [
+      "vegetarian",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "counterOrder",
+      "takeawayAvailable",
+      "quiet",
+      "light"
+    ],
+    "editorialSummary": "Tiny sandwich window doing three fillings a day on house-baked bread until mid-afternoon.",
+    "reviewSnippets": [
+      "Order at the hatch and carry it off to the park.",
+      "Never crowded, never loud, just a very good chicken sandwich."
+    ]
+  },
+  {
+    "id": "tram-depot-kitchen",
+    "name": "Tram Depot Kitchen",
+    "cuisine": "modernAsian",
+    "pricePerHead": 26,
+    "rating": 4.1,
+    "ratingCount": 860,
+    "walkingMinutes": 10,
+    "opensAt": "11:00",
+    "closesAt": "21:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "shellfishFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "sharedTables",
+      "lively",
+      "goodForGroups",
+      "hearty"
+    ],
+    "editorialSummary": "Share plates of chilli chicken, roti and fat noodles along steel benches in an old depot shed.",
+    "reviewSnippets": [
+      "We pulled two benches together for a birthday lunch.",
+      "Big echoing room, and the plates are just as big."
+    ]
+  },
+  {
+    "id": "olive-and-anchor",
+    "name": "Olive & Anchor",
+    "cuisine": "italian",
+    "pricePerHead": 41,
+    "rating": 4.9,
+    "ratingCount": 1450,
+    "walkingMinutes": 13,
+    "opensAt": "12:00",
+    "closesAt": "22:30",
+    "dietary": [
+      "vegetarian",
+      "shellfishFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "licensed",
+      "quiet",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Coastal Italian cooking, crudo and vongole, in a serene room with a leafy courtyard.",
+    "reviewSnippets": [
+      "Reserved the courtyard and it felt like being on holiday.",
+      "Unhurried service, we sat for close to two hours."
+    ]
+  },
+  {
+    "id": "sakura-bento-bar",
+    "name": "Sakura Bento Bar",
+    "cuisine": "japanese",
+    "pricePerHead": 18,
+    "rating": 3.5,
+    "ratingCount": 90,
+    "walkingMinutes": 5,
+    "opensAt": "11:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "unverified",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "sharedTables"
+    ],
+    "editorialSummary": "Pre-packed bento, katsu and miso from a small counter with a shared eating bar.",
+    "reviewSnippets": [
+      "Grabbed a bento and paid inside two minutes.",
+      "You perch at the bar beside whoever is already there."
+    ]
+  },
+  {
+    "id": "cedar-smoke-grill",
+    "name": "Cedar Smoke Grill",
+    "cuisine": "middleEastern",
+    "pricePerHead": 24,
+    "rating": 4.3,
+    "ratingCount": 980,
+    "walkingMinutes": 13,
+    "opensAt": "11:00",
+    "closesAt": "21:00",
+    "dietary": [
+      "halal",
+      "glutenFree",
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "hearty",
+      "lively",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Charcoal-grilled meats, mezze and pickles in a busy room with a covered terrace.",
+    "reviewSnippets": [
+      "Mixed grill for the table and we still took leftovers home.",
+      "Ended up on the terrace under the heaters, noisy and fun."
+    ]
+  },
+  {
+    "id": "bunjis-burger-shed",
+    "name": "Bunji's Burger Shed",
+    "cuisine": "burgers",
+    "pricePerHead": 27,
+    "rating": 3.6,
+    "ratingCount": 1600,
+    "walkingMinutes": 12,
+    "opensAt": "11:30",
+    "closesAt": "22:00",
+    "dietary": [
+      "halal",
+      "nutFree"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "lively",
+      "licensed",
+      "hearty"
+    ],
+    "editorialSummary": "Shed-style burger joint with cold schooners, loaded fries and booths built for six.",
+    "reviewSnippets": [
+      "The booths fit our whole crew without splitting up.",
+      "Very loud and very filling, not the place for a quiet chat."
+    ]
+  },
+  {
+    "id": "fern-and-fig",
+    "name": "Fern & Fig",
+    "cuisine": "cafe",
+    "pricePerHead": 23,
+    "rating": 4.5,
+    "ratingCount": 590,
+    "walkingMinutes": 7,
+    "opensAt": "07:00",
+    "closesAt": "15:30",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "vegan",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "outdoorSeating",
+      "quiet",
+      "light",
+      "bookingsTaken"
+    ],
+    "editorialSummary": "All-day cafe with seeded loaves, house granola and a courtyard under an old fig tree.",
+    "reviewSnippets": [
+      "We held a courtyard table and nobody rushed us.",
+      "Peaceful spot, though the plates are on the dainty side."
+    ]
+  },
+  {
+    "id": "thonburi-corner",
+    "name": "Thonburi Corner",
+    "cuisine": "thai",
+    "pricePerHead": 31,
+    "rating": 4.4,
+    "ratingCount": 430,
+    "walkingMinutes": 17,
+    "opensAt": "11:30",
+    "closesAt": "21:30",
+    "dietary": [
+      "glutenFree",
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "bookingsTaken",
+      "licensed",
+      "goodForGroups",
+      "hearty"
+    ],
+    "editorialSummary": "Northern Thai curries and crisp pork belly in a red-lacquered dining room.",
+    "reviewSnippets": [
+      "Rang ahead for eight and they set a long table for us.",
+      "The khao soi is rich enough to carry you through to dinner."
+    ]
+  },
+  {
+    "id": "seoul-street-cart",
+    "name": "Seoul Street Cart",
+    "cuisine": "korean",
+    "pricePerHead": 16,
+    "rating": 3.9,
+    "ratingCount": 720,
+    "walkingMinutes": 13,
+    "opensAt": "11:00",
+    "closesAt": "19:00",
+    "dietary": [],
+    "dietaryProvenance": "unverified",
+    "attributes": [
+      "counterOrder",
+      "takeawayAvailable",
+      "lively",
+      "sharedTables"
+    ],
+    "editorialSummary": "Korean fried chicken, kimbap and tteokbokki handed over a busy street-side counter.",
+    "reviewSnippets": [
+      "Pay at the window, food in a paper bag, gone.",
+      "Stood at the shared ledge outside with half the office."
+    ]
+  },
+  {
+    "id": "lotus-nine",
+    "name": "Lotus Nine",
+    "cuisine": "chinese",
+    "pricePerHead": 36,
+    "rating": 4.5,
+    "ratingCount": 1310,
+    "walkingMinutes": 14,
+    "opensAt": "11:00",
+    "closesAt": "22:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "goodForGroups",
+      "bookingsTaken",
+      "lively",
+      "licensed"
+    ],
+    "editorialSummary": "Banquet Cantonese with roast duck, live tanks and lazy-susan tables.",
+    "reviewSnippets": [
+      "Ten of us, one big spinning table, no drama at all.",
+      "The room was humming the entire time we were there."
+    ]
+  },
+  {
+    "id": "maki-line",
+    "name": "Maki Line",
+    "cuisine": "sushi",
+    "pricePerHead": 13,
+    "rating": 3.3,
+    "ratingCount": 640,
+    "walkingMinutes": 2,
+    "opensAt": "10:30",
+    "closesAt": "15:00",
+    "dietary": [],
+    "dietaryProvenance": "unverified",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "quiet"
+    ],
+    "editorialSummary": "Conveyor sushi and hand rolls priced by the plate in a narrow arcade shop.",
+    "reviewSnippets": [
+      "Plates come past constantly so lunch takes about ten minutes.",
+      "Still at the back and cheap enough to go twice a week."
+    ]
+  },
+  {
+    "id": "the-longboard-cafe",
+    "name": "The Longboard Cafe",
+    "cuisine": "cafe",
+    "pricePerHead": 20,
+    "rating": 4.2,
+    "ratingCount": 140,
+    "walkingMinutes": 22,
+    "opensAt": "08:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "outdoorSeating",
+      "sharedTables",
+      "light",
+      "quiet"
+    ],
+    "editorialSummary": "Surf-shack cafe doing acai bowls, iced lattes and rolls on a big shaded deck.",
+    "reviewSnippets": [
+      "Worth the walk for a deck table away from the office.",
+      "Long benches, sea breeze, nothing hurried about it."
+    ]
+  },
+  {
+    "id": "pizzetta-nove",
+    "name": "Pizzetta Nove",
+    "cuisine": "pizza",
+    "pricePerHead": 19,
+    "rating": 4.3,
+    "ratingCount": 540,
+    "walkingMinutes": 6,
+    "opensAt": "11:00",
+    "closesAt": "20:00",
+    "dietary": [
+      "vegetarian"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "quickService",
+      "goodForGroups",
+      "takeawayAvailable",
+      "lively",
+      "outdoorSeating"
+    ],
+    "editorialSummary": "Roman-style pizza by the slice, weighed and boxed, with a row of tables on the footpath.",
+    "reviewSnippets": [
+      "Two slices, ninety seconds, back out the door.",
+      "We carried a dozen slices back for the team and it worked out cheap."
+    ]
+  },
+  {
+    "id": "grainstore-deli",
+    "name": "Grainstore Deli",
+    "cuisine": "sandwiches",
+    "pricePerHead": 21,
+    "rating": 4.4,
+    "ratingCount": 880,
+    "walkingMinutes": 11,
+    "opensAt": "08:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "nutFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "counterOrder",
+      "takeawayAvailable",
+      "light",
+      "sharedTables",
+      "quiet"
+    ],
+    "editorialSummary": "Sourdough sandwiches, soups and cut cheese from a marble deli counter with a standing ledge.",
+    "reviewSnippets": [
+      "Point at what you want and it is wrapped in a minute.",
+      "Stood at the window ledge and watched the street go by."
+    ]
+  },
+  {
+    "id": "wattleseed-and-rye",
+    "name": "Wattleseed & Rye",
+    "cuisine": "modernAustralian",
+    "pricePerHead": 32,
+    "rating": 4.6,
+    "ratingCount": 610,
+    "walkingMinutes": 10,
+    "opensAt": "11:30",
+    "closesAt": "21:00",
+    "dietary": [
+      "glutenFree",
+      "vegetarian",
+      "shellfishFree"
+    ],
+    "dietaryProvenance": "restaurantReported",
+    "attributes": [
+      "sitDownDining",
+      "outdoorSeating",
+      "licensed",
+      "bookingsTaken",
+      "quiet"
+    ],
+    "editorialSummary": "Native-ingredient plates and a small local wine list in a courtyard behind a sandstone terrace.",
+    "reviewSnippets": [
+      "Held the courtyard table and it was a genuinely calm hour.",
+      "Plates are precise and pretty rather than enormous."
+    ]
+  },
+  {
+    "id": "lemongrass-tuk-tuk",
+    "name": "Lemongrass Tuk Tuk",
+    "cuisine": "thai",
+    "pricePerHead": 15,
+    "rating": 3.7,
+    "ratingCount": 1120,
+    "walkingMinutes": 4,
+    "opensAt": "11:00",
+    "closesAt": "15:00",
+    "dietary": [
+      "halal",
+      "vegetarian",
+      "dairyFree"
+    ],
+    "dietaryProvenance": "userContributed",
+    "attributes": [
+      "quickService",
+      "counterOrder",
+      "takeawayAvailable",
+      "hearty"
+    ],
+    "editorialSummary": "Street-style pad thai and boat noodles bagged up fast at a shopfront window.",
+    "reviewSnippets": [
+      "Six minutes from ordering to bag in hand.",
+      "An enormous serve for fifteen dollars."
+    ]
+  },
+  {
+    "id": "ramen-kohaku",
+    "name": "Ramen Kohaku",
+    "cuisine": "japanese",
+    "pricePerHead": 23,
+    "rating": 4.6,
+    "ratingCount": 1280,
+    "walkingMinutes": 8,
+    "opensAt": "11:30",
+    "closesAt": "21:00",
+    "dietary": [],
+    "dietaryProvenance": "unverified",
+    "attributes": [
+      "sitDownDining",
+      "sharedTables",
+      "lively",
+      "hearty"
+    ],
+    "editorialSummary": "Tonkotsu and shoyu ramen slurped at shared timber counters in a steamy basement.",
+    "reviewSnippets": [
+      "You share a bench with strangers and nobody minds.",
+      "The bowl is huge and the room is loud with slurping."
+    ]
+  }
+]
