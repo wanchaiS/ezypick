@@ -23,12 +23,16 @@ struct GooglePlacesRestaurantRepositoryTests {
         #expect(found.first(where: { $0.name == "Gandhi's Kitchen" })?.walkingMinutes == 5)
     }
 
-    @Test("A venue is priced from its range, then its band, or it is not offered at all")
-    func pricesFromTheRangeFirstAndDropsWhateverItCannotPrice() async throws {
+    @Test("A venue is priced at the middle of its band, then from its band level, or not offered")
+    func pricesFromTheMiddleOfTheRangeFirstAndDropsWhateverItCannotPrice() async throws {
         let found = try await restaurants(answering: recordedResponse())
 
-        // "40" arrives as a string holding an integer, and PRICE_LEVEL_INEXPENSIVE is the fallback.
-        #expect(found.first(where: { $0.name == "Bar Totti's" })?.pricePerHead == 40)
+        // Bar Totti's reports "40" to "80", strings holding integers. Both edges are prices no
+        // single meal costs; the middle is the one number in the band that describes a bill.
+        #expect(found.first(where: { $0.name == "Bar Totti's" })?.pricePerHead == 60)
+        // Gandhi's publishes a range and no band level, so the range is all there is to read.
+        #expect(found.first(where: { $0.name == "Gandhi's Kitchen" })?.pricePerHead == 30)
+        // Chat Thai publishes no range at all, and PRICE_LEVEL_INEXPENSIVE is the fallback.
         #expect(found.first(where: { $0.name == "Chat Thai" })?.pricePerHead == 20)
         // Morso publishes neither. Keeping it would let it through the diner's budget cap unmeasured.
         #expect(!found.contains(where: { $0.name == "Morso Espresso Bar" }))

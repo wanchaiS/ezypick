@@ -242,13 +242,19 @@ extension GooglePlacesRestaurantRepository {
 
     /// What one person should expect to spend, in whole dollars.
     ///
-    /// `priceRange` is preferred because it is denominated in money, but it is a band rather than an
-    /// estimate: every populated `startPrice.units` observed across the Sydney CBD was 1, 20, 40 or
-    /// 60. `Restaurant.pricePerHead` therefore claims a precision the source does not have, and the
-    /// budget cap is really comparing a dollar figure against a bucket boundary. `priceLevel` is the
-    /// coarser fallback, mapped onto the midpoint of the same buckets.
+    /// `priceRange` is a band rather than an estimate, so the app has to decide which number in it
+    /// a diner means when they say twenty-five dollars a head. It reads the **midpoint**.
+    ///
+    /// The lower edge was the first answer and it was wrong on screen: Google files a fast food
+    /// counter as one dollar to twenty, so it read as `$1` and outlived every budget the app could
+    /// set, while a restaurant filed at forty to eighty was refused on a floor nobody is charged
+    /// either. A band's edges are both prices that no single meal costs; its middle is the only
+    /// number in it that describes a likely bill.
+    ///
+    /// - Note: `priceLevel` is the coarser fallback and was already mapped onto the midpoint of
+    ///   each bucket, so both paths now mean the same thing by the number they return.
     static func pricePerHead(of place: Places.Place) -> Int? {
-        if let units = place.priceRange?.startPrice?.units, let dollars = Int(units) { return dollars }
+        if let dollars = midpointOfBand(place.priceRange) { return dollars }
         guard let band = place.priceLevel else { return nil }
         switch band {
         case "PRICE_LEVEL_INEXPENSIVE": return 20
@@ -257,6 +263,15 @@ extension GooglePlacesRestaurantRepository {
         case "PRICE_LEVEL_VERY_EXPENSIVE": return 80
         default: return nil
         }
+    }
+
+    /// The middle of a reported price band, rounded up to a whole dollar.
+    ///
+    /// A band with no upper edge is all the API is willing to say, so its single figure stands.
+    private static func midpointOfBand(_ range: Places.PriceRange?) -> Int? {
+        guard let start = range?.startPrice?.units.flatMap(Int.init) else { return nil }
+        guard let end = range?.endPrice?.units.flatMap(Int.init), end > start else { return start }
+        return (start + end + 1) / 2
     }
 
     // MARK: Walking time

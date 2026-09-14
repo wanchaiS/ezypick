@@ -8,10 +8,13 @@ import os
 /// because all of it is already known.
 ///
 /// A fourth limit used to come first and was the app's hardest rule: dietary requirements, vetoed
-/// absolutely. It was removed once live data showed what it did. Halal is a venue category almost
-/// nobody publishes and vegetarian is a flag that is asserted or absent but never denied, so
-/// ticking either emptied the list wherever the diner stood. A veto over data that does not exist
-/// does not protect anyone; it just refuses everything, and it taught the diner to turn it off.
+/// absolutely. Live data removed it by failing three different ways at once. Gluten-free had no
+/// field anywhere in the API, so it was never answerable. Halal is a venue category almost nobody
+/// publishes, one venue across the inner city, so it returned an empty list. Vegetarian is the
+/// subtle one: the flag exists and almost never says no, two venues in fifty-seven, and an absent
+/// flag never means no either. Empty, unanswerable, or true of nearly everything. A veto that
+/// looks like a safety check and removes two places in fifty-seven protects nobody, so the rule
+/// went rather than got hedged.
 ///
 /// - Important: Business rules enforced here, in this order — budget per head, walking distance,
 ///   open at the time given, and anything already turned down in this session.
