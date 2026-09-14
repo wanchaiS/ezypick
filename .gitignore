@@ -18,3 +18,6 @@ Secrets.xcconfig
 
 # Course material — not ours to redistribute
 lectures/
+
+# Submission bundle, assembled locally
+submission/
