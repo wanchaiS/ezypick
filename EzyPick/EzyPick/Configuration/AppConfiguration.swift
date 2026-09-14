@@ -1,16 +1,11 @@
 import Foundation
 
-/// The local settings the app reads once at launch: a places key, how far to search, and an
-/// optional question-writing service.
+/// The local settings the app reads once at launch: a places key, a search radius, and an optional
+/// question-writing service.
 ///
-/// Read from a plain `KEY=VALUE` file that the build copies into the app bundle as `env.txt`,
-/// never from source, so nothing here is ever committed. The file lives at the repository root as
-/// `.env` and is excluded by `.gitignore`.
-///
-/// - Important: a missing file is the normal case, not an error. Someone who clones the repository
-///   gets no `env.txt` at all, every property below comes back nil, and the app runs exactly as it
-///   did before any of this existed: the seeded catalogue instead of live places, and the built-in
-///   question generator instead of a service. Nothing warns, because nothing is wrong.
+/// - Important: Read from a `KEY=VALUE` file the build copies into the bundle as `env.txt`, never
+///   from source. A missing file is the normal case: a fresh clone gets nil for every property and
+///   runs on the seeded catalogue and the built-in question generator rather than warning.
 struct AppConfiguration {
     /// The configuration the running app was launched with.
     static let current = AppConfiguration()
@@ -21,21 +16,17 @@ struct AppConfiguration {
     /// How far out from the diner to search, in metres.
     let placesSearchRadiusMetres: Double
 
-    /// Where the question-writing service lives. Both this and ``aiAPIKey`` are needed before it
-    /// is used at all.
+    /// Where the question-writing service lives. Needed together with ``aiAPIKey``.
     let aiBaseURL: URL?
 
     /// Credential for the question-writing service.
     let aiAPIKey: String?
 
-    /// Which model to ask for, when the service offers a choice. Absent leaves the generator's own
-    /// default in place.
+    /// Which model to ask for. Absent leaves the generator's own default in place.
     let aiModel: String?
 
-    /// The radius used when the file says nothing, or says something that is not a number.
-    ///
-    /// 1600 m is roughly the twenty-minute walk that is the furthest the profile editor lets
-    /// anyone ask for, so the fence downstream is never the thing that ran out of candidates.
+    /// Radius used when the file says nothing, or something that is not a number. 1600 m is the
+    /// furthest walk the profile editor allows, so the fence downstream is what runs out, not this.
     static let defaultSearchRadiusMetres: Double = 1600
 
     init(values: [String: String] = AppConfiguration.bundledValues()) {
@@ -47,10 +38,8 @@ struct AppConfiguration {
         aiModel = values["AI_MODEL"]
     }
 
-    /// Reads `env.txt` out of the app bundle, or reports that there was nothing to read.
-    ///
-    /// Both the missing file and the unreadable file come back as no settings, because the caller
-    /// does the same thing either way and there is nobody to tell.
+    /// Reads `env.txt` out of the app bundle. Missing and unreadable both come back as no settings,
+    /// because the caller does the same thing either way.
     static func bundledValues() -> [String: String] {
         guard let url = Bundle.main.url(forResource: "env", withExtension: "txt"),
               let text = try? String(contentsOf: url, encoding: .utf8) else { return [:] }
@@ -59,11 +48,8 @@ struct AppConfiguration {
 
     /// Turns the file's text into settings: one `KEY=VALUE` per line.
     ///
-    /// Blank lines and lines starting with `#` are skipped, so the file can explain itself to the
-    /// next person who opens it. The split is on the *first* `=` only, because a key or a URL may
-    /// well contain one. Keys and values are trimmed, and an empty value is treated as absent
-    /// rather than as an empty string, which is what makes commenting a setting out and blanking
-    /// it mean the same thing.
+    /// - Note: Blank and `#` lines are skipped, and the split is on the *first* `=` only, since a
+    ///   key or a URL may contain one. An empty value counts as absent.
     static func parse(_ text: String) -> [String: String] {
         var values: [String: String] = [:]
         for line in text.split(whereSeparator: \.isNewline) {

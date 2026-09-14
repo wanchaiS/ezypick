@@ -3,13 +3,9 @@ import Foundation
 /// Asks a language model to read what the remaining restaurants are actually like, and to write a
 /// question that tells them apart.
 ///
-/// The model is given everything the places lookup returned, including the parts no filter can use:
-/// the editorial blurb and the review snippets. It is also asked to name, for each question, the
-/// restaurants a yes would keep, so its answer is usable whether it noticed something in a boolean
-/// or in a sentence a diner wrote.
-///
-/// It is given no authority. `AskNextQuestionsUseCase` checks that a question genuinely divides the
-/// candidates in front of the diner and has not already been asked, and discards it otherwise.
+/// - Note: It has no authority. The model sees the blurb and review snippets no filter can use and
+///   names the restaurants a yes would keep; `AskNextQuestionsUseCase` discards any question that
+///   does not divide the candidates in front of the diner, or has been asked already.
 struct LLMQuestionGenerator: QuestionGenerator {
     private let apiKey: String
     private let endpoint: URL
@@ -66,22 +62,9 @@ struct LLMQuestionGenerator: QuestionGenerator {
 
     /// What the model is told.
     ///
-    /// The list of characteristics it may ask about is gone, and its absence is the point. That list
-    /// could only ever contain what a places API asserts, so the model was being handed five
-    /// booleans and asked to be interesting. It now reads the prose and says which restaurants its
-    /// own question keeps, which is the only way a question about how somewhere *feels* can filter
-    /// anything.
-    ///
-    /// The length rules are here rather than enforced in code, deliberately. Asked for one thing in
-    /// ten words the model complies, and a rule that discarded long questions would throw away good
-    /// ones to catch the occasional bad one. An earlier version of this brief simply lost the word
-    /// "short" in a rewrite, which is how a diner ended up reading "Do you want a traditional pub
-    /// atmosphere with classic comfort food and possible live music?" — three questions in one, and
-    /// unanswerable by anyone who wants the pub but not the live music.
-    ///
-    /// The JSON shape is given as placeholders rather than a worked example, so there is no sample
-    /// question sitting in the context for the model to reach for when the restaurants are dull.
-    /// The field names still have to be exact, which placeholders keep visible.
+    /// - Note: The length and single-question rules live in the prompt rather than in code, and the
+    ///   JSON shape is placeholders rather than an example so no sample question sits in context.
+    ///   The field names must be exact.
     static let brief = [
         "You help someone choose where to eat lunch.",
         "The restaurants listed already fit their budget, walking distance and are open now,",
@@ -104,10 +87,8 @@ struct LLMQuestionGenerator: QuestionGenerator {
         "ask about what they want, never about a venue by name."
     ].joined(separator: " ")
 
-    /// Everything known about the candidates, numbered so the model can point at them cheaply.
-    ///
-    /// Numbers rather than place ids: an id is twenty-odd opaque characters that costs tokens on the
-    /// way in and invites a typo on the way back, and the mapping back is an array index here.
+    /// Everything known about the candidates, numbered so the model can point at them: the mapping
+    /// back is an array index in `parse(_:candidates:)`.
     static func describe(_ candidates: [CandidateRestaurant], alreadyAsked: [LunchQuestion]) -> String {
         let places = candidates.enumerated().map { index, candidate in
             let r = candidate.restaurant
@@ -126,14 +107,8 @@ struct LLMQuestionGenerator: QuestionGenerator {
         return "Restaurants still in the running:\n\(places)\n\nAlready asked about: \(asked)"
     }
 
-    /// One review, cut to the part that says something.
-    ///
-    /// Places returns reviews of any length, with their own paragraph breaks, and the full text was
-    /// going over verbatim: nine venues came to six and a half thousand characters, most of it a
-    /// stranger's account of the parking. Two effects, both bad. It is paid for on every question,
-    /// and the model mirrors the register it is fed, so long florid reviews produced long florid
-    /// questions. The first couple of sentences carry the character of a place; the rest is
-    /// anecdote.
+    /// One review, cut to the part that says something: the model mirrors the register it is fed,
+    /// and the first couple of sentences carry the character of a place.
     static func shortened(_ review: String, to limit: Int = 200) -> String {
         let flattened = review.split(whereSeparator: \.isNewline)
             .joined(separator: " ")
@@ -146,10 +121,8 @@ struct LLMQuestionGenerator: QuestionGenerator {
 
     /// Turns the model's reply into questions, resolving its numbers back to real restaurants.
     ///
-    /// A number that names no candidate is dropped rather than failing the reply, and a question
-    /// left with no restaurants at all is discarded here: a question whose answer key is empty
-    /// would be rejected by the use case anyway, and reporting it as a usable question first only
-    /// makes the log harder to read.
+    /// - Note: A number naming no candidate is dropped, and a question left with no restaurants is
+    ///   discarded here rather than rejected later by the use case.
     static func parse(_ content: String, candidates: [CandidateRestaurant]) throws -> [LunchQuestion] {
         struct Payload: Decodable {
             let questions: [Item]
@@ -177,8 +150,7 @@ struct LLMQuestionGenerator: QuestionGenerator {
 
     enum GenerationError: LocalizedError, Equatable {
         case modelUnavailable, unreadableResponse
-        // Never shown: the use case falls back to the template generator and the diner sees a
-        // question either way.
+        // Never shown: the use case falls back to the template generator.
         var errorDescription: String? { "Could not reach the question service." }
     }
 }

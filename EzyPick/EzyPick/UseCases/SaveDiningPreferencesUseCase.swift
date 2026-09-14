@@ -1,20 +1,17 @@
 import Foundation
 
-/// Records what the diner can and cannot do, so that every later lunch can be decided without
-/// asking again.
+/// Records what the diner can and cannot do, so every later lunch can be decided without asking
+/// again. These limits rule restaurants out silently, keeping the daily flow to a couple of taps.
 ///
-/// This is the only moment the app asks for anything slow. Everything the diner enters here is
-/// used to rule restaurants out silently, which is what keeps the daily interaction down to a
-/// couple of taps.
+/// - Important: Business rules — a profile is invalid if the budget per head is zero or less, or
+///   the walk is outside one to twenty minutes.
 struct SaveDiningPreferencesUseCase {
     private let store: DiningPreferencesStore
 
     init(store: DiningPreferencesStore) { self.store = store }
 
-    /// Validates and saves the diner's preferences.
-    ///
     /// - Throws: `SaveDiningPreferencesError` when the preferences could not produce a usable
-    ///   search — for example a budget of zero, which would rule out every restaurant in the city.
+    ///   search, such as a budget of zero.
     @discardableResult
     func execute(_ preferences: DiningPreferences) throws -> DiningPreferences {
         guard preferences.budgetPerHead > 0 else {
@@ -27,13 +24,11 @@ struct SaveDiningPreferencesUseCase {
         return preferences
     }
 
-    /// A lunch break sets the outer limit. Twenty minutes each way is already most of a break
-    /// spent walking; beyond it there is no lunch left to eat.
+    /// Twenty minutes each way is already most of a lunch break spent walking.
     static let walkingRange = 1...20
 }
 
-/// What can go wrong while a diner is setting themselves up, written for the diner rather than
-/// for a developer.
+/// What can go wrong while a diner is setting themselves up, written for the diner.
 enum SaveDiningPreferencesError: LocalizedError, Equatable {
     /// The diner left the budget empty or set it to zero.
     case budgetNotSet

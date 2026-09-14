@@ -1,29 +1,15 @@
 import Foundation
 
-/// Works out which restaurants the diner could actually eat at right now.
-///
-/// This is the app doing the legwork a person would otherwise do themselves: prices against a
-/// budget, how far each place is, and whether it is actually open. None of it is asked about,
-/// because all of it is already known.
-///
-/// A fourth limit used to come first and was the app's hardest rule: dietary requirements, vetoed
-/// absolutely. Live data removed it by failing three different ways at once. Gluten-free had no
-/// field anywhere in the API, so it was never answerable. Halal is a venue category almost nobody
-/// publishes, one venue across the inner city, so it returned an empty list. Vegetarian is the
-/// subtle one: the flag exists and almost never says no, two venues in fifty-seven, and an absent
-/// flag never means no either. Empty, unanswerable, or true of nearly everything. A veto that
-/// looks like a safety check and removes two places in fifty-seven protects nobody, so the rule
-/// went rather than got hedged.
+/// Works out which restaurants the diner could actually eat at right now. None of it is asked
+/// about, because all of it is already known.
 ///
 /// - Important: Business rules enforced here, in this order — budget per head, walking distance,
 ///   open at the time given, and anything already turned down in this session.
 struct ShortlistRestaurantsUseCase {
     /// - Parameters:
-    ///   - all: everything the search returned, before any limit is applied.
-    ///   - preferences: the diner's saved limits.
     ///   - now: the time to judge "open" against. Passed in rather than read here so a test never
     ///     depends on the hour it runs at.
-    ///   - declined: restaurants they have already turned down this session, which are never re-offered.
+    ///   - declined: restaurants already turned down this session, which are never re-offered.
     ///   - allowingOverBudget: set only when the diner has deliberately lifted their own budget.
     /// - Throws: `ShortlistRestaurantsError.nothingWithinReach` carrying the tally, so the message
     ///   can name the limit that did the damage.
@@ -36,8 +22,8 @@ struct ShortlistRestaurantsUseCase {
         tally.consideredCount = all.count
         var survivors: [CandidateRestaurant] = []
 
-        // Stops at the first limit a venue fails, so the counts are disjoint and the line the diner
-        // reads adds up: every excluded venue is counted once, against the limit that cost it.
+        // Stops at the first limit a venue fails, so the counts are disjoint and the tally the
+        // diner reads adds up: every excluded venue is counted once, against the limit that cost it.
         for restaurant in all {
             if !allowingOverBudget && restaurant.pricePerHead > preferences.budgetPerHead { tally.byBudget += 1; continue }
             if restaurant.walkingMinutes > preferences.willingToWalkMinutes { tally.byDistance += 1; continue }

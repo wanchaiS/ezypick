@@ -1,9 +1,6 @@
 import SwiftUI
 
 /// One trip through deciding: the research, then the questions, then the shortlist.
-///
-/// A single screen that changes with the phase rather than a stack of pushes, because the diner is
-/// doing one continuous thing and going "back" halfway through has no meaning.
 struct LunchSearchView: View {
     @ObservedObject var model: LunchSearchViewModel
     let preferences: DiningPreferences
@@ -52,11 +49,7 @@ struct LunchSearchView: View {
     }
 }
 
-/// Shown while the search itself is running.
-///
-/// Separate from the research screen because they are different promises. This one says "I am
-/// looking"; the research screen says "here is what I ruled out and why". Collapsing them would
-/// leave the diner unable to tell a slow network from a strict budget.
+/// Shown while the nearby search itself is running.
 struct LookingAroundView: View {
     var body: some View {
         VStack(spacing: 14) {
@@ -68,16 +61,8 @@ struct LookingAroundView: View {
     }
 }
 
-/// What the search found: the places that actually fit, by name.
-///
-/// The app has just done, in a couple of seconds, the legwork its whole premise is built on. Doing
-/// that invisibly and jumping straight to a question would waste the one moment the diner can see
-/// that the questions come from somewhere real, so narrowing is something they ask for rather than
-/// something that happens to them.
-///
-/// Names rather than counts. Counts are true of anywhere: two different suburbs once summarised
-/// identically here, down to the dollar, and nothing on screen could tell them apart. A name is the
-/// cheapest proof that a search happened where somebody is standing.
+/// What the search found: the places that actually fit, named rather than counted, because a count
+/// is true of anywhere.
 struct PlacesFoundView: View {
     let survey: NearbySurvey
     /// The restaurants left after the diner's own limits, which is what the list names.
@@ -90,11 +75,8 @@ struct PlacesFoundView: View {
 
     /// What happened to everything that is not on the list.
     ///
-    /// This line used to read "from 15 nearby, 6 open right now", which was true and read as a
-    /// contradiction: six open, two listed, and nothing on screen accounting for the other four.
-    /// Two counts from different denominators sitting next to each other invite a subtraction that
-    /// gives the wrong answer. The tally is the one the app actually applied, limit by limit, and it
-    /// reconciles exactly: what is listed is what is left.
+    /// - Important: Reports the tally the app actually applied, limit by limit, so what is listed
+    ///   is what is left. Counts from two different denominators invite a wrong subtraction.
     private var whatWentMissing: String {
         guard let excluded else { return "\(survey.count) nearby" }
         var reasons: [String] = []
@@ -153,10 +135,8 @@ struct PlacesFoundView: View {
 
     /// Where the app looked, said plainly.
     ///
-    /// The coordinate is shown as well as the suburb, and deliberately not hidden behind a tap.
-    /// "Near you" is the one claim in this whole screen a diner cannot check, and on a simulator or
-    /// with a stale fix it is also the claim most likely to be wrong. Six decimal places would be
-    /// noise; four puts it within about ten metres, which is enough to recognise a street corner.
+    /// - Note: The coordinate is shown as well as the suburb, because "near you" is the one claim
+    ///   on this screen a diner cannot check. Four decimal places puts it within about ten metres.
     private var searchedFrom: some View {
         VStack(spacing: 2) {
             HStack(spacing: 5) {
@@ -174,10 +154,7 @@ struct PlacesFoundView: View {
 
 }
 
-/// The screen the diner waits in front of while the questions are written.
-///
-/// Says what the app is doing rather than only that it is busy: the reading is the work the diner
-/// came for, and a bare spinner would hide the one moment the app earns its keep.
+/// Shown while the questions are being written, saying what the app is reading.
 struct ThinkingView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
@@ -197,16 +174,10 @@ struct ThinkingView: View {
     }
 }
 
-/// One yes-or-no question, with why it is being asked underneath.
+/// One yes-or-no question, with why it is being asked underneath, and how many places are left.
 ///
-/// The count of what is left is deliberately visible: it tells the diner their tap did something,
-/// which is what makes answering a second one feel worth it.
-///
-/// The line underneath is the question's **own** reason, written alongside it. It used to be the
-/// first sentence of the streamed thinking, which describes whatever the model considered first,
-/// while the app goes on to ask whichever question splits the candidates most evenly. Those are
-/// often not the same question, so a diner read one about pubs explained by a sentence about two
-/// Italian places. A reason that explains a different question is worse than no reason.
+/// - Important: The line underneath is the question's own reason, written alongside it, not the
+///   model's first thought, which often explains a different question.
 struct QuestionView: View {
     let question: LunchQuestion
     let remaining: Int

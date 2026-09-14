@@ -2,17 +2,11 @@ import Foundation
 
 /// Decides what to ask the diner next, or that nothing more is worth asking.
 ///
-/// The app exists to spare someone the work of choosing, so every question has to earn its place.
-/// A question is only asked when the restaurants still in the running genuinely disagree about it,
-/// and the app stops the moment the answer can no longer change.
-///
 /// - Important: Business rules — at most five questions per lunch; stop as soon as three or fewer
-///   remain; never ask the same thing twice; never ask anything that fails to split the candidates.
-///   These rules are enforced here and not by whatever wrote the question, so a language model
-///   cannot talk the app out of them.
+///   candidates remain; never ask the same thing twice; never ask anything that fails to split
+///   the candidates. Enforced here rather than by whatever wrote the question.
 struct AskNextQuestionsUseCase {
-    /// The most questions a diner will ever be asked. A longer quiz would rebuild the very
-    /// decision fatigue the app is meant to remove.
+    /// The most questions a diner will ever be asked.
     static let questionLimit = 5
     /// How many restaurants count as few enough for a person to choose between unaided.
     static let shortlistTarget = 3
@@ -20,18 +14,15 @@ struct AskNextQuestionsUseCase {
     private let generator: QuestionGenerator
     private let fallback: QuestionGenerator
 
-    /// - Parameters:
-    ///   - generator: the preferred source of questions, normally the language model.
-    ///   - fallback: used when the preferred one fails, is unreachable, or returns nothing usable.
+    /// - Parameter fallback: used when the preferred generator fails, is unreachable, or returns
+    ///   nothing usable.
     init(generator: QuestionGenerator, fallback: QuestionGenerator = TemplateQuestionGenerator()) {
         self.generator = generator
         self.fallback = fallback
     }
 
-    /// Whether this run can ask anything at all.
-    ///
-    /// Read by the view model so the search can stop on the results screen rather than walk the
-    /// diner into a narrowing that is not configured to happen.
+    /// Whether this run can ask anything at all. Read by the view model so the flow can stop on
+    /// the results screen when no question service is configured.
     var canAsk: Bool { generator.isConfigured }
 
     func execute(narrowing candidates: [CandidateRestaurant],
@@ -47,7 +38,6 @@ struct AskNextQuestionsUseCase {
         }
 
         // The service was reachable and said nothing usable, so the built-in generator answers.
-        // The diner is never told, and should not be: they get a question either way.
         let backup = (try? await fallback.questions(narrowing: candidates, alreadyAsked: alreadyAsked)) ?? []
         if let usable = bestUsable(from: backup, candidates: candidates, alreadyAsked: alreadyAsked) {
             return .ask(usable)
@@ -58,13 +48,9 @@ struct AskNextQuestionsUseCase {
 
     /// The most evenly splitting question that divides the candidates and has not been asked.
     ///
-    /// Taking the generator's first suggestion instead was worse in a way only live data showed. A
-    /// model asked for its best question first leads with the most *interesting* one: against six
-    /// Sydney venues it opened with "are you craving a focused bowl of ramen?", which keeps one
-    /// restaurant, so yes ends the flow and no has narrowed almost nothing. The measurement behind
-    /// the whole question design is that an even split is worth about a bit and a single-cuisine
-    /// question about a seventh of one, so the app picks the even one and lets the generator's
-    /// order break ties.
+    /// - Note: Most even rather than the generator's first suggestion, which tends to be the most
+    ///   interesting question rather than the most useful: one only a single venue answers yes to
+    ///   barely narrows anything. Generator order breaks ties.
     private func bestUsable(from questions: [LunchQuestion],
                             candidates: [CandidateRestaurant],
                             alreadyAsked: [LunchQuestion]) -> LunchQuestion? {

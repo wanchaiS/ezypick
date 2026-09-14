@@ -2,9 +2,8 @@ import Foundation
 
 /// Applies the diner's yes or no, narrowing the restaurants still in the running.
 ///
-/// - Important: Business rule — an answer must never leave the diner with nothing. If a question
-///   could wipe out every remaining restaurant it should not have been asked, so this refuses to
-///   apply it rather than emptying the shortlist.
+/// - Important: Business rule — an answer may never empty the candidate set. A question that
+///   could rule out everything left should not have been asked, so this refuses to apply it.
 struct AnswerQuestionUseCase {
     init() {}
 

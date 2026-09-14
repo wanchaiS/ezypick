@@ -1,19 +1,11 @@
 import Foundation
 
-/// Looks up what is around the diner and describes it, without ruling anything out.
-///
-/// Separate from `ShortlistRestaurantsUseCase` on purpose. That one answers "where could I eat?"
-/// and enforces every limit the diner has set; this one answers the question that comes first,
-/// "what is even out here?", and enforces nothing. Keeping them apart is what lets the app show a
-/// diner the size of the problem before it starts solving it, which is the difference between an
-/// app that asks for trust and one that earns it.
+/// Looks up what is around the diner and describes it. It answers "what is even out here?",
+/// which comes before "where could I eat?".
 ///
 /// - Important: No business rule lives here. Nothing is excluded, so nothing can be wrongly
 ///   excluded, and a diner reading this screen is reading the search rather than the filter.
 struct SurveyNearbyRestaurantsUseCase {
-    /// - Parameters:
-    ///   - found: everything the search returned, unfiltered.
-    ///   - origin: where that search ran from, so the screen can say where it looked.
     /// - Throws: `SurveyNearbyRestaurantsError.nothingNearby` when the search came back empty.
     func execute(from found: [Restaurant], at origin: Coordinate) throws -> NearbySurvey {
         guard !found.isEmpty else { throw SurveyNearbyRestaurantsError.nothingNearby }
@@ -28,10 +20,7 @@ struct SurveyNearbyRestaurantsUseCase {
         )
     }
 
-    /// The nearest few by name.
-    ///
-    /// The closest rather than a sample, because the diner is most likely to recognise what is on
-    /// their own doorstep, and recognition is the whole job of this list.
+    /// The nearest few by name, closest first.
     static func closest(_ many: Int, of restaurants: [Restaurant]) -> [String] {
         restaurants
             .sorted { ($0.walkingMinutes, $0.name) < ($1.walkingMinutes, $1.name) }
@@ -41,21 +30,17 @@ struct SurveyNearbyRestaurantsUseCase {
 
     /// What the middle restaurant costs.
     ///
-    /// The median rather than the mean, because one steakhouse among a street of sandwich shops
-    /// drags an average somewhere no actual restaurant sits. The lower of the two middles is taken
-    /// when the count is even, so the figure is always a price some real venue charges rather than
-    /// a number arrived at by dividing.
+    /// - Note: Median, not mean, so one steakhouse among sandwich shops cannot drag the figure
+    ///   somewhere no real venue sits. Even counts take the lower of the two middles.
     static func typicalPrice(of restaurants: [Restaurant]) -> Int {
         let prices = restaurants.map(\.pricePerHead).sorted()
         guard !prices.isEmpty else { return 0 }
         return prices[(prices.count - 1) / 2]
     }
 
-    /// The three kinds of food that come up most often, which is what a person scanning a street
-    /// would notice first.
+    /// The three kinds of food that come up most often.
     ///
-    /// Ties are broken by name so the same search always reads the same way. A summary that
-    /// reshuffles itself between looks reads as unreliable even when the numbers are identical.
+    /// - Note: Ties break by name so the same search always reads the same way.
     static func mostCommonCuisines(in restaurants: [Restaurant]) -> [Cuisine] {
         var counts: [Cuisine: Int] = [:]
         for restaurant in restaurants { counts[restaurant.cuisine, default: 0] += 1 }

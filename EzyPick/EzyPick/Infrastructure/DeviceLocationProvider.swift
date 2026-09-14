@@ -2,22 +2,14 @@ import CoreLocation
 
 /// Answers the one question CoreLocation is here for: where is the diner standing right now?
 ///
-/// The app's only CoreLocation dependency, kept behind `CurrentLocationProvider` so the use cases
-/// and the places repository never import it and can be exercised with a fixed coordinate instead.
+/// Kept behind `CurrentLocationProvider` so the use cases and the places repository can be
+/// exercised with a fixed coordinate. One coarse `requestLocation()` per search.
 ///
-/// One `requestLocation()` rather than continuous updates: the app asks once, when a search starts,
-/// and the walk it is planning does not move far enough while a few questions are answered to be
-/// worth tracking. Accuracy is deliberately coarse for the same reason, and a coarse fix comes back
-/// sooner, which is the part the diner feels.
-///
-/// - Important: the waiting call is resumed exactly once on every path, including a denial and a
-///   failure that arrives before `requestLocation()` even returns. Resuming a continuation twice
-///   traps the process, so ``finish(_:)`` is the only place that resumes and it takes the
-///   continuation out from under the lock, leaving nil behind.
-///
-/// `CLLocationManager` calls its delegate on the queue the manager was created on, while
-/// `currentCoordinate()` may be awaited from anywhere, so the stored request is guarded by a lock
-/// rather than by an actor. The conformance is stated explicitly rather than designed around.
+/// - Important: Resuming a continuation twice traps the process, so ``finish(_:)`` is the only
+///   place that resumes, on every path including a denial that arrives before `requestLocation()`
+///   returns, and it takes the continuation out from under the lock. CoreLocation calls the
+///   delegate on the manager's own queue while `currentCoordinate()` may be awaited from anywhere,
+///   hence a lock rather than an actor.
 nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvider, @unchecked Sendable {
     /// How long a diner will wait to be found before the app should say something instead.
     private static let patience: Duration = .seconds(10)
@@ -35,9 +27,8 @@ nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvide
 
     /// Where the diner is, or why the app could not find out.
     ///
-    /// Asks for when-in-use authorisation first when it has never been asked. The system sheet is
-    /// modal and the answer arrives on the delegate, so the request is parked until it does; a
-    /// refusal ends it there rather than sending a location request that would quietly fail.
+    /// - Note: Asks for when-in-use authorisation first if it never has; the answer arrives on the
+    ///   delegate, so the request is parked until it does and a refusal ends it there.
     func currentCoordinate() async throws -> Coordinate {
         try await withCheckedThrowingContinuation { continuation in
             begin(continuation)
@@ -48,8 +39,7 @@ nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvide
         lock.lock()
         guard pending == nil else {
             lock.unlock()
-            // One fix at a time. The app asks once per search, so a second caller is a mistake
-            // rather than a queue to serve.
+            // One fix at a time: the app asks once per search, so a second caller is a mistake.
             continuation.resume(throwing: LocationError.unavailable)
             return
         }
@@ -71,11 +61,8 @@ nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvide
         }
     }
 
-    /// Resumes the waiting call, once and only once.
-    ///
-    /// Every ending runs through here: a fix, a failure, a refusal, the countdown running out.
-    /// Whoever gets to the continuation first takes it, and everyone after that finds nil and
-    /// returns, which is what makes a late delegate callback harmless instead of fatal.
+    /// Resumes the waiting call, once and only once: whoever reaches the continuation first takes
+    /// it and everyone after finds nil, which makes a late delegate callback harmless.
     private func finish(_ result: Result<Coordinate, Error>) {
         lock.lock()
         let waiting = pending
@@ -98,8 +85,7 @@ nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvide
 /// `nonisolated` for the same reason the class is: the target compiles with main actor isolation by
 /// default, and CoreLocation calls these back without one.
 nonisolated extension DeviceLocationProvider: CLLocationManagerDelegate {
-    /// Fires when the diner answers the permission sheet, and once when the delegate is first set,
-    /// which is why nothing happens unless somebody is actually waiting on a fix.
+    /// Also fires once when the delegate is first set, hence the guard on somebody waiting.
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         guard isWaiting else { return }
         switch manager.authorizationStatus {
@@ -127,12 +113,8 @@ nonisolated extension DeviceLocationProvider: CLLocationManagerDelegate {
     }
 }
 
-/// What can go wrong when the app tries to work out where the diner is.
-///
-/// Every message here is read by someone standing on a footpath deciding where to eat, so each one
-/// names what happened in their words and then what they can do about it. None of them is a dead
-/// end: the search screen shows the message and the diner can change the setting, move, or simply
-/// try again.
+/// What can go wrong when the app tries to work out where the diner is. Every message is read by
+/// someone standing on a footpath, so each says what happened and what they can do next.
 enum LocationError: LocalizedError, Equatable {
     /// Location is switched off for this app, or the device will not allow it at all.
     case denied

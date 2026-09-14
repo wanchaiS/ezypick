@@ -4,25 +4,25 @@ import CoreLocation
 
 /// Drives one trip through the app: the research, the questions, and the shortlist at the end.
 ///
-/// Holds where the diner currently is and what is on screen. Every decision — which restaurants
-/// qualify, what to ask next, whether to stop — is made by a use case and only reported here.
+/// - Note: Which restaurants qualify and what to ask next is decided by a use case, never here.
 @MainActor
 final class LunchSearchViewModel: ObservableObject {
 
-    /// Where the diner currently is in deciding.
+    /// Where the diner currently is in deciding. The whole screen flow is driven off this.
     enum Phase: Equatable {
+        /// Nothing asked for yet.
         case notStarted
-        /// The search is running. Nothing is known yet.
+        /// The nearby search is running. Nothing is known yet.
         case lookingAround
-        /// The search came back and the diner's own limits have been applied. These are the places
-        /// that fit, named rather than counted.
+        /// The places that fit the diner's own limits, named rather than counted.
         case results(NearbySurvey)
-        /// The model is reading those places and working out what is worth asking.
+        /// Working out what is worth asking next.
         case thinking
+        /// A question is waiting for an answer.
         case asking
+        /// The final few, with the pick first.
         case shortlist
-        /// The search worked and the narrowing cannot run, which is a different thing from nothing
-        /// fitting and gets a different screen.
+        /// The search worked but the narrowing cannot run. Not the same as nothing fitting.
         case notSetUp(problem: String, howToFixIt: String)
         /// Nothing could be suggested, with what blocked it and what to try instead.
         case nothingFits(problem: String, howToFixIt: String)
@@ -40,9 +40,8 @@ final class LunchSearchViewModel: ObservableObject {
     private var allowingOverBudget = false
     /// The one search this trip is built on: where it ran from, and what it returned.
     ///
-    /// Kept so that widening a limit re-fences the places already found. Searching again would
-    /// cost a second billed lookup and could describe a different moment from the summary the
-    /// diner is looking at.
+    /// - Important: Held for the whole trip, so widening a limit re-fences the places already
+    ///   found rather than paying for a second billed lookup.
     private var search: (origin: Coordinate, places: [Restaurant])?
 
     private let restaurants: RestaurantRepository
@@ -68,13 +67,9 @@ final class LunchSearchViewModel: ObservableObject {
 
     /// A new trip: the diner has come back to the home screen and pressed the button again.
     ///
-    /// Two things are true only for as long as one trip lasts. Turning down a shortlist rules those
-    /// venues out of the *rest of that decision*, not out of lunch forever, and lifting the budget
-    /// is the diner saying they will spend more **today**. Both used to outlive the trip that set
-    /// them, because nothing marked where a trip ended: a second search silently kept excluding
-    /// places the diner had never seen, and quietly ignored the budget cap they had just gone back
-    /// and set. A fence that has switched itself off is worse than no fence, because the tally
-    /// still reports on it.
+    /// - Important: Turning down a shortlist and lifting the budget last for one trip only, so
+    ///   both are cleared here. Left standing, they silently exclude places the diner never saw
+    ///   and ignore a budget they just went back and set.
     func startOver() {
         declined = []
         allowingOverBudget = false
@@ -83,10 +78,6 @@ final class LunchSearchViewModel: ObservableObject {
     }
 
     /// Looks up what is around the diner and stops, so they see the search before it is narrowed.
-    ///
-    /// The narrowing is deliberately not started here. Being shown a question before being shown
-    /// what the question is about is how the app would feel like it was guessing, when in fact it
-    /// has already done the work.
     func findLunch(for preferences: DiningPreferences) async {
         self.preferences = preferences
         phase = .lookingAround
@@ -118,10 +109,8 @@ final class LunchSearchViewModel: ObservableObject {
             phase = .results(survey)
             originName = await Self.suburb(at: trip.origin)
         } catch let error as any LocalizedError {
-            // Every failure that can reach here writes its own words: the fence explaining which
-            // limit did the damage, a refused location, a places lookup that did not come back.
-            // Flattening them into one message would tell someone to reopen the app when what they
-            // actually need to do is grant location access.
+            // Every failure that reaches here writes its own words. Flattening them would tell
+            // someone to reopen the app when they need to grant location access.
             phase = .nothingFits(problem: error.errorDescription ?? "Nothing fits today.",
                                  howToFixIt: error.recoverySuggestion ?? "Try widening something.")
         } catch {
@@ -130,14 +119,11 @@ final class LunchSearchViewModel: ObservableObject {
         }
     }
 
-    /// Turns the coordinate the search ran from into a place a person recognises.
+    /// Turns the coordinate the search ran from into a suburb name, shown next to the coordinate
+    /// rather than instead of it.
     ///
-    /// Shown next to the raw coordinate rather than instead of it. A suburb name is what the diner
-    /// can actually check against the street they are standing in, but it is a lookup that can be
-    /// wrong or unavailable, and the numbers underneath it never are.
-    ///
-    /// Failure is silent on purpose: not knowing what the suburb is called has no bearing on
-    /// whether the restaurants are right, so it must never turn a working search into an error.
+    /// - Note: Failure is silent: a missing suburb name must never turn a working search into an
+    ///   error.
     private static func suburb(at origin: Coordinate) async -> String? {
         let point = CLLocation(latitude: origin.latitude, longitude: origin.longitude)
         guard let placemark = try? await CLGeocoder().reverseGeocodeLocation(point).first else {
@@ -190,10 +176,8 @@ final class LunchSearchViewModel: ObservableObject {
             question = next
             phase = .asking
         case .stop(.noQuestionService):
-            // Stops here rather than falling back. The built-in generator could answer, and what it
-            // would produce is a narrowing by whatever a places API happens to assert, which is a
-            // weaker thing than the app claims to do. Serving that silently is the substitution the
-            // seeded catalogue was deleted for.
+            // Stops here rather than falling back to the built-in generator, which narrows by
+            // whatever booleans a places API asserts.
             stoppedBecause = .noQuestionService
             question = nil
             phase = .notSetUp(

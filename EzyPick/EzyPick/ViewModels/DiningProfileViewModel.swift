@@ -3,9 +3,7 @@ import Combine
 
 /// Drives the screen where the diner says what their lunch break allows.
 ///
-/// Holds what the form currently shows and passes it to `SaveDiningPreferencesUseCase` when the
-/// diner saves. No rule about what makes a profile usable lives here — that belongs to the use
-/// case, so the same rule holds no matter which screen is in front of the diner.
+/// - Note: What makes a profile usable is `SaveDiningPreferencesUseCase`'s rule, not this one's.
 @MainActor
 final class DiningProfileViewModel: ObservableObject {
     @Published var budgetPerHead = 25
@@ -13,9 +11,7 @@ final class DiningProfileViewModel: ObservableObject {
 
     /// Whether the diner has ever saved a profile.
     ///
-    /// The home screen needs this to tell "$25 a head, ten minutes" chosen by a person apart from
-    /// the same values sitting there as untouched defaults, which would have the app
-    /// claiming to know someone it has never met.
+    /// - Note: Lets the home screen tell values a person chose apart from untouched defaults.
     @Published private(set) var hasSavedProfile = false
 
     @Published var problem: String?

@@ -2,10 +2,9 @@ import Foundation
 
 /// Writes narrowing questions from the restaurants' structured attributes alone.
 ///
-/// It picks whichever characteristic divides the remaining restaurants most evenly, because that
-/// is the question that rules out the most options per tap. Deterministic, instant and free: it
-/// backs the language model when there is no network, no key, or nothing usable came back, and it
-/// is what the tests run against so that business rules are never asserted against a model's mood.
+/// - Note: Picks whichever characteristic divides the remaining restaurants most evenly, because
+///   that rules out the most options per tap. Deterministic and free, so it backs the language
+///   model when there is no network, key or usable reply, and it is what the tests run against.
 struct TemplateQuestionGenerator: QuestionGenerator {
     init() {}
 

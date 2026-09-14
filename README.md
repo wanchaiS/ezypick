@@ -166,8 +166,7 @@ EzyPick/
     UseCases/                 the rules
     Infrastructure/           the Places client, location, storage, question generators
     ViewModels/               screen state, no rules
-    Views/                    six screens
+    Views/                    the screens
   EzyPickTests/               the unit tests, and Fixtures/ for recorded API responses
 Ezypick-Architecture.excalidraw
-.env                          local keys, gitignored
 ```

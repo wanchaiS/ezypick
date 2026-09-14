@@ -1,9 +1,6 @@
 import SwiftUI
 
-/// The end of the trip: a named suggestion with its reason, and two alternatives.
-///
-/// The app commits to a pick rather than handing back a list, but it shows its working and leaves
-/// the choice with the diner — they are the one who has to walk there and eat it.
+/// The end of the trip: the pick with its reason, and the alternatives behind it.
 struct ShortlistView: View {
     let candidates: [CandidateRestaurant]
     let stoppedBecause: StopReason?
@@ -43,8 +40,8 @@ struct ShortlistView: View {
         case .questionLimitReached: "That's as far as I'll ask. These are the best fits."
         case .nothingLeftToAsk: "These are alike enough that another question wouldn't help."
         // Never drawn: without a question service the search stops on its own screen and no
-        // shortlist is assembled. Named rather than defaulted so that adding a reason to the domain
-        // makes the compiler ask what the diner should be told.
+        // shortlist is assembled. Named rather than defaulted so a new stop reason makes the
+        // compiler ask what the diner should be told.
         case .noQuestionService: nil
         case nil: nil
         }
@@ -86,10 +83,8 @@ struct ShortlistView: View {
     }
 }
 
-/// What the diner sees when their own limits leave nothing to suggest.
-///
-/// It names the limit that did the damage and offers the way out, because a hungry person handed
-/// "no results" will simply go back to their usual takeaway.
+/// What the diner sees when their own limits leave nothing to suggest: the limit that did the
+/// damage, and the way out of it.
 struct NothingFitsView: View {
     let problem: String
     let howToFixIt: String
@@ -111,11 +106,8 @@ struct NothingFitsView: View {
 
 /// What the diner sees when the app found them places but cannot narrow them down.
 ///
-/// Deliberately not `NothingFitsView`, which was what this reused at first. That screen is headed
-/// "Nothing fits today" and offers to spend more, and both were false here: twelve places fitted,
-/// and no budget raise will conjure a question service. A screen that reports a real number of real
-/// restaurants as "nothing" and offers a fix for a problem the diner does not have is the same
-/// defect as a summary true of anywhere.
+/// - Important: Deliberately not `NothingFitsView`, whose "Nothing fits today" heading and offer
+///   to spend more are both false here.
 struct NotSetUpView: View {
     let placesFound: Int
     let problem: String

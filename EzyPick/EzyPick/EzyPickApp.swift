@@ -2,9 +2,7 @@ import SwiftUI
 
 /// Builds the app's parts and hands them to the first screen.
 ///
-/// The only place that knows which implementations are in use: the venues actually around the diner,
-/// found from the device's own location, `UserDefaults` for the profile, and a language model for
-/// the questions when one has been configured. Nothing below this line knows the difference.
+/// - Note: The only place that knows which implementations are in use.
 @main
 struct EzyPickApp: App {
     private let store = UserDefaultsPreferencesStore()
@@ -24,13 +22,8 @@ struct EzyPickApp: App {
         }
     }
 
-    /// Where the candidate restaurants come from.
-    ///
-    /// There is one answer now. A catalogue of invented venues used to stand in when no key was
-    /// configured, and it went because it was quietly answering a different question than the one
-    /// the diner asked: it could say where someone might eat, never where they can eat today. An
-    /// app that silently substitutes made-up restaurants for real ones is worse than an app that
-    /// says it is not set up.
+    /// Where the candidate restaurants come from: real venues near the device, or a stub that
+    /// says the app is not set up when no places key is configured.
     private static func catalogue(_ configuration: AppConfiguration,
                                   at location: any CurrentLocationProvider) -> RestaurantRepository {
         guard let key = configuration.googlePlacesAPIKey else { return UnconfiguredCatalogue() }
@@ -39,19 +32,10 @@ struct EzyPickApp: App {
                                                 searchRadiusMetres: configuration.placesSearchRadiusMetres)
     }
 
-    /// Who writes the narrowing questions.
+    /// Who writes the narrowing questions, pointed at a service by the local configuration file.
     ///
-    /// One way to point the app at a service, and it is the local configuration file. There used to
-    /// be a second: a box in the profile editor for pasting a key. It went because it did not work
-    /// and could not have. This initialiser runs once at launch, so a key typed into the profile
-    /// took effect only after the app was killed and reopened, and nothing on screen said so. A
-    /// control that silently does nothing is worse than no control.
-    /// Without a configured service the app **stops after the research** and says so. It could fall
-    /// back to the built-in generator, and deliberately does not: that generator narrows by the
-    /// handful of booleans a places API asserts, which is a weaker product than reading what a
-    /// place is actually like, and serving it silently while claiming the other is the same
-    /// substitution the seeded catalogue was deleted for. The diner still gets the whole of stage
-    /// one, which is real work on real data: where they are, what is around them, and what fits.
+    /// - Important: With no question service configured the app stops after the research rather
+    ///   than narrowing with the weaker built-in generator.
     private static func questionWriter(_ configuration: AppConfiguration) -> QuestionGenerator {
         guard let baseURL = configuration.aiBaseURL, let key = configuration.aiAPIKey else {
             return QuestionServiceMissing()
@@ -64,10 +48,8 @@ struct EzyPickApp: App {
 
     /// Turns the configured base URL into the address the generator posts to.
     ///
-    /// Chat completion services document their base URL ending at the version segment, which is
-    /// what people paste into a settings file, while `LLMQuestionGenerator` wants the full address.
-    /// Completing it here keeps the file looking like the instructions it was copied from, and
-    /// leaves an address that was already written out in full alone.
+    /// - Note: Services document their base URL ending at the version segment, which is what gets
+    ///   pasted into a settings file. An address already written out in full is left alone.
     private static func endpoint(from baseURL: URL) -> URL {
         baseURL.path.hasSuffix("/chat/completions")
             ? baseURL
@@ -75,12 +57,10 @@ struct EzyPickApp: App {
     }
 }
 
-/// Stands in when no places key has been configured, so the app still launches and can say why it
-/// cannot do the one thing it exists to do.
+/// Stands in when no places key has been configured, so the app still launches and can say why.
 ///
-/// Returning an empty list instead would be read by the shortlisting rules as "nothing nearby
-/// fits", and the diner would be told to widen their budget when the real problem is that nobody
-/// gave the app a key.
+/// - Important: Throws rather than returning an empty list, which the rules would report as
+///   "nothing nearby fits".
 private struct UnconfiguredCatalogue: RestaurantRepository {
     func nearbyRestaurants() async throws -> [Restaurant] { throw NotConfigured() }
 
@@ -94,13 +74,10 @@ private struct UnconfiguredCatalogue: RestaurantRepository {
     }
 }
 
-/// Stands in when no question service has been configured, so the narrowing can refuse rather than
-/// be quietly done by something else.
+/// Stands in when no question service has been configured.
 ///
-/// It is never asked anything: `AskNextQuestionsUseCase` reads `isConfigured` first and stops. The
-/// throw exists because a port has to be implementable, and because a caller that ignored the flag
-/// should fail loudly rather than receive an empty list of questions and treat it as "nothing worth
-/// asking", which is a true sentence about a completely different situation.
+/// - Note: Never asked anything: `AskNextQuestionsUseCase` reads `isConfigured` first and stops.
+///   The throw is there so a caller that ignored the flag fails loudly.
 private struct QuestionServiceMissing: QuestionGenerator {
     var isConfigured: Bool { false }
 

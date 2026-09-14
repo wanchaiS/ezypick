@@ -1,9 +1,7 @@
 import SwiftUI
 
-/// The first screen: one thing to do, and a reminder of what the app already knows.
-///
-/// Deliberately offers no list, no map and no filters. Being handed options is the problem the
-/// app exists to solve, so the home screen hands the diner none.
+/// The first screen: one thing to do, and a reminder of what the app already knows. No list, no
+/// map, no filters.
 struct HomeView: View {
     @StateObject private var profile: DiningProfileViewModel
     @StateObject private var search: LunchSearchViewModel
@@ -51,10 +49,7 @@ struct HomeView: View {
         }
     }
 
-    /// The saved profile, shown as badges rather than prose.
-    ///
-    /// The point is recognition, not information: the diner should glance at this and know the app
-    /// has them right. A sentence has to be read to be checked, so the profile is drawn as chips.
+    /// The saved profile, drawn as chips so the diner can check the app has them right.
     private var aboutYouCard: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {

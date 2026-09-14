@@ -1,23 +1,12 @@
 import Foundation
 
-/// What a diner has told the app about the practical limits of a working lunch break.
+/// What a diner has told the app about the practical limits of a working lunch break, declared
+/// once and reused for every lunch.
 ///
-/// Declared once and reused for every lunch, which is what lets the app stay quiet day to day.
-/// Nothing here is inferred from behaviour — a preference the diner did not state does not exist,
-/// because a wrong guess is invisible to them and impossible to correct.
-///
-/// Two things, and no more. Dietary requirements used to live here and were the app's hardest rule.
-/// They went because no data source underwrites them, and the three failed in three different ways:
-/// nothing anywhere in the API answers gluten-free; halal is a venue category almost nobody
-/// publishes, so ticking it emptied the list; and `servesVegetarianFood` came back 48 true, 2 false
-/// and 7 absent across 57 probed Sydney restaurants, where absent never means no, so vetoing on it
-/// ruled out two venues in fifty-seven. A filter that always empties the list is not a strict
-/// filter, it is a broken one, and a control that cannot change the answer is a tap the diner paid
-/// for and got nothing back.
-///
-/// - Important: Business rules carried here — `budgetPerHead` excludes anything dearer unless the
-///   diner deliberately lifts it for today, and `willingToWalkMinutes` bounds what can be suggested
-///   at all. When the diner intends to eat is not stored: the app searches against the clock.
+/// - Important: Business rules — `budgetPerHead` excludes anything dearer unless the diner lifts
+///   it for today, and `willingToWalkMinutes` bounds what can be suggested at all. Nothing is
+///   inferred from behaviour, and when the diner intends to eat is not stored: the app searches
+///   against the clock.
 struct DiningPreferences: Equatable, Codable, Sendable {
     /// The most the diner will spend on one lunch, in whole dollars.
     let budgetPerHead: Int
@@ -32,8 +21,8 @@ struct DiningPreferences: Equatable, Codable, Sendable {
 
 /// A restaurant that has survived every hard limit and is still a real possibility for this lunch.
 ///
-/// Distinct from `Restaurant` on purpose: a restaurant is a fact about the world, a candidate is a
-/// judgement about this particular lunch, and only candidates are ever narrowed by questions.
+/// - Note: A `Restaurant` is a fact about the world; a candidate is a judgement about this lunch.
+///   Only candidates are narrowed by questions.
 struct CandidateRestaurant: Equatable, Identifiable, Sendable {
     let restaurant: Restaurant
     var id: Restaurant.ID { restaurant.id }
@@ -50,10 +39,8 @@ struct CandidateRestaurant: Equatable, Identifiable, Sendable {
     }
 }
 
-/// A count of why restaurants were ruled out, kept so that a failure can name its own cause.
-///
-/// Without this the app could only say "nothing matched", which tells a hungry person nothing they
-/// can act on. With it, the app can say which limit did the damage and what to relax.
+/// A count of why restaurants were ruled out, so a failure can name the limit that did the damage
+/// instead of only saying "nothing matched".
 struct ExclusionTally: Equatable, Sendable {
     var consideredCount = 0
     var byBudget = 0

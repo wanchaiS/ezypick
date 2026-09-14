@@ -3,10 +3,8 @@ import Foundation
 /// Keeps the diner's preferences between launches.
 ///
 /// `UserDefaults` rather than a database: a single small record, written rarely, read once per
-/// lunch, with nothing to query or relate. Week 6's storage guidance puts exactly this shape here.
-///
-/// `UserDefaults` is documented as thread-safe but is not marked `Sendable`, so the conformance is
-/// stated explicitly rather than designed around.
+/// lunch, with nothing to query or relate. It is documented as thread-safe but not marked
+/// `Sendable`, hence the explicit `@unchecked` conformance.
 struct UserDefaultsPreferencesStore: DiningPreferencesStore, @unchecked Sendable {
     private let defaults: UserDefaults
     private let key = "ezypick.diningPreferences"

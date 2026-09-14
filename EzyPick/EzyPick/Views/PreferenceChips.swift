@@ -20,10 +20,8 @@ struct PreferenceChip: View {
 
 /// Lays chips out left to right, wrapping onto a new line when the next one will not fit.
 ///
-/// SwiftUI ships no wrapping stack, and both workarounds misrepresent the content: an `HStack`
-/// truncates once the profile grows, and a `LazyVGrid` forces every chip to a shared column width,
-/// so "Vegan" takes as much room as "Modern Australian". A chip should be exactly as wide as its
-/// words, which is what this does.
+/// - Note: SwiftUI ships no wrapping stack. An `HStack` truncates and a `LazyVGrid` forces every
+///   chip to a shared column width, so a chip would not be as wide as its own words.
 struct ChipFlowLayout: Layout {
     var spacing: CGFloat = 6
 

@@ -1,15 +1,10 @@
 import SwiftUI
 
-/// Where the diner says what their lunch break allows.
+/// Where the diner says what their lunch break allows: what they will spend, and how far they
+/// will walk.
 ///
-/// Two controls, and the list is short on purpose. Every control here is a tap the diner pays for
-/// once and the app spends every day, so a setting that never changes which restaurants come back
-/// has no business being on this screen. Four things have been removed on exactly that test:
-/// cuisines to avoid, which are a craving and therefore what the questions are for; a meal-time
-/// picker, which asked a lunch app to confirm it was lunchtime; a box for pasting an API key, which
-/// an engineer configures once and nobody knows about themselves; and the dietary requirements,
-/// which were the hardest rule in the app until live data showed that ticking one returned nothing
-/// at all, wherever the diner stood.
+/// - Note: Short on purpose. A setting that never changes which restaurants come back has no
+///   business on this screen.
 struct DiningProfileView: View {
     @ObservedObject var model: DiningProfileViewModel
     @Environment(\.dismiss) private var dismiss
