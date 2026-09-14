@@ -126,8 +126,8 @@ one, and saying so is the finding, not the excuse.
 
 **The tests**
 
-No key, no account, no network. The suite replays a recorded Places response, so it runs the same
-on any machine.
+No key, no account, no network. Every test builds the restaurants it cares about, so the suite runs
+the same on any machine and in well under a second.
 
 In Xcode: ⌘U. The `EzyPick` scheme is shared and runs the `EzyPickTests` target.
 
@@ -141,19 +141,17 @@ xcodebuild -project EzyPick.xcodeproj -scheme EzyPick \
 
 ## Tests
 
-Tests covering the business rules, not the plumbing. Among them:
+**Ten tests, two per use case: one proving it works, one proving it refuses.** That is the shape
+the brief asks for, and it is the whole suite, so every test here is a business rule rather than
+plumbing.
 
-- Priced exactly at budget is in; a dollar over is out. Ten minutes' walk is in; eleven is out.
-- A place that shut before the diner looked is ruled out, and when nothing fits at all the failure
-  names the limit that did the most damage rather than shrugging.
-- The app stops at three, never asks a sixth question, and never repeats one.
-- A suggested question that would not narrow anything is discarded and replaced.
-- When the question service throws, the diner still gets a sensible question.
-- A walking time, a price and an opening hour read out of a Places response stay with the venue
-  they belong to, and an attribute the API never asserted is never claimed.
-- End to end against a recorded Places response, replayed through a URL stub so the journey never
-  touches the network: a real search narrowed by the research, then by the questions, down to a
-  shortlist.
+| Use case | Works | Refuses |
+|---|---|---|
+| `SaveDiningPreferences` | a usable profile is saved and kept | a budget of nothing is refused, because it would rule out every restaurant |
+| `SurveyNearbyRestaurants` | everything nearby is counted, including what the diner's own limits would rule out | an empty search says so rather than describing nothing |
+| `ShortlistRestaurants` | priced exactly at the budget is still affordable | when nothing fits, the diner is told which limit caused it |
+| `AskNextQuestions` | asks something the remaining places genuinely disagree about | never asks a sixth question, however many places are left |
+| `AnswerQuestion` | yes keeps the places that match, no keeps the rest | an answer is refused if it would leave the diner with nowhere to eat |
 
 ## Project layout
 

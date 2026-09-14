@@ -16,52 +16,6 @@ struct ShortlistRestaurantsTests {
         #expect(shortlist.candidates.count == 1)
     }
 
-    @Test("A restaurant a dollar over the budget is ruled out")
-    func excludesRestaurantOneDollarOverTheBudget() throws {
-        let places = [restaurant("Just Over", price: 26)]
-
-        #expect(throws: ShortlistRestaurantsError.self) {
-            try ShortlistRestaurantsUseCase()
-                .execute(from: places, for: preferences(budget: 25), at: lunchtime)
-        }
-    }
-
-    @Test("A restaurant that closes before the diner eats is ruled out")
-    func excludesRestaurantThatClosesBeforeTheMealTime() throws {
-        let places = [
-            restaurant("Early Closer", closes: "12:00"),
-            restaurant("Still Serving", closes: "15:00")
-        ]
-        let shortlist = try ShortlistRestaurantsUseCase()
-            .execute(from: places, for: preferences(), at: lunchtime)
-
-        #expect(shortlist.candidates.map(\.restaurant.name) == ["Still Serving"])
-        #expect(shortlist.excluded.byOpeningHours == 1)
-    }
-
-    @Test("A walk exactly as long as the diner will go is still acceptable")
-    func keepsRestaurantExactlyAtTheWalkingLimit() throws {
-        let places = [
-            restaurant("Ten Minutes", walk: 10),
-            restaurant("Eleven Minutes", walk: 11)
-        ]
-        let shortlist = try ShortlistRestaurantsUseCase()
-            .execute(from: places, for: preferences(walk: 10), at: lunchtime)
-
-        #expect(shortlist.candidates.map(\.restaurant.name) == ["Ten Minutes"])
-        #expect(shortlist.excluded.byDistance == 1)
-    }
-
-    @Test("A restaurant turned down earlier is not offered again")
-    func neverReOffersARestaurantTheDinerAlreadyTurnedDown() throws {
-        let declined = restaurant("Already Seen")
-        let places = [declined, restaurant("Somewhere New")]
-        let shortlist = try ShortlistRestaurantsUseCase()
-            .execute(from: places, for: preferences(), at: lunchtime, declining: [declined.id])
-
-        #expect(shortlist.candidates.map(\.restaurant.name) == ["Somewhere New"])
-        #expect(shortlist.excluded.byPreviousDecline == 1)
-    }
 
     @Test("When nothing fits, the diner is told which limit caused it")
     func namesTheLimitResponsibleWhenNothingFits() throws {
@@ -83,13 +37,4 @@ struct ShortlistRestaurantsTests {
         }
     }
 
-    @Test("The message a diner sees names the cause and a way out of it")
-    func explainsTheFailureInWordsTheDinerCanAct0n() throws {
-        var tally = ExclusionTally()
-        tally.byDistance = 7
-        let error = ShortlistRestaurantsError.nothingWithinReach(tally)
-
-        #expect(error.errorDescription == "The places that fit are all further than you said you'd walk.")
-        #expect(error.recoverySuggestion == "Widen your walk to twenty minutes and try again.")
-    }
 }
