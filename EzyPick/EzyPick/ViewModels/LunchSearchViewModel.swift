@@ -37,7 +37,6 @@ final class LunchSearchViewModel: ObservableObject {
 
     private var declined: Set<Restaurant.ID> = []
     private var preferences: DiningPreferences?
-    private var allowingOverBudget = false
     /// The one search this trip is built on: where it ran from, and what it returned.
     ///
     /// - Important: Held for the whole trip, so widening a limit re-fences the places already
@@ -67,12 +66,10 @@ final class LunchSearchViewModel: ObservableObject {
 
     /// A new trip: the diner has come back to the home screen and pressed the button again.
     ///
-    /// - Important: Turning down a shortlist and lifting the budget last for one trip only, so
-    ///   both are cleared here. Left standing, they silently exclude places the diner never saw
-    ///   and ignore a budget they just went back and set.
+    /// - Important: Turning down a shortlist lasts for one trip only. Left standing, it silently
+    ///   excludes places the diner never saw.
     func startOver() {
         declined = []
-        allowingOverBudget = false
         search = nil
         originName = nil
     }
@@ -102,8 +99,7 @@ final class LunchSearchViewModel: ObservableObject {
             let shortlist = try shortlisting.execute(from: trip.places,
                                                      for: preferences,
                                                      at: TimeOfDay.now,
-                                                     declining: declined,
-                                                     allowingOverBudget: allowingOverBudget)
+                                                     declining: declined)
             candidates = shortlist.candidates
             tally = shortlist.excluded
             phase = .results(survey)
@@ -158,13 +154,6 @@ final class LunchSearchViewModel: ObservableObject {
     /// The diner does not fancy any of the three. Rule them out and look again.
     func noneOfThese() async {
         declined.formUnion(candidates.map(\.id))
-        guard let preferences else { return }
-        await findLunch(for: preferences)
-    }
-
-    /// The diner has decided to spend more than they said today.
-    func searchAgainAllowingOverBudget() async {
-        allowingOverBudget = true
         guard let preferences else { return }
         await findLunch(for: preferences)
     }

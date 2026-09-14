@@ -69,7 +69,7 @@ private struct UnconfiguredCatalogue: RestaurantRepository {
             "Ezypick has not been set up to look up restaurants yet."
         }
         var recoverySuggestion: String? {
-            "Add a Google Places key to the .env file at the root of the project and build again."
+                "Add a Google Places key to the .env file at the root of the project and build again."
         }
     }
 }

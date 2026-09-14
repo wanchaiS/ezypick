@@ -3,7 +3,8 @@ import SwiftUI
 /// One trip through deciding: the research, then the questions, then the shortlist.
 struct LunchSearchView: View {
     @ObservedObject var model: LunchSearchViewModel
-    let preferences: DiningPreferences
+    @ObservedObject var profile: DiningProfileViewModel
+    @State private var adjustingSettings = false
 
     var body: some View {
         Group {
@@ -40,12 +41,19 @@ struct LunchSearchView: View {
                              howToFixIt: howToFixIt)
             case .nothingFits(let problem, let howToFixIt):
                 NothingFitsView(problem: problem, howToFixIt: howToFixIt) {
-                    Task { await model.searchAgainAllowingOverBudget() }
+                    adjustingSettings = true
                 }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
-        .task { await model.findLunch(for: preferences) }
+        .task { await model.findLunch(for: profile.preferences) }
+        // Whatever the diner changed, the places found are already in hand, so the limits are
+        // simply applied again. Cancelling changes nothing and costs nothing.
+        .sheet(isPresented: $adjustingSettings) {
+            Task { await model.findLunch(for: profile.preferences) }
+        } content: {
+            NavigationStack { DiningProfileView(model: profile) }
+        }
     }
 }
 

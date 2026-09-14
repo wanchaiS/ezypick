@@ -10,14 +10,12 @@ struct ShortlistRestaurantsUseCase {
     ///   - now: the time to judge "open" against. Passed in rather than read here so a test never
     ///     depends on the hour it runs at.
     ///   - declined: restaurants already turned down this session, which are never re-offered.
-    ///   - allowingOverBudget: set only when the diner has deliberately lifted their own budget.
     /// - Throws: `ShortlistRestaurantsError.nothingWithinReach` carrying the tally, so the message
     ///   can name the limit that did the damage.
     func execute(from all: [Restaurant],
                  for preferences: DiningPreferences,
                  at now: TimeOfDay,
-                 declining declined: Set<Restaurant.ID> = [],
-                 allowingOverBudget: Bool = false) throws -> Shortlist {
+                 declining declined: Set<Restaurant.ID> = []) throws -> Shortlist {
         var tally = ExclusionTally()
         tally.consideredCount = all.count
         var survivors: [CandidateRestaurant] = []
@@ -25,7 +23,7 @@ struct ShortlistRestaurantsUseCase {
         // Stops at the first limit a venue fails, so the counts are disjoint and the tally the
         // diner reads adds up: every excluded venue is counted once, against the limit that cost it.
         for restaurant in all {
-            if !allowingOverBudget && restaurant.pricePerHead > preferences.budgetPerHead { tally.byBudget += 1; continue }
+            if restaurant.pricePerHead > preferences.budgetPerHead { tally.byBudget += 1; continue }
             if restaurant.walkingMinutes > preferences.willingToWalkMinutes { tally.byDistance += 1; continue }
             if !restaurant.isOpen(at: now) { tally.byOpeningHours += 1; continue }
             if declined.contains(restaurant.id) { tally.byPreviousDecline += 1; continue }
@@ -72,7 +70,7 @@ enum ShortlistRestaurantsError: LocalizedError, Equatable {
     var recoverySuggestion: String? {
         guard case .nothingWithinReach(let tally) = self else { return nil }
         switch tally.dominantCause {
-        case .budget: return "Raise your budget for today, or walk a little further."
+        case .budget: return "Raise your budget, or walk a little further."
         case .distance: return "Widen your walk to twenty minutes and try again."
         case .openingHours: return "Try again a bit later, or widen how far you'll walk."
         case .previouslyDeclined: return "Start again to see the places you turned down."

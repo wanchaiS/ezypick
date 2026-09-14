@@ -23,22 +23,20 @@ struct LunchSearchViewModelTests {
         return false
     }
 
-    @Test("Spending more than you said is allowed for today, not for every trip after it")
-    func aLiftedBudgetDoesNotSurviveTheTripThatLiftedIt() async throws {
-        let search = model([restaurant("Steakhouse", price: 60, opens: "00:00", closes: "23:59")])
-        let tight = preferences(budget: 25, walk: 30)
+    @Test("Adjusting the settings re-fences the search already in hand, without paying for another")
+    func newLimitsAreAppliedToTheSameSearch() async throws {
+        let catalogue = CountingCatalogue([restaurant("Steakhouse", price: 60, opens: "00:00", closes: "23:59")])
+        let search = LunchSearchViewModel(restaurants: catalogue,
+                                          generator: UnconfiguredQuestionGenerator(),
+                                          location: FixedLocation())
 
-        await search.findLunch(for: tight)
+        await search.findLunch(for: preferences(budget: 25, walk: 30))
         #expect(nothingFits(search))
 
-        // The diner decides to spend more today, and the one venue comes back.
-        await search.searchAgainAllowingOverBudget()
+        // "Adjust settings", a bigger budget, and the sheet closing: the same trip, fenced again.
+        await search.findLunch(for: preferences(budget: 70, walk: 30))
         #expect(search.candidates.count == 1)
-
-        // Today ends when they go home and start again. The cap they set is a cap again.
-        search.startOver()
-        await search.findLunch(for: tight)
-        #expect(nothingFits(search))
+        #expect(await catalogue.lookups == 1, "A settings change must not cost a second billed lookup")
     }
 
     @Test("A place turned down in one decision is offered again in the next one")
@@ -56,5 +54,18 @@ struct LunchSearchViewModelTests {
         search.startOver()
         await search.findLunch(for: preferences(walk: 30))
         #expect(search.candidates.count == 1)
+    }
+}
+
+/// Counts how many times the places were looked up, so the one-lookup claim can be proved.
+private actor CountingCatalogue: RestaurantRepository {
+    private let restaurants: [Restaurant]
+    private(set) var lookups = 0
+
+    init(_ restaurants: [Restaurant]) { self.restaurants = restaurants }
+
+    func nearbyRestaurants() async throws -> [Restaurant] {
+        lookups += 1
+        return restaurants
     }
 }

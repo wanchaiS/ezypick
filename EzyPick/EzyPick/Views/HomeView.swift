@@ -41,7 +41,7 @@ struct HomeView: View {
                 Spacer()
             }
             .navigationDestination(isPresented: $showingSearch) {
-                LunchSearchView(model: search, preferences: profile.preferences)
+                LunchSearchView(model: search, profile: profile)
             }
             .sheet(isPresented: $showingProfile) {
                 NavigationStack { DiningProfileView(model: profile) }

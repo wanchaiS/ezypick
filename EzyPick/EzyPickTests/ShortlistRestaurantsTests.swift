@@ -26,15 +26,6 @@ struct ShortlistRestaurantsTests {
         }
     }
 
-    @Test("Lifting the budget deliberately brings the dearer places back")
-    func includesOverBudgetRestaurantWhenTheDinerLiftsTheirBudget() throws {
-        let places = [restaurant("Just Over", price: 26)]
-        let shortlist = try ShortlistRestaurantsUseCase()
-            .execute(from: places, for: preferences(budget: 25), at: lunchtime, allowingOverBudget: true)
-
-        #expect(shortlist.candidates.count == 1)
-    }
-
     @Test("A restaurant that closes before the diner eats is ruled out")
     func excludesRestaurantThatClosesBeforeTheMealTime() throws {
         let places = [

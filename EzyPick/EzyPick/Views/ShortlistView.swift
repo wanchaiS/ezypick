@@ -85,10 +85,14 @@ struct ShortlistView: View {
 
 /// What the diner sees when their own limits leave nothing to suggest: the limit that did the
 /// damage, and the way out of it.
+///
+/// - Note: The way out is always the settings, never a one-tap override of one limit. An offer to
+///   spend more is wrong on the two refusals out of three that budget did not cause, and a button
+///   that cannot fix what the screen above it just named reads as broken.
 struct NothingFitsView: View {
     let problem: String
     let howToFixIt: String
-    let searchAgainAllowingOverBudget: () -> Void
+    let adjustSettings: () -> Void
 
     var body: some View {
         VStack(spacing: 16) {
@@ -96,7 +100,7 @@ struct NothingFitsView: View {
             Text("Nothing fits today").font(.title2.bold())
             Text(problem).multilineTextAlignment(.center)
             Text(howToFixIt).font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
-            Button("Spend a bit more today", action: searchAgainAllowingOverBudget)
+            Button("Adjust settings", action: adjustSettings)
                 .buttonStyle(.borderedProminent).tint(.red).padding(.top, 8)
             Spacer()
         }
