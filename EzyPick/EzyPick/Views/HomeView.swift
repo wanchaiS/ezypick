@@ -70,7 +70,7 @@ struct HomeView: View {
                     }
                 }
             } else {
-                Text("Nothing saved yet. Tell Ezypick what you can't eat and how long your break is.")
+                Text("Nothing saved yet. Tell Ezypick what you'll spend and how far you'll walk.")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
