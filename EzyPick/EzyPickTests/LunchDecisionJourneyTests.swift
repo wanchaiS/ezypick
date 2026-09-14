@@ -14,11 +14,10 @@ struct LunchDecisionJourneyTests {
 
     @Test("A diner reaches a handful of places within the question limit")
     func narrowsRealVenuesToAShortlistWithinFiveQuestions() async throws {
-        let places = try placesRepository(replaying: "places-sydney-lunch")
+        let places = try await placesRepository(replaying: "places-sydney-lunch").nearbyRestaurants()
         let profile = preferences(budget: 45, walk: 20)
 
-        let shortlist = try await ShortlistRestaurantsUseCase(restaurants: places)
-            .execute(for: profile, at: lunchtime)
+        let shortlist = try ShortlistRestaurantsUseCase().execute(from: places, for: profile, at: lunchtime)
         var remaining = shortlist.candidates
         var asked: [LunchQuestion] = []
 

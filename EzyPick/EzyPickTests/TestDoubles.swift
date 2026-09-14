@@ -19,8 +19,7 @@ final class InMemoryPreferencesStore: DiningPreferencesStore, @unchecked Sendabl
 struct FailingQuestionGenerator: QuestionGenerator {
     struct Unavailable: Error {}
     func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion],
-                   thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion] {
+                   alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion] {
         throw Unavailable()
     }
 }
@@ -28,15 +27,10 @@ struct FailingQuestionGenerator: QuestionGenerator {
 /// A generator that returns whatever a test tells it to, including deliberately useless questions.
 struct ScriptedQuestionGenerator: QuestionGenerator {
     let scripted: [LunchQuestion]
-    /// Reported through `thinkingAloud` before the questions are returned, for tests that care that
-    /// the reasoning reaches the screen.
-    var reasoning: [String] = []
 
     func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion],
-                   thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion] {
-        reasoning.forEach(thinkingAloud)
-        return scripted
+                   alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion] {
+        scripted
     }
 }
 
@@ -45,8 +39,7 @@ struct UnconfiguredQuestionGenerator: QuestionGenerator {
     var isConfigured: Bool { false }
 
     func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion],
-                   thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion] {
+                   alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion] {
         throw FailingQuestionGenerator.Unavailable()
     }
 }

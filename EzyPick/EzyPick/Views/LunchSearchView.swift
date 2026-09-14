@@ -21,7 +21,7 @@ struct LunchSearchView: View {
                     Task { await model.narrowItDown() }
                 }
             case .thinking:
-                ThinkingView(thinking: model.thinking)
+                ThinkingView()
             case .asking:
                 if let question = model.question {
                     QuestionView(question: question,
@@ -174,15 +174,11 @@ struct PlacesFoundView: View {
 
 }
 
-/// The model's reasoning, put on screen while it happens.
+/// The screen the diner waits in front of while the questions are written.
 ///
-/// A spinner here would be a lie of omission. The app is not waiting on a network, it is reading
-/// what other diners wrote about twenty restaurants to find the one thing they genuinely disagree
-/// about, and that reading is the work the diner came for. It is also the only way anyone watching
-/// can tell a service that answered from one that quietly fell back to the built-in questions.
+/// Says what the app is doing rather than only that it is busy: the reading is the work the diner
+/// came for, and a bare spinner would hide the one moment the app earns its keep.
 struct ThinkingView: View {
-    let thinking: String
-
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(spacing: 10) {
@@ -190,13 +186,9 @@ struct ThinkingView: View {
                 Text("Reading the reviews").font(.title3.bold())
             }
 
-            ScrollView {
-                Text(thinking.isEmpty ? "Working out what is worth asking you." : thinking)
-                    .font(.callout)
-                    .foregroundStyle(thinking.isEmpty ? .secondary : .primary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-            }
-            .animation(.default, value: thinking)
+            Text("Working out what is worth asking you.")
+                .font(.callout)
+                .foregroundStyle(.secondary)
 
             Spacer()
         }

@@ -16,13 +16,9 @@ protocol QuestionGenerator: Sendable {
     /// - Parameters:
     ///   - candidates: the restaurants still in the running.
     ///   - alreadyAsked: questions the diner has answered already, which must not be repeated.
-    ///   - thinkingAloud: called with each fragment of the generator's reasoning as it arrives, so
-    ///     the screen can show the work rather than a spinner. A generator that has no reasoning to
-    ///     report simply never calls it.
     /// - Returns: between one and three questions, in the order they should be asked.
     func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion],
-                   thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion]
+                   alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion]
 
     /// Whether this generator can actually be asked anything.
     ///
@@ -33,12 +29,6 @@ protocol QuestionGenerator: Sendable {
 }
 
 extension QuestionGenerator {
-    /// For callers that do not show the reasoning, chiefly tests and the deterministic generator.
-    func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion] = []) async throws -> [LunchQuestion] {
-        try await questions(narrowing: candidates, alreadyAsked: alreadyAsked, thinkingAloud: { _ in })
-    }
-
     /// Anything that can be asked is configured; the one that cannot says so for itself.
     var isConfigured: Bool { true }
 }

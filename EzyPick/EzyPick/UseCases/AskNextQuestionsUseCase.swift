@@ -1,5 +1,4 @@
 import Foundation
-import os
 
 /// Decides what to ask the diner next, or that nothing more is worth asking.
 ///
@@ -35,31 +34,20 @@ struct AskNextQuestionsUseCase {
     /// diner into a narrowing that is not configured to happen.
     var canAsk: Bool { generator.isConfigured }
 
-    /// - Parameter thinkingAloud: passed through to the generator, so the screen can show the model
-    ///   working. The fallback generator is silent, which is correct: it is instant.
     func execute(narrowing candidates: [CandidateRestaurant],
-                        alreadyAsked: [LunchQuestion] = [],
-                        thinkingAloud: @escaping @Sendable (String) -> Void = { _ in }) async -> NarrowingStep {
+                 alreadyAsked: [LunchQuestion] = []) async -> NarrowingStep {
         guard generator.isConfigured else { return .stop(.noQuestionService) }
         guard candidates.count > Self.shortlistTarget else { return .stop(.fewEnoughLeft) }
         guard alreadyAsked.count < Self.questionLimit else { return .stop(.questionLimitReached) }
 
         let suggested = (try? await generator.questions(narrowing: candidates,
-                                                        alreadyAsked: alreadyAsked,
-                                                        thinkingAloud: thinkingAloud)) ?? []
+                                                        alreadyAsked: alreadyAsked)) ?? []
         if let usable = bestUsable(from: suggested, candidates: candidates, alreadyAsked: alreadyAsked) {
             return .ask(usable)
         }
 
-        // The diner is never told this happened, and should not be: they get a question either way.
-        // Whoever is reading the console does need to know, because a run that quietly falls back
-        // looks identical to one where the service answered well.
-        Diagnostics.questions.notice("""
-            falling back to the built-in generator: the service returned \
-            \(suggested.count, privacy: .public) question(s), none of which split \
-            \(candidates.count, privacy: .public) candidates or were unasked
-            """)
-
+        // The service was reachable and said nothing usable, so the built-in generator answers.
+        // The diner is never told, and should not be: they get a question either way.
         let backup = (try? await fallback.questions(narrowing: candidates, alreadyAsked: alreadyAsked)) ?? []
         if let usable = bestUsable(from: backup, candidates: candidates, alreadyAsked: alreadyAsked) {
             return .ask(usable)

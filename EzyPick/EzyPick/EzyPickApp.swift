@@ -1,5 +1,4 @@
 import SwiftUI
-import os
 
 /// Builds the app's parts and hands them to the first screen.
 ///
@@ -11,8 +10,7 @@ struct EzyPickApp: App {
     private let store = UserDefaultsPreferencesStore()
     private let restaurants: RestaurantRepository
     private let generator: QuestionGenerator
-    /// One fix, shared by the search and by the screen that reports where it searched.
-    private let location = RememberedLocation(DeviceLocationProvider())
+    private let location = DeviceLocationProvider()
 
     init() {
         let configuration = AppConfiguration.current
@@ -56,18 +54,9 @@ struct EzyPickApp: App {
     /// one, which is real work on real data: where they are, what is around them, and what fits.
     private static func questionWriter(_ configuration: AppConfiguration) -> QuestionGenerator {
         guard let baseURL = configuration.aiBaseURL, let key = configuration.aiAPIKey else {
-            Diagnostics.questions.notice("""
-                no question service configured: set AI_BASE_URL and AI_API_KEY in .env for a \
-                language model to write the questions. The search will stop after the research.
-                """)
             return QuestionServiceMissing()
         }
-        let model = configuration.aiModel
-        Diagnostics.questions.notice("""
-            questions written by \(model ?? "the service default", privacy: .public) \
-            at \(endpoint(from: baseURL).absoluteString, privacy: .public)
-            """)
-        guard let model else {
+        guard let model = configuration.aiModel else {
             return LLMQuestionGenerator(apiKey: key, endpoint: endpoint(from: baseURL))
         }
         return LLMQuestionGenerator(apiKey: key, endpoint: endpoint(from: baseURL), model: model)
@@ -116,8 +105,7 @@ private struct QuestionServiceMissing: QuestionGenerator {
     var isConfigured: Bool { false }
 
     func questions(narrowing candidates: [CandidateRestaurant],
-                   alreadyAsked: [LunchQuestion],
-                   thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion] {
+                   alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion] {
         throw NotConfigured()
     }
 

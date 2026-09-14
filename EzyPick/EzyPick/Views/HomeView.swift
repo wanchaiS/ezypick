@@ -28,6 +28,7 @@ struct HomeView: View {
                     .foregroundStyle(.secondary)
 
                 Button {
+                    search.startOver()
                     showingSearch = true
                 } label: {
                     Text("Find me lunch")

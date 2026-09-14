@@ -34,22 +34,23 @@ final class LunchSearchViewModel: ObservableObject {
     @Published private(set) var askedSoFar: [LunchQuestion] = []
     @Published private(set) var tally: ExclusionTally?
     @Published private(set) var stoppedBecause: StopReason?
-    /// The model's reasoning, as it arrives.
-    ///
-    /// Shown rather than hidden because the wait is the app's case for itself: this is the reading
-    /// a person would otherwise do. Empty whenever nothing is being asked for, and empty for the
-    /// whole call when the deterministic generator answers, which is honest — it does not reason.
-    @Published private(set) var thinking: String = ""
 
     private var declined: Set<Restaurant.ID> = []
     private var preferences: DiningPreferences?
     private var allowingOverBudget = false
+    /// The one search this trip is built on: where it ran from, and what it returned.
+    ///
+    /// Kept so that widening a limit re-fences the places already found. Searching again would
+    /// cost a second billed lookup and could describe a different moment from the summary the
+    /// diner is looking at.
+    private var search: (origin: Coordinate, places: [Restaurant])?
 
-    private let surveying: SurveyNearbyRestaurantsUseCase
-    private let shortlisting: ShortlistRestaurantsUseCase
+    private let restaurants: RestaurantRepository
+    private let location: any CurrentLocationProvider
+    private let surveying = SurveyNearbyRestaurantsUseCase()
+    private let shortlisting = ShortlistRestaurantsUseCase()
     private let narrowing: AskNextQuestionsUseCase
     private let answering = AnswerQuestionUseCase()
-    private let search: OneShotRestaurantCache
 
     /// The suburb the search ran from, once it has been looked up. Nil while unknown.
     @Published private(set) var originName: String?
@@ -57,18 +58,29 @@ final class LunchSearchViewModel: ObservableObject {
     init(restaurants: RestaurantRepository,
          generator: QuestionGenerator,
          location: any CurrentLocationProvider) {
-        // One lookup and one position fix serve the whole trip. Without this the summary the diner
-        // reads and the shortlist they get could describe two different searches, from two
-        // different corners.
-        let search = OneShotRestaurantCache(restaurants)
-        self.search = search
-        self.surveying = SurveyNearbyRestaurantsUseCase(restaurants: search, location: location)
-        self.shortlisting = ShortlistRestaurantsUseCase(restaurants: search)
+        self.restaurants = restaurants
+        self.location = location
         self.narrowing = AskNextQuestionsUseCase(generator: generator)
     }
 
     var questionNumber: Int { askedSoFar.count + 1 }
     var questionLimit: Int { AskNextQuestionsUseCase.questionLimit }
+
+    /// A new trip: the diner has come back to the home screen and pressed the button again.
+    ///
+    /// Two things are true only for as long as one trip lasts. Turning down a shortlist rules those
+    /// venues out of the *rest of that decision*, not out of lunch forever, and lifting the budget
+    /// is the diner saying they will spend more **today**. Both used to outlive the trip that set
+    /// them, because nothing marked where a trip ended: a second search silently kept excluding
+    /// places the diner had never seen, and quietly ignored the budget cap they had just gone back
+    /// and set. A fence that has switched itself off is worse than no fence, because the tally
+    /// still reports on it.
+    func startOver() {
+        declined = []
+        allowingOverBudget = false
+        search = nil
+        originName = nil
+    }
 
     /// Looks up what is around the diner and stops, so they see the search before it is narrowed.
     ///
@@ -82,22 +94,29 @@ final class LunchSearchViewModel: ObservableObject {
         question = nil
         stoppedBecause = nil
         tally = nil
-        thinking = ""
 
         do {
-            // Both of these read the same single lookup through `OneShotRestaurantCache`, so the
-            // summary and the list below it always describe the same search and one trip costs one
-            // billed call. The clock is read once, for the same reason.
-            let now = TimeOfDay.now
-            let survey = try await surveying.execute()
-            let shortlist = try await shortlisting.execute(for: preferences,
-                                                           at: now,
-                                                           declining: declined,
-                                                           allowingOverBudget: allowingOverBudget)
+            let trip: (origin: Coordinate, places: [Restaurant])
+            if let search {
+                trip = search
+            } else {
+                trip = (try await location.currentCoordinate(),
+                        try await restaurants.nearbyRestaurants())
+                search = trip
+            }
+
+            // The clock is read once and passed in, so the summary and the fence agree about what
+            // is open even if the diner takes a minute to press Next.
+            let survey = try surveying.execute(from: trip.places, at: trip.origin)
+            let shortlist = try shortlisting.execute(from: trip.places,
+                                                     for: preferences,
+                                                     at: TimeOfDay.now,
+                                                     declining: declined,
+                                                     allowingOverBudget: allowingOverBudget)
             candidates = shortlist.candidates
             tally = shortlist.excluded
             phase = .results(survey)
-            originName = await Self.suburb(at: survey.origin)
+            originName = await Self.suburb(at: trip.origin)
         } catch let error as any LocalizedError {
             // Every failure that can reach here writes its own words: the fence explaining which
             // limit did the damage, a refused location, a places lookup that did not come back.
@@ -131,14 +150,14 @@ final class LunchSearchViewModel: ObservableObject {
 
     /// The diner has seen what was found and asked the app to narrow it down.
     func narrowItDown() async {
-        startThinking()
+        phase = .thinking
         await askOrFinish()
     }
 
     /// Applies the diner's answer and either asks again or shows the shortlist.
     func answer(_ answer: Answer) async {
         guard let question else { return }
-        startThinking()
+        phase = .thinking
         do {
             candidates = try answering.execute(answer, to: question, narrowing: candidates)
             askedSoFar.append(question)
@@ -148,12 +167,6 @@ final class LunchSearchViewModel: ObservableObject {
             askedSoFar.append(question)
             await askOrFinish()
         }
-    }
-
-    /// Clears the last run's reasoning and shows the screen the diner waits in front of.
-    private func startThinking() {
-        thinking = ""
-        phase = .thinking
     }
 
     /// The diner does not fancy any of the three. Rule them out and look again.
@@ -171,11 +184,7 @@ final class LunchSearchViewModel: ObservableObject {
     }
 
     private func askOrFinish() async {
-        let step = await narrowing.execute(narrowing: candidates,
-                                           alreadyAsked: askedSoFar,
-                                           thinkingAloud: { [weak self] fragment in
-                                               Task { @MainActor in self?.thinking += fragment }
-                                           })
+        let step = await narrowing.execute(narrowing: candidates, alreadyAsked: askedSoFar)
         switch step {
         case .ask(let next):
             question = next

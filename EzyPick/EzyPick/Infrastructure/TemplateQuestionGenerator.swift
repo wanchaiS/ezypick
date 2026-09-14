@@ -10,8 +10,7 @@ struct TemplateQuestionGenerator: QuestionGenerator {
     init() {}
 
     func questions(narrowing candidates: [CandidateRestaurant],
-                          alreadyAsked: [LunchQuestion],
-                          thinkingAloud: @escaping @Sendable (String) -> Void) async throws -> [LunchQuestion] {
+                          alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion] {
         rankedQuestions(narrowing: candidates, alreadyAsked: alreadyAsked)
     }
 

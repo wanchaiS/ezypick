@@ -11,22 +11,11 @@ import Foundation
 /// - Important: No business rule lives here. Nothing is excluded, so nothing can be wrongly
 ///   excluded, and a diner reading this screen is reading the search rather than the filter.
 struct SurveyNearbyRestaurantsUseCase {
-    private let restaurants: RestaurantRepository
-    private let location: any CurrentLocationProvider
-
-    /// - Parameter location: must be the same provider the repository searches from, or the summary
-    ///   will name a corner the restaurants were not chosen from. `RememberedLocation` exists to
-    ///   make that easy to get right.
-    init(restaurants: RestaurantRepository, location: any CurrentLocationProvider) {
-        self.restaurants = restaurants
-        self.location = location
-    }
-
-    /// - Throws: whatever the repository or the location provider throws, so a refused location or
-    ///   an unreachable service keeps its own explanation.
-    func execute() async throws -> NearbySurvey {
-        let origin = try await location.currentCoordinate()
-        let found = try await restaurants.nearbyRestaurants()
+    /// - Parameters:
+    ///   - found: everything the search returned, unfiltered.
+    ///   - origin: where that search ran from, so the screen can say where it looked.
+    /// - Throws: `SurveyNearbyRestaurantsError.nothingNearby` when the search came back empty.
+    func execute(from found: [Restaurant], at origin: Coordinate) throws -> NearbySurvey {
         guard !found.isEmpty else { throw SurveyNearbyRestaurantsError.nothingNearby }
 
         return NearbySurvey(

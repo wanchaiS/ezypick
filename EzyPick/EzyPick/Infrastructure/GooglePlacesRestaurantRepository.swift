@@ -1,5 +1,4 @@
 import Foundation
-import os
 
 /// Restaurants from Google Places API (New), centred on wherever the diner is standing.
 ///
@@ -65,36 +64,21 @@ struct GooglePlacesRestaurantRepository: RestaurantRepository {
         request.httpBody = try JSONSerialization.data(
             withJSONObject: Self.searchBody(around: origin, radiusMetres: searchRadiusMetres))
 
-        Diagnostics.places.info("""
-            searching from \(origin.latitude, privacy: .public), \
-            \(origin.longitude, privacy: .public) within \(Int(searchRadiusMetres), privacy: .public) m
-            """)
-
         let data: Data
         let response: URLResponse
         do {
             (data, response) = try await session.data(for: request)
         } catch {
-            Diagnostics.places.error("lookup failed before a reply: \(error.localizedDescription, privacy: .public)")
             throw PlacesLookupError.placesUnavailable
         }
         guard let http = response as? HTTPURLResponse, (200..<300).contains(http.statusCode) else {
-            let code = (response as? HTTPURLResponse)?.statusCode ?? -1
-            Diagnostics.places.error("lookup refused with HTTP \(code, privacy: .public)")
             throw PlacesLookupError.placesUnavailable
         }
         guard let payload = try? JSONDecoder().decode(Places.NearbyResponse.self, from: data) else {
-            Diagnostics.places.error("reply could not be decoded, \(data.count, privacy: .public) bytes")
             throw PlacesLookupError.unreadableResponse
         }
 
         let restaurants = Self.restaurants(in: payload, from: origin, on: Date())
-        // The gap between the two counts is the venues dropped for not trading or having no price.
-        Diagnostics.places.info("""
-            \(payload.places?.count ?? 0, privacy: .public) venues returned, \
-            \(restaurants.count, privacy: .public) usable: \
-            \(restaurants.map(\.name).joined(separator: ", "), privacy: .public)
-            """)
         guard !restaurants.isEmpty else { throw PlacesLookupError.nothingNearby }
         return restaurants
     }

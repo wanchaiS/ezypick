@@ -1,5 +1,4 @@
 import Foundation
-import os
 
 /// Works out which restaurants the diner could actually eat at right now.
 ///
@@ -19,11 +18,8 @@ import os
 /// - Important: Business rules enforced here, in this order — budget per head, walking distance,
 ///   open at the time given, and anything already turned down in this session.
 struct ShortlistRestaurantsUseCase {
-    private let restaurants: RestaurantRepository
-
-    init(restaurants: RestaurantRepository) { self.restaurants = restaurants }
-
     /// - Parameters:
+    ///   - all: everything the search returned, before any limit is applied.
     ///   - preferences: the diner's saved limits.
     ///   - now: the time to judge "open" against. Passed in rather than read here so a test never
     ///     depends on the hour it runs at.
@@ -31,16 +27,17 @@ struct ShortlistRestaurantsUseCase {
     ///   - allowingOverBudget: set only when the diner has deliberately lifted their own budget.
     /// - Throws: `ShortlistRestaurantsError.nothingWithinReach` carrying the tally, so the message
     ///   can name the limit that did the damage.
-    func execute(for preferences: DiningPreferences,
-                        at now: TimeOfDay,
-                        declining declined: Set<Restaurant.ID> = [],
-                        allowingOverBudget: Bool = false) async throws -> Shortlist {
-        let all = try await restaurants.nearbyRestaurants()
-
+    func execute(from all: [Restaurant],
+                 for preferences: DiningPreferences,
+                 at now: TimeOfDay,
+                 declining declined: Set<Restaurant.ID> = [],
+                 allowingOverBudget: Bool = false) throws -> Shortlist {
         var tally = ExclusionTally()
         tally.consideredCount = all.count
         var survivors: [CandidateRestaurant] = []
 
+        // Stops at the first limit a venue fails, so the counts are disjoint and the line the diner
+        // reads adds up: every excluded venue is counted once, against the limit that cost it.
         for restaurant in all {
             if !allowingOverBudget && restaurant.pricePerHead > preferences.budgetPerHead { tally.byBudget += 1; continue }
             if restaurant.walkingMinutes > preferences.willingToWalkMinutes { tally.byDistance += 1; continue }
@@ -48,16 +45,6 @@ struct ShortlistRestaurantsUseCase {
             if declined.contains(restaurant.id) { tally.byPreviousDecline += 1; continue }
             survivors.append(CandidateRestaurant(restaurant))
         }
-
-        // The fence is silent to the diner by design, which also makes it invisible to whoever is
-        // trying to work out why a shortlist came back the size it did.
-        Diagnostics.fence.info("""
-            \(tally.consideredCount, privacy: .public) considered, \
-            \(survivors.count, privacy: .public) fit \
-            (budget \(tally.byBudget, privacy: .public), \
-            walk \(tally.byDistance, privacy: .public), shut \(tally.byOpeningHours, privacy: .public), \
-            declined \(tally.byPreviousDecline, privacy: .public))
-            """)
 
         guard !survivors.isEmpty else { throw ShortlistRestaurantsError.nothingWithinReach(tally) }
         return Shortlist(candidates: survivors, excluded: tally)
