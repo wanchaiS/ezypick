@@ -86,9 +86,9 @@ struct ShortlistView: View {
 /// What the diner sees when their own limits leave nothing to suggest: the limit that did the
 /// damage, and the way out of it.
 ///
-/// - Note: The way out is always the settings, never a one-tap override of one limit. An offer to
-///   spend more is wrong on the two refusals out of three that budget did not cause, and a button
-///   that cannot fix what the screen above it just named reads as broken.
+/// - Note: The one way out is the profile editor, never a one-tap widening of whichever limit
+///   refused. Budget is only one of the four causes that reach this screen, and a button that
+///   cannot fix what the line above it just named reads as broken.
 struct NothingFitsView: View {
     let problem: String
     let howToFixIt: String
@@ -110,8 +110,8 @@ struct NothingFitsView: View {
 
 /// What the diner sees when the app found them places but cannot narrow them down.
 ///
-/// - Important: Deliberately not `NothingFitsView`, whose "Nothing fits today" heading and offer
-///   to spend more are both false here.
+/// - Important: Deliberately not `NothingFitsView`. Everything did fit; the app simply cannot ask
+///   about them, and no setting the diner can reach will change that, so there is no button here.
 struct NotSetUpView: View {
     let placesFound: Int
     let problem: String

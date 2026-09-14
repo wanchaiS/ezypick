@@ -31,9 +31,8 @@ struct GooglePlacesRestaurantRepository: RestaurantRepository {
 
     /// Every operating, priced restaurant within the search radius of the diner.
     ///
-    /// - Note: Only venues that are not trading, or have no price to check a budget against, are
-    ///   dropped here.
-    /// - Throws: `PlacesLookupError`, the only error a caller sees.
+    /// - Throws: `PlacesLookupError`, or the `LocationError` from finding the diner, left as it is:
+    ///   someone who refused location access must be told about location, not about restaurants.
     func nearbyRestaurants() async throws -> [Restaurant] {
         let origin = try await location.currentCoordinate()
 
@@ -395,6 +394,8 @@ enum Places {
     }
 
     struct OpeningHours: Codable {
+        /// Decoded but never read: Google's answer at response time, while the fence judges "open"
+        /// against the clock the caller passes in. Two clocks would disagree on one screen.
         let openNow: Bool?
         let periods: [Period]?
     }

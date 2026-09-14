@@ -9,9 +9,7 @@ final class DiningProfileViewModel: ObservableObject {
     @Published var budgetPerHead = 25
     @Published var willingToWalkMinutes = 10
 
-    /// Whether the diner has ever saved a profile.
-    ///
-    /// - Note: Lets the home screen tell values a person chose apart from untouched defaults.
+    /// How the home screen tells a budget a person chose from an untouched default.
     @Published private(set) var hasSavedProfile = false
 
     @Published var problem: String?

@@ -10,21 +10,22 @@ final class LunchSearchViewModel: ObservableObject {
 
     /// Where the diner currently is in deciding. The whole screen flow is driven off this.
     enum Phase: Equatable {
-        /// Nothing asked for yet.
+        /// The screen is up but `findLunch` has not run; drawn the same as ``lookingAround``.
         case notStarted
-        /// The nearby search is running. Nothing is known yet.
+        /// The one billed lookup is in flight. Every later phase re-fences what it returned.
         case lookingAround
         /// The places that fit the diner's own limits, named rather than counted.
         case results(NearbySurvey)
-        /// Working out what is worth asking next.
+        /// The last answer is applied and the next question written: the only wait on a service.
         case thinking
-        /// A question is waiting for an answer.
+        /// A question is on screen. ``question`` must be set before this, or nothing is drawn.
         case asking
         /// The final few, with the pick first.
         case shortlist
         /// The search worked but the narrowing cannot run. Not the same as nothing fitting.
         case notSetUp(problem: String, howToFixIt: String)
-        /// Nothing could be suggested, with what blocked it and what to try instead.
+        /// Where every failure lands, not only the diner's limits: a refused location or an
+        /// unreachable service too, each with its own words.
         case nothingFits(problem: String, howToFixIt: String)
     }
 
@@ -50,7 +51,7 @@ final class LunchSearchViewModel: ObservableObject {
     private let narrowing: AskNextQuestionsUseCase
     private let answering = AnswerQuestionUseCase()
 
-    /// The suburb the search ran from, once it has been looked up. Nil while unknown.
+    /// The suburb, looked up after the results are already on screen: a courtesy, never a hold-up.
     @Published private(set) var originName: String?
 
     init(restaurants: RestaurantRepository,
@@ -93,8 +94,9 @@ final class LunchSearchViewModel: ObservableObject {
                 search = trip
             }
 
-            // The clock is read once and passed in, so the summary and the fence agree about what
-            // is open even if the diner takes a minute to press Next.
+            // Both read the same one search: the survey describes everything found and excludes
+            // nothing, the fence applies the diner's limits, so the count on screen and the tally
+            // of what went missing under it are counted off the same denominator.
             let survey = try surveying.execute(from: trip.places, at: trip.origin)
             let shortlist = try shortlisting.execute(from: trip.places,
                                                      for: preferences,
@@ -130,7 +132,6 @@ final class LunchSearchViewModel: ObservableObject {
             .joined(separator: ", ")
     }
 
-    /// The diner has seen what was found and asked the app to narrow it down.
     func narrowItDown() async {
         phase = .thinking
         await askOrFinish()

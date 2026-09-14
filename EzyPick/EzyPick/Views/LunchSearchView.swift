@@ -57,7 +57,6 @@ struct LunchSearchView: View {
     }
 }
 
-/// Shown while the nearby search itself is running.
 struct LookingAroundView: View {
     var body: some View {
         VStack(spacing: 14) {
@@ -162,7 +161,6 @@ struct PlacesFoundView: View {
 
 }
 
-/// Shown while the questions are being written, saying what the app is reading.
 struct ThinkingView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
@@ -193,7 +191,8 @@ struct QuestionView: View {
     let limit: Int
     let answer: (Answer) -> Void
 
-    /// The reason, when whatever wrote the question gave one.
+    /// Nil rather than empty: the template generator writes no reason, and a blank gap under the
+    /// question reads as something that failed to load.
     private var reason: String? {
         let trimmed = question.because.trimmingCharacters(in: .whitespacesAndNewlines)
         return trimmed.isEmpty ? nil : trimmed

@@ -7,14 +7,12 @@ import Foundation
 struct NearbySurvey: Equatable, Sendable {
     /// Where the search was run from, carried so the diner can be shown it.
     let origin: Coordinate
-    /// How many restaurants the search found, before any of the diner's limits are applied.
     let count: Int
-    /// The shortest walk to any of them, in minutes.
     let nearestWalkMinutes: Int
     /// What a diner would typically spend at the middle of this lot, in whole dollars.
     ///
-    /// - Important: The middle, not a range. Places reports a price *band* per venue and the app
-    ///   reads its lower edge, so a cheapest-to-dearest range describes no real restaurant.
+    /// - Important: The middle, not a range. Every venue is reported as a price *band*, so a
+    ///   cheapest-to-dearest range across all of them describes no real restaurant.
     let typicalPerHead: Int
     /// The kinds of food most of them serve, most common first, at most three.
     let commonCuisines: [Cuisine]

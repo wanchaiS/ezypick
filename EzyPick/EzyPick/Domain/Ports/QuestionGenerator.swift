@@ -8,7 +8,8 @@ protocol QuestionGenerator: Sendable {
     /// Questions worth asking about these candidates, best first.
     ///
     /// - Parameter alreadyAsked: questions the diner has answered, which must not be repeated.
-    /// - Returns: between one and three questions, in the order they should be asked.
+    /// - Returns: between one and three questions, preferred first. Preference is a hint only: the
+    ///   use case picks whichever splits the candidates most evenly and uses this order for ties.
     func questions(narrowing candidates: [CandidateRestaurant],
                    alreadyAsked: [LunchQuestion]) async throws -> [LunchQuestion]
 

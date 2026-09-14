@@ -21,10 +21,6 @@ struct AskNextQuestionsUseCase {
         self.fallback = fallback
     }
 
-    /// Whether this run can ask anything at all. Read by the view model so the flow can stop on
-    /// the results screen when no question service is configured.
-    var canAsk: Bool { generator.isConfigured }
-
     func execute(narrowing candidates: [CandidateRestaurant],
                  alreadyAsked: [LunchQuestion] = []) async -> NarrowingStep {
         guard generator.isConfigured else { return .stop(.noQuestionService) }
@@ -37,7 +33,8 @@ struct AskNextQuestionsUseCase {
             return .ask(usable)
         }
 
-        // The service was reachable and said nothing usable, so the built-in generator answers.
+        // Nothing usable came back — the call failed, or every question it wrote repeated or
+        // failed to split — so the built-in generator answers instead of the diner being stopped.
         let backup = (try? await fallback.questions(narrowing: candidates, alreadyAsked: alreadyAsked)) ?? []
         if let usable = bestUsable(from: backup, candidates: candidates, alreadyAsked: alreadyAsked) {
             return .ask(usable)

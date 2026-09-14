@@ -4,22 +4,21 @@ import Foundation
 /// question-writing service.
 ///
 /// - Important: Read from a `KEY=VALUE` file the build copies into the bundle as `env.txt`, never
-///   from source. A missing file is the normal case: a fresh clone gets nil for every property and
-///   runs on the seeded catalogue and the built-in question generator rather than warning.
+///   from source. A fresh clone gets nil for every property, and the app says so rather than
+///   inventing data: with no places key it refuses to search, and with no question service it
+///   shows what it found and stops.
 struct AppConfiguration {
-    /// The configuration the running app was launched with.
+    /// Read once, at launch: nothing re-reads the file, so a changed setting needs a fresh build.
     static let current = AppConfiguration()
 
-    /// Key for Google Places API (New). Absent means the seeded catalogue.
+    /// Google Places API (New). Absent means no restaurants at all, and the app says so.
     let googlePlacesAPIKey: String?
 
-    /// How far out from the diner to search, in metres.
     let placesSearchRadiusMetres: Double
 
-    /// Where the question-writing service lives. Needed together with ``aiAPIKey``.
+    /// Where the question service lives. Missing this or ``aiAPIKey`` means no questions at all.
     let aiBaseURL: URL?
 
-    /// Credential for the question-writing service.
     let aiAPIKey: String?
 
     /// Which model to ask for. Absent leaves the generator's own default in place.

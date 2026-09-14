@@ -2,8 +2,8 @@ import CoreLocation
 
 /// Answers the one question CoreLocation is here for: where is the diner standing right now?
 ///
-/// Kept behind `CurrentLocationProvider` so the use cases and the places repository can be
-/// exercised with a fixed coordinate. One coarse `requestLocation()` per search.
+/// Kept behind `CurrentLocationProvider` so the use cases and the repository can be exercised with
+/// a fixed coordinate. Coarse on purpose: street accuracy costs battery and standing-still time.
 ///
 /// - Important: Resuming a continuation twice traps the process, so ``finish(_:)`` is the only
 ///   place that resumes, on every path including a denial that arrives before `requestLocation()`
@@ -39,7 +39,9 @@ nonisolated final class DeviceLocationProvider: NSObject, CurrentLocationProvide
         lock.lock()
         guard pending == nil else {
             lock.unlock()
-            // One fix at a time: the app asks once per search, so a second caller is a mistake.
+            // One at a time, never queued. A search does ask twice, but in sequence: the view
+            // model for the origin it shows, then the repository to centre the request. Two at
+            // once means a caller started a second search over the top of the first.
             continuation.resume(throwing: LocationError.unavailable)
             return
         }

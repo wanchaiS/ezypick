@@ -38,7 +38,8 @@ struct TimeOfDay: Equatable, Comparable, Codable, Sendable, CustomStringConverti
         a.minutesSinceMidnight < b.minutesSinceMidnight
     }
 
-    // Decoded from "HH:MM", the form the seeded catalogue and the places API both use.
+    // On the wire a time is "HH:MM" rather than the minute count it is stored as, and anything
+    // else is refused: a time quietly read as midnight would make a venue look shut all day.
     init(from decoder: Decoder) throws {
         let text = try decoder.singleValueContainer().decode(String.self)
         guard let parsed = TimeOfDay(text) else {

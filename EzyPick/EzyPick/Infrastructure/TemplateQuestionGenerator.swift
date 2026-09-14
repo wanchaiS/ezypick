@@ -4,7 +4,9 @@ import Foundation
 ///
 /// - Note: Picks whichever characteristic divides the remaining restaurants most evenly, because
 ///   that rules out the most options per tap. Deterministic and free, so it backs the language
-///   model when there is no network, key or usable reply, and it is what the tests run against.
+///   model when the service is unreachable or answers with nothing usable, and it is what the
+///   tests run against. It is not a substitute for a missing service: with none configured the
+///   app stops on the results screen rather than narrowing on booleans alone.
 struct TemplateQuestionGenerator: QuestionGenerator {
     init() {}
 
@@ -13,7 +15,8 @@ struct TemplateQuestionGenerator: QuestionGenerator {
         rankedQuestions(narrowing: candidates, alreadyAsked: alreadyAsked)
     }
 
-    /// Exposed synchronously so callers that cannot await still have a question to fall back on.
+    /// Synchronous because none of this waits on anything; the `async` above is the port's shape,
+    /// not this generator's need.
     func rankedQuestions(narrowing candidates: [CandidateRestaurant],
                                 alreadyAsked: [LunchQuestion]) -> [LunchQuestion] {
         guard !candidates.isEmpty else { return [] }

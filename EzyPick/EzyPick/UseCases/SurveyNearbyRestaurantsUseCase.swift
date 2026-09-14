@@ -1,6 +1,6 @@
 import Foundation
 
-/// Looks up what is around the diner and describes it. It answers "what is even out here?",
+/// Describes what a search already found around the diner. It answers "what is even out here?",
 /// which comes before "where could I eat?".
 ///
 /// - Important: No business rule lives here. Nothing is excluded, so nothing can be wrongly

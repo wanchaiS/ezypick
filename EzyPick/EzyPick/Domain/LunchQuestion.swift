@@ -9,13 +9,12 @@ import Foundation
 struct LunchQuestion: Equatable, Sendable {
     /// What the question is about, in a word or two, so the same ground is never covered twice.
     let topic: String
-    /// The question as the diner reads it.
     let text: String
     /// The restaurants a yes keeps. Anything not named here is what a no keeps.
     let keptByYes: Set<Restaurant.ID>
-    /// One line saying what this question is splitting on, shown under it. Belongs to the question
-    /// rather than the generator's reasoning stream, so it always matches the question actually
-    /// picked; empty when the writer gave no reason.
+    /// One line saying what this question is splitting on, shown under it. Carried on the question
+    /// itself rather than alongside the batch, so it always matches the question actually picked;
+    /// empty when the writer gave no reason.
     let because: String
 
     init(topic: String, text: String, keptByYes: Set<Restaurant.ID>, because: String = "") {
@@ -25,7 +24,6 @@ struct LunchQuestion: Equatable, Sendable {
         self.because = because
     }
 
-    /// Whether this question would actually divide the given candidates.
     func splits(_ candidates: [CandidateRestaurant]) -> Bool {
         let yes = candidates.lazy.filter { keptByYes.contains($0.id) }.count
         return yes > 0 && yes < candidates.count
@@ -43,12 +41,10 @@ struct LunchQuestion: Equatable, Sendable {
     }
 }
 
-/// The diner's answer to a question.
 enum Answer: Equatable, Sendable {
     case yes, no
 }
 
-/// What the app decided to do next: ask another question, or stop and show the shortlist.
 enum NarrowingStep: Equatable, Sendable {
     case ask(LunchQuestion)
     case stop(StopReason)
@@ -58,7 +54,6 @@ enum NarrowingStep: Equatable, Sendable {
 enum StopReason: Equatable, Sendable {
     /// Three or fewer restaurants remain — the diner can choose from these without help.
     case fewEnoughLeft
-    /// The app has asked as many questions as it is allowed to.
     case questionLimitReached
     /// Nothing left to ask that would tell the app anything new.
     case nothingLeftToAsk

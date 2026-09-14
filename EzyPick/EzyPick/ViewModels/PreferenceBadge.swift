@@ -6,7 +6,6 @@ struct PreferenceBadge: Identifiable, Equatable {
 
     var id: String { text }
 
-    /// Every badge for a saved profile: what the diner will spend and how far they will walk.
     static func all(for preferences: DiningPreferences) -> [PreferenceBadge] {
         [
             PreferenceBadge(text: "Up to $\(preferences.budgetPerHead)"),

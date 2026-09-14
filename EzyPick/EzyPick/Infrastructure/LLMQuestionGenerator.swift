@@ -45,7 +45,7 @@ struct LLMQuestionGenerator: QuestionGenerator {
         return try Self.parse(Self.reply(in: data), candidates: candidates)
     }
 
-    /// The assistant's message out of a chat completion reply.
+    /// An empty message is unreadable, not a service with nothing left to ask.
     static func reply(in data: Data) throws -> String {
         struct Completion: Decodable {
             let choices: [Choice]

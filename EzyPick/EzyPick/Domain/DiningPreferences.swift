@@ -3,10 +3,10 @@ import Foundation
 /// What a diner has told the app about the practical limits of a working lunch break, declared
 /// once and reused for every lunch.
 ///
-/// - Important: Business rules — `budgetPerHead` excludes anything dearer unless the diner lifts
-///   it for today, and `willingToWalkMinutes` bounds what can be suggested at all. Nothing is
-///   inferred from behaviour, and when the diner intends to eat is not stored: the app searches
-///   against the clock.
+/// - Important: Business rules — `budgetPerHead` is absolute: anything dearer is excluded, with no
+///   way to lift it for one lunch, so a diner who wants a dearer place edits their profile.
+///   `willingToWalkMinutes` bounds what can be suggested at all. Nothing is inferred from
+///   behaviour, and when the diner intends to eat is not stored: the app searches against the clock.
 struct DiningPreferences: Equatable, Codable, Sendable {
     /// The most the diner will spend on one lunch, in whole dollars.
     let budgetPerHead: Int
@@ -33,7 +33,7 @@ struct CandidateRestaurant: Equatable, Identifiable, Sendable {
         restaurant.attributes.contains(attribute)
     }
 
-    /// Why this candidate is worth suggesting, in words the diner can act on.
+    /// Walk and price in one line, because those are the two things the diner's limits were set on.
     var recommendationReason: String {
         "\(restaurant.walkingMinutes) min walk · about $\(restaurant.pricePerHead) a head"
     }

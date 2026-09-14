@@ -1,8 +1,7 @@
 import SwiftUI
 
-/// Builds the app's parts and hands them to the first screen.
-///
-/// - Note: The only place that knows which implementations are in use.
+/// Builds the app's parts and hands them to the first screen: the only place that knows which
+/// implementations are in use, and the only one that reads the configuration file.
 @main
 struct EzyPickApp: App {
     private let store = UserDefaultsPreferencesStore()

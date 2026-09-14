@@ -62,7 +62,8 @@ struct Restaurant: Identifiable, Equatable, Codable, Sendable {
     let pricePerHead: Int
     let rating: Double
     let ratingCount: Int
-    /// Minutes on foot from the office. Minutes rather than metres: a lunch break is measured in time.
+    /// Minutes on foot from wherever the diner is standing. Minutes rather than metres: a lunch
+    /// break is measured in time.
     let walkingMinutes: Int
     let opensAt: TimeOfDay
     let closesAt: TimeOfDay
