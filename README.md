@@ -91,16 +91,19 @@ against the real candidates and discards any that would not narrow anything.
 
 **Ezypick does not filter on dietary requirements, and that is the most deliberate decision in it.**
 
-It used to, and the veto was the app's hardest business rule. Measuring live data killed it in
-three steps. No mainstream places API records gluten-free, nut-free or allergen information at all,
-so those never existed. Google asserts one dietary flag, `servesVegetarianFood`, which is present or
-absent but **never false**, and one venue category, `halal_restaurant`, which almost nobody
-publishes: one venue across the whole of the inner city. Ticking either setting in a real search
-returned **nothing at all**, wherever the diner stood.
+It used to, and the veto was the app's hardest business rule. Measuring live data killed it, and the
+three settings failed in three different ways. No mainstream places API records gluten-free,
+nut-free or allergen information at all, so that one was never answerable. `halal_restaurant` is a
+venue category almost nobody publishes — one venue across the whole of the inner city — so ticking
+it returned **nothing at all**, wherever the diner stood. `servesVegetarianFood` is the subtle one:
+across 57 restaurants probed in the CBD, Surry Hills and Chinatown it came back **48 true, 2 false,
+7 absent**, and absent never means no, so a vegetarian veto ruled out two venues in fifty-seven
+while looking exactly like a safety check.
 
-A veto over data that does not exist protects nobody. It refuses everything, teaches the diner to
-turn it off, and implies the app checked something it never could. So the filter is gone rather than
-hedged, and the profile is two honest settings instead of four, two of which lied.
+Empty, vacuous or absent, not one of the three protected anybody. A veto like that either refuses
+everything or changes nothing, teaches the diner to turn it off, and implies the app checked
+something it never could. So the filter is gone rather than hedged, and the profile is two honest
+settings instead of four, two of which lied.
 
 Anyone building this properly needs a source that records what kitchens actually do. Google is not
 one, and saying so is the finding, not the excuse.

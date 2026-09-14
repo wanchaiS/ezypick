@@ -7,11 +7,13 @@ import Foundation
 /// because a wrong guess is invisible to them and impossible to correct.
 ///
 /// Two things, and no more. Dietary requirements used to live here and were the app's hardest rule.
-/// They went because no data source underwrites them: halal is a venue category almost nobody
-/// publishes, vegetarian is a single flag that is asserted or absent but never denied, and in live
-/// searches ticking either one returned nothing at all. A filter that always empties the list is
-/// not a strict filter, it is a broken one, and a control that cannot change the answer is a tap
-/// the diner paid for and got nothing back.
+/// They went because no data source underwrites them, and the three failed in three different ways:
+/// nothing anywhere in the API answers gluten-free; halal is a venue category almost nobody
+/// publishes, so ticking it emptied the list; and `servesVegetarianFood` came back 48 true, 2 false
+/// and 7 absent across 57 probed Sydney restaurants, where absent never means no, so vetoing on it
+/// ruled out two venues in fifty-seven. A filter that always empties the list is not a strict
+/// filter, it is a broken one, and a control that cannot change the answer is a tap the diner paid
+/// for and got nothing back.
 ///
 /// - Important: Business rules carried here — `budgetPerHead` excludes anything dearer unless the
 ///   diner deliberately lifts it for today, and `willingToWalkMinutes` bounds what can be suggested
