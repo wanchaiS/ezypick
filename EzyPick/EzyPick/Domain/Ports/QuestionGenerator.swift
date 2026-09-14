@@ -2,9 +2,9 @@ import Foundation
 
 /// Something that can read a set of candidate restaurants and write questions that tell them apart.
 ///
-/// Two implementations exist and the difference matters. \`LLMQuestionGenerator\` reads the parts of a
+/// Two implementations exist and the difference matters. `LLMQuestionGenerator` reads the parts of a
 /// restaurant no database column can express — the reviews, the editorial blurb — and phrases a
-/// question about them. \`TemplateQuestionGenerator\` works from the structured attributes alone and
+/// question about them. `TemplateQuestionGenerator` works from the structured attributes alone and
 /// always returns the most evenly splitting one.
 ///
 /// - Important: Whatever a generator returns is treated as a suggestion. The use case checks that a
