@@ -1,4 +1,4 @@
-# Reflective Report — Ezypick
+# Reflective Report: Ezypick
 
 **Peter Wanchai · Advanced iOS Development · Assessment 2**
 
@@ -14,22 +14,22 @@ the weakest possible narrowing tool, and I had chosen it because it looked good 
 rather than because it decided anything. So the app now generates questions from the restaurants
 still in the running instead of a list written in advance.
 
-The second was about dietary requirements. I assumed the data would be there. It is not. Google
-Places has one sparse `servesVegetarianFood` flag and no gluten-free field at all, and Apple MapKit
-exposes no attributes whatsoever. The hardest rule in my app turned out to be the one rule no data
-source will underwrite. I could have hidden that by filtering quietly, but a nut allergy is not
-something you quietly get wrong. So the app filters on what it has and says where that came from:
-"gluten-free options as listed by the restaurant, worth confirming when you order". It never says
-"safe". That wording is a business rule in the code now, not a UI decision.
+The second was about dietary requirements, and it cost me the hardest rule I wrote. I assumed the
+data would be there. It is not. Google Places has one vegetarian flag that is present or absent but
+never false, one halal category almost nobody publishes, nothing for gluten-free, and Apple MapKit
+has none of it. I built an absolute veto on top of that anyway. Against live data, turning either
+setting on returned nothing at all, wherever I stood. A veto over data that does not exist does not
+protect anyone: it refuses everything and teaches the user to switch it off. So I removed it rather
+than hedge the wording, and the app now filters on the three things a phone can actually know.
 
 ## Why these use cases
 
 I ended up with four, and each one owns a rule that would cause a real problem if it broke.
 
-`ShortlistRestaurantsUseCase` holds the hard limits: dietary requirements, budget, walking distance,
-opening hours, and anything already turned down. It runs before a single question is asked, which
-means nothing unsafe or unaffordable ever reaches the part of the app that is less careful. That
-ordering is deliberate. It is what lets the question step be simple without being dangerous.
+`ShortlistRestaurantsUseCase` holds the hard limits: budget, walking distance, whether the place is
+open right now, and anything already turned down. It runs before a single question is asked, so
+nothing unaffordable or shut ever reaches the part of the app that is less careful. That ordering
+is deliberate. It is what lets the question step be simple.
 
 `AskNextQuestionsUseCase` holds the rules about asking: at most five questions, stop as soon as three
 restaurants remain, never repeat, and never ask anything the remaining restaurants would all answer
@@ -64,11 +64,13 @@ would have no way of knowing that.
 
 ## What I would do next
 
-The obvious next step is live restaurant data. Everything sits behind `RestaurantRepository` already,
-and the seeded catalogue is shaped like a Google Places response, so the swap should be one new type
-and no change to any rule or screen. The harder part is cost: Places charges per field for reviews
-and atmosphere data, so a real version has to decide which restaurants are worth fetching in detail,
-and when.
+Live restaurant data is in, and the swap was what the structure promised: one new type behind
+`RestaurantRepository`, with no rule and no screen changed. That is the best evidence I have that
+the port earned its place. Cost is still real, because Places charges per field for reviews and
+atmosphere data, so a paying version has to choose which restaurants are worth fetching in detail.
+
+What is still ahead is dietary, properly. It needs a source that records what kitchens actually do,
+and no mapping platform is one, so it is a data problem before it is an app problem.
 
 After that, group lunches, which I cut from this version. It is the same flow with several people
 answering rather than a different problem, and I would rather ship one honest single-user version
