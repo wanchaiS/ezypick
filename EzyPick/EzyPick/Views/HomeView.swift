@@ -1,5 +1,4 @@
 import SwiftUI
-import EzypickCore
 
 /// The first screen: one thing to do, and a reminder of what the app already knows.
 ///
@@ -11,9 +10,12 @@ struct HomeView: View {
     @State private var showingProfile = false
     @State private var showingSearch = false
 
-    init(store: DiningPreferencesStore, restaurants: RestaurantRepository, generator: QuestionGenerator) {
+    init(store: DiningPreferencesStore, restaurants: RestaurantRepository,
+         generator: QuestionGenerator, location: any CurrentLocationProvider) {
         _profile = StateObject(wrappedValue: DiningProfileViewModel(store: store))
-        _search = StateObject(wrappedValue: LunchSearchViewModel(restaurants: restaurants, generator: generator))
+        _search = StateObject(wrappedValue: LunchSearchViewModel(restaurants: restaurants,
+                                                                generator: generator,
+                                                                location: location))
     }
 
     var body: some View {
@@ -21,12 +23,9 @@ struct HomeView: View {
             VStack(spacing: 28) {
                 Spacer()
                 Text("Ezypick").font(.system(size: 44, weight: .bold))
-                VStack(spacing: 4) {
-                    Text("I'll do the research.")
-                    Text("You just answer a few questions.")
-                }
-                .font(.callout)
-                .foregroundStyle(.secondary)
+                Text("Picking a restaurant, made easier.")
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
 
                 Button {
                     showingSearch = true
@@ -39,7 +38,7 @@ struct HomeView: View {
                 .tint(.red)
                 .padding(.horizontal, 32)
 
-                savedProfileCard
+                aboutYouCard
                 Spacer()
             }
             .navigationDestination(isPresented: $showingSearch) {
@@ -51,22 +50,34 @@ struct HomeView: View {
         }
     }
 
-    private var savedProfileCard: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            Text("What Ezypick knows about you").font(.caption).foregroundStyle(.secondary)
-            Text(summary).font(.subheadline.weight(.medium))
-            Button("Edit") { showingProfile = true }.font(.caption)
+    /// The saved profile, shown as badges rather than prose.
+    ///
+    /// The point is recognition, not information: the diner should glance at this and know the app
+    /// has them right. A sentence has to be read to be checked, so the profile is drawn as chips.
+    private var aboutYouCard: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .firstTextBaseline) {
+                Text("About you").font(.caption).foregroundStyle(.secondary)
+                Spacer()
+                Button(profile.hasSavedProfile ? "Edit" : "Set up") { showingProfile = true }
+                    .font(.caption)
+            }
+
+            if profile.hasSavedProfile {
+                ChipFlowLayout(spacing: 6) {
+                    ForEach(PreferenceBadge.all(for: profile.preferences)) { badge in
+                        PreferenceChip(badge: badge)
+                    }
+                }
+            } else {
+                Text("Nothing saved yet. Tell Ezypick what you can't eat and how long your break is.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .overlay(RoundedRectangle(cornerRadius: 12).stroke(.quaternary))
         .padding(.horizontal, 32)
-    }
-
-    private var summary: String {
-        let diet = profile.dietaryRequirements.isEmpty
-            ? "no dietary requirements"
-            : profile.dietaryRequirements.map(\.spokenName).sorted().joined(separator: ", ")
-        return "\(diet) · $\(profile.budgetPerHead) a head · \(profile.willingToWalkMinutes) min walk"
     }
 }

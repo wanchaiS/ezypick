@@ -1,0 +1,6872 @@
+{
+ "places": [
+  {
+   "id": "ChIJJ_iexRyvEmsRDszlhtBpDUQ",
+   "types": [
+    "italian_restaurant",
+    "cocktail_bar",
+    "european_restaurant",
+    "bar",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.866462,
+    "longitude": 151.20735159999998
+   },
+   "rating": 4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 PM – 12:00 AM",
+     "Tuesday: 12:00 PM – 12:00 AM",
+     "Wednesday: 12:00 PM – 12:00 AM",
+     "Thursday: 12:00 PM – 2:00 AM",
+     "Friday: 12:00 PM – 2:00 AM",
+     "Saturday: 12:00 PM – 2:00 AM",
+     "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 4456,
+   "displayName": {
+    "text": "Bar Totti's",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 PM – 12:00 AM",
+     "Tuesday: 12:00 PM – 12:00 AM",
+     "Wednesday: 12:00 PM – 12:00 AM",
+     "Thursday: 12:00 PM – 2:00 AM",
+     "Friday: 12:00 PM – 2:00 AM",
+     "Saturday: 12:00 PM – 2:00 AM",
+     "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "primaryType": "italian_restaurant",
+   "editorialSummary": {
+    "text": "Laid-back neighbourhood joint serving Italian-style small plates, plus wines & cocktails.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJJ_iexRyvEmsRDszlhtBpDUQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT25Sd2RtUjFZemRIYTBJNVRrTnJVVWxqTW1ORmRYYxAB",
+     "relativePublishTimeDescription": "6 months ago",
+     "rating": 2,
+     "text": {
+      "text": "I recently dined solo at Bar Totti’s in the Sydney CBD. I was seated outside in the alley, which unfortunately meant dealing with quite a bit of noise and disruption from nearby venues.\n\nThe food started off strong. The ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Bep Chavez"
+     }
+    },
+    {
+     "name": "places/ChIJJ_iexRyvEmsRDszlhtBpDUQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT21SeFZVUnVTM2hzVTJZNWNsQnFiRTFpZEVGYVQwRRAB",
+     "relativePublishTimeDescription": "4 months ago",
+     "rating": 5,
+     "text": {
+      "text": "I came with three friends on a Friday with a reservation (really encourage y’all to book in advance as we did 2 weeks before the date as it’s gets so busy and the reservations are filling up quite quick). We were seated ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Rachel Zhao"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "80"
+    }
+   }
+  },
+  {
+   "id": "ChIJIwfAJT2uEmsRrIZ3SLoX5GM",
+   "types": [
+    "italian_restaurant",
+    "wine_bar",
+    "catering_service",
+    "coffee_roastery",
+    "pizza_restaurant",
+    "food_delivery",
+    "cocktail_bar",
+    "salad_shop",
+    "wholesaler",
+    "european_restaurant",
+    "bar",
+    "food_store",
+    "store",
+    "restaurant",
+    "food",
+    "service",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8760766,
+    "longitude": 151.20656219999998
+   },
+   "rating": 4.6,
+   "businessStatus": "CLOSED_TEMPORARILY",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 14351,
+   "displayName": {
+    "text": "Macchiato Wood Fire Pizza and Coffee Roasters",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "primaryType": "italian_restaurant",
+   "editorialSummary": {
+    "text": "Casual Italian grill with rustic-chic decor and bare-brick walls, for wood-fired pizza, and coffee.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJIwfAJT2uEmsRrIZ3SLoX5GM/reviews/Ci9DQUlRQUNvZENodHljRjlvT25GRVNtZDZXbmt3ZDAxamVXNVdMVXRYZUVremMyYxAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Absolutely loved the experience here. The atmosphere was warm, vibrant, and welcoming from the moment we arrived.\n\nA very special mention to the head chef and Pizza chef Pavel 👨‍🍳 for the passion and quality behind the",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Saif Islam"
+     }
+    },
+    {
+     "name": "places/ChIJIwfAJT2uEmsRrIZ3SLoX5GM/reviews/Ci9DQUlRQUNvZENodHljRjlvT25aUloyYzJha2xOVEZoeVpGcDBlRzVNUzI1d1ZHYxAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Fantastic food, great variety, and wonderful service!\nI recently dined at Macchiato and had an absolutely amazing experience! The menu is incredibly extensive, offering a perfect blend of authentic Italian wood-fired piz",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "CA dra"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJT2CGg0GuEmsRYLRNCFoOvv4",
+   "types": [
+    "cantonese_restaurant",
+    "asian_restaurant",
+    "meal_takeaway",
+    "chinese_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.864063099999996,
+    "longitude": 151.2079885
+   },
+   "rating": 4.4,
+   "regularOpeningHours": {
+    "openNow": false,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 15,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 17,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Tuesday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Wednesday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Thursday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Friday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Saturday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Sunday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM"
+    ],
+    "nextOpenTime": "2026-09-13T07:30:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "userRatingCount": 5865,
+   "displayName": {
+    "text": "Mr. Wong",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": false,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 15,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 17,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Tuesday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Wednesday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Thursday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Friday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Saturday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM",
+     "Sunday: 12:00 – 3:00 PM, 5:30 PM – 12:00 AM"
+    ],
+    "nextOpenTime": "2026-09-13T07:30:00Z"
+   },
+   "primaryType": "cantonese_restaurant",
+   "editorialSummary": {
+    "text": "Modern Cantonese menu, from dim sum to classic mud crab, served in a lavish French-colonial setting.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJT2CGg0GuEmsRYLRNCFoOvv4/reviews/Ci9DQUlRQUNvZENodHljRjlvT2kxMVpFRlZNMWRmWDNsYVYwMHdaV1pUZEhkMFlsRRAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "I’ve been meaning to visit Mr Wong for years and it definitely lived up to the reputation. We had a fantastic night.\n\nThe service was excellent from start to finish. Food and drinks came out at a great pace, we never fel",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Terry Hur"
+     }
+    },
+    {
+     "name": "places/ChIJT2CGg0GuEmsRYLRNCFoOvv4/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwRlYyMW9WMjU2TjFkcVptcHVTSEpaUjJkMVIwRRAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We've been coming to Mr Wong for about 15 years. Whether for a birthday, wedding celebration or anniversary... or just because. This place is beyond exceptional. From the food to the service. It never fails. The last few",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Katalina"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true
+  },
+  {
+   "id": "ChIJF5-RdGquEmsR5rN_H74uSqQ",
+   "types": [
+    "french_restaurant",
+    "european_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.865130400000005,
+    "longitude": 151.2104197
+   },
+   "rating": 4.6,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 PM – 12:00 AM",
+     "Tuesday: 12:00 PM – 12:00 AM",
+     "Wednesday: 12:00 PM – 12:00 AM",
+     "Thursday: 12:00 PM – 12:00 AM",
+     "Friday: 12:00 PM – 12:00 AM",
+     "Saturday: 12:00 PM – 12:00 AM",
+     "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "userRatingCount": 5167,
+   "displayName": {
+    "text": "Restaurant Hubert",
+    "languageCode": "en"
+   },
+   "takeout": false,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 PM – 12:00 AM",
+     "Tuesday: 12:00 PM – 12:00 AM",
+     "Wednesday: Closed",
+     "Thursday: 12:00 PM – 12:00 AM",
+     "Friday: 12:00 PM – 12:00 AM",
+     "Saturday: 12:00 PM – 12:00 AM",
+     "Sunday: 12:00 PM – 12:00 AM"
+    ],
+    "specialDays": [
+     {
+      "date": {
+       "year": 2026,
+       "month": 9,
+       "day": 16
+      }
+     }
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "primaryType": "french_restaurant",
+   "editorialSummary": {
+    "text": "Classic French dishes showcased in a sophisticated venue featuring a lively bar & vintage decor.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJF5-RdGquEmsR5rN_H74uSqQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2s5bGJIUlNWV1p1VTBoUVlsVldaWFpCYjNGVWNHYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Entree/sides and dessert cake was deliiiiicious 10/10. So so good. We got the oysters, steak tartare, and escargot - whatever was in that XO sauce; was that anchovies? Delicious.\n\nWould love to try other dishes next time",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "H K"
+     }
+    },
+    {
+     "name": "places/ChIJF5-RdGquEmsR5rN_H74uSqQ/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xGd1Z6SmxNa1IyYmpnNE9DMTVVVE55Ym5aSllVRRAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 5,
+     "text": {
+      "text": "⭐⭐⭐⭐⭐\nHow can we not give 5 stars when everything is this perfect?\n\nThe atmosphere is absolutely beautiful romantic, elegant, with live music playing in the background. The restaurant is spacious and not cramped at all, ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Ken W"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true
+  },
+  {
+   "id": "ChIJ2fbUKx6vEmsR8Fuwbd8pWec",
+   "types": [
+    "hot_pot_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.877949799999996,
+    "longitude": 151.2022124
+   },
+   "rating": 4.8,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 1,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 1:00 AM",
+     "Tuesday: 11:30 AM – 1:00 AM",
+     "Wednesday: 11:30 AM – 1:00 AM",
+     "Thursday: 11:30 AM – 1:00 AM",
+     "Friday: 11:30 AM – 1:00 AM",
+     "Saturday: 11:00 AM – 1:00 AM",
+     "Sunday: 11:00 AM – 1:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T15:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 5279,
+   "displayName": {
+    "text": "Haidilao Hotpot Darling Square",
+    "languageCode": "en"
+   },
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 1:00 AM",
+     "Tuesday: 11:30 AM – 1:00 AM",
+     "Wednesday: 11:30 AM – 1:00 AM",
+     "Thursday: 11:30 AM – 1:00 AM",
+     "Friday: 11:30 AM – 1:00 AM",
+     "Saturday: 11:00 AM – 1:00 AM",
+     "Sunday: 11:00 AM – 1:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T15:00:00Z"
+   },
+   "primaryType": "hot_pot_restaurant",
+   "reviews": [
+    {
+     "name": "places/ChIJ2fbUKx6vEmsR8Fuwbd8pWec/reviews/Ci9DQUlRQUNvZENodHljRjlvT21sM1ZVZGtURWgxV2tjeU5WbGFSRmcyZVVaWFRuYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Haidilao is always my go to place for hotpot. So yum and really good service. My friends and I enjoyed our dinner here.\nThe waiter 张雪阳 and another waitress (sorry I forgot her name) did an amazing job for celebrating my ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Yunru Liu"
+     }
+    },
+    {
+     "name": "places/ChIJ2fbUKx6vEmsR8Fuwbd8pWec/reviews/Ci9DQUlRQUNvZENodHljRjlvT25oRVdtaHJOM1ZoWmtsUFMybzVlVFpqU1ZkTlYyYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We had a very nice lunch at Haidilao Hotpot Darling Square today. The lovely waitress Miss Siqi Xia approached our table with genuine warmth and a smile immediately of being seated. The food was fresh and so good. Our wa",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Ling Wang"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "80"
+    }
+   }
+  },
+  {
+   "id": "ChIJD5xTal2uEmsRZNsPx8E2q-s",
+   "types": [
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.858832299999996,
+    "longitude": 151.2083496
+   },
+   "rating": 4.1,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 7,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 7:30 AM – 12:00 AM",
+     "Tuesday: 7:30 AM – 12:00 AM",
+     "Wednesday: 7:30 AM – 12:00 AM",
+     "Thursday: 7:30 AM – 12:00 AM",
+     "Friday: 7:30 AM – 2:00 AM",
+     "Saturday: 7:30 AM – 2:00 AM",
+     "Sunday: 7:30 AM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 9231,
+   "displayName": {
+    "text": "Pancakes On The Rocks",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 7,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 7:30 AM – 12:00 AM",
+     "Tuesday: 7:30 AM – 12:00 AM",
+     "Wednesday: 7:30 AM – 12:00 AM",
+     "Thursday: 7:30 AM – 12:00 AM",
+     "Friday: 7:30 AM – 2:00 AM",
+     "Saturday: 7:30 AM – 2:00 AM",
+     "Sunday: 7:30 AM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "primaryType": "restaurant",
+   "editorialSummary": {
+    "text": "Long-running diner chain known for sweet & savoury pancakes, plus pizza, ribs & brekkie.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJD5xTal2uEmsRZNsPx8E2q-s/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tKS1YyMVlRMTlxV1d0YU0xSkNlVlpPYkhoRmEzYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "This restaurant seemed to be quite well received by the locals and the tourist. When we were seated in the restaurant, we saw at least 3 pairs of Japanese tourist inside. Plus, the locals had seemed to enjoy their meal. ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Kokthye Lim"
+     }
+    },
+    {
+     "name": "places/ChIJD5xTal2uEmsRZNsPx8E2q-s/reviews/Ci9DQUlRQUNvZENodHljRjlvT25KVVkzTlpkM1paWW5OU05sSk5jSGRYUWw5MWEwRRAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 3,
+     "text": {
+      "text": "Pancakes lovers alert! Legendary Australian diner famous for its all-day breakfast, savory crepes, and signature pancakes stacks. Casual dining, best for family & friends, and perfect for late-night cravings. Opening 7.3",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "JuzChris L."
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJ7VPt0-CvEmsRjO4_xKnTl-c",
+   "types": [
+    "thai_restaurant",
+    "dessert_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8785847,
+    "longitude": 151.2071492
+   },
+   "rating": 4.4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 10:00 PM",
+     "Tuesday: 11:30 AM – 10:00 PM",
+     "Wednesday: 11:30 AM – 10:00 PM",
+     "Thursday: 11:30 AM – 11:00 PM",
+     "Friday: 11:30 AM – 11:00 PM",
+     "Saturday: 11:00 AM – 11:00 PM",
+     "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 2897,
+   "displayName": {
+    "text": "Mango Coco",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "servesBeer": false,
+   "servesWine": false,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 10:00 PM",
+     "Tuesday: 11:30 AM – 10:00 PM",
+     "Wednesday: 11:30 AM – 10:00 PM",
+     "Thursday: 11:30 AM – 11:00 PM",
+     "Friday: 11:30 AM – 11:00 PM",
+     "Saturday: 11:00 AM – 11:00 PM",
+     "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "primaryType": "thai_restaurant",
+   "editorialSummary": {
+    "text": "Trendy cafe serving light Thai fare, desserts & smoothies in contemporary surrounds.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJ7VPt0-CvEmsRjO4_xKnTl-c/reviews/Ci9DQUlRQUNvZENodHljRjlvT2t0emEzRnJjVFJSY0U5M1VESndZVWhaUkZwMlptYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Mango Coco is a must-visit dessert spot in Sydney CBD! Even late at night, the place was still packed, which shows just how popular it is.\n\nWe ordered the Thai Tea Mochi Cloud and the Egg on Nest, and both were a complet",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "단짠단짠"
+     }
+    },
+    {
+     "name": "places/ChIJ7VPt0-CvEmsRjO4_xKnTl-c/reviews/Ci9DQUlRQUNvZENodHljRjlvT2tKSk9VUlJVRmR1YlZaNU9XcEJTMVJxYzFWTFFXYxAB",
+     "relativePublishTimeDescription": "4 months ago",
+     "rating": 4,
+     "text": {
+      "text": "I ordered the beef fried rice and pad thai, and overall, both dishes were absolutely delicious. Each plate felt thoughtfully prepared, with a good balance of flavors and solid execution.\n\nThe presentation really stood ou",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Al So"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": false,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJB7lkaV2uEmsRoPnko9dUzYw",
+   "types": [
+    "fine_dining_restaurant",
+    "steak_house",
+    "oyster_bar_restaurant",
+    "wine_bar",
+    "australian_restaurant",
+    "seafood_restaurant",
+    "cocktail_bar",
+    "bar",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.856647599999995,
+    "longitude": 151.2090994
+   },
+   "rating": 4.6,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 30
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 5:00 – 9:30 PM",
+     "Tuesday: 12:00 – 9:30 PM",
+     "Wednesday: 12:00 – 9:30 PM",
+     "Thursday: 12:00 – 9:30 PM",
+     "Friday: 12:00 – 10:30 PM",
+     "Saturday: 12:00 – 10:30 PM",
+     "Sunday: 12:00 – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "userRatingCount": 3655,
+   "displayName": {
+    "text": "6HEAD Sydney",
+    "languageCode": "en"
+   },
+   "takeout": false,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 5:00 – 9:30 PM",
+     "Tuesday: 12:00 – 9:30 PM",
+     "Wednesday: 12:00 – 9:30 PM",
+     "Thursday: 12:00 – 9:30 PM",
+     "Friday: 12:00 – 10:30 PM",
+     "Saturday: 12:00 – 10:30 PM",
+     "Sunday: 12:00 – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "primaryType": "fine_dining_restaurant",
+   "editorialSummary": {
+    "text": "Industrial-chic eatery spotlighting steak & seafood, plus a robust wine list & Sydney Harbour views.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJB7lkaV2uEmsRoPnko9dUzYw/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pOR1NucFRUSHBOTlZKM1VrODRablF4VEU0MVRHYxAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 5,
+     "text": {
+      "text": "Came here for a birthday dinner and ordered their set menu. The t bone steak was amazing, cooked well and full of flavor, easily the highlight of the meal. Service was attentive throughout without being intrusive, staff ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Richard C"
+     }
+    },
+    {
+     "name": "places/ChIJB7lkaV2uEmsRoPnko9dUzYw/reviews/Ci9DQUlRQUNvZENodHljRjlvT21GeVFWQjROV3BRVkUxSWMwZ3lMVmMwWW5aelltYxAB",
+     "relativePublishTimeDescription": "4 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We visited 6HEAD to celebrate our 3-year anniversary, and it was truly a world-class experience from start to finish. From the moment we arrived, we were greeted warmly by two staff members who made us feel like VIPs imm",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "gcam"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "servesCocktails": true
+  },
+  {
+   "id": "ChIJPX-LyYOvEmsRARGze1O4Uu0",
+   "types": [
+    "chicken_wings_restaurant",
+    "chicken_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8746033,
+    "longitude": 151.2224135
+   },
+   "rating": 4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:00 AM – 10:00 PM",
+     "Tuesday: 11:00 AM – 10:00 PM",
+     "Wednesday: 11:00 AM – 10:00 PM",
+     "Thursday: 11:00 AM – 11:00 PM",
+     "Friday: 11:00 AM – 2:00 AM",
+     "Saturday: 11:00 AM – 2:00 AM",
+     "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "userRatingCount": 772,
+   "displayName": {
+    "text": "Wingstop Kings Cross",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": false,
+   "servesBeer": false,
+   "servesWine": false,
+   "servesVegetarianFood": false,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:00 AM – 10:00 PM",
+     "Tuesday: 11:00 AM – 10:00 PM",
+     "Wednesday: 11:00 AM – 10:00 PM",
+     "Thursday: 11:00 AM – 11:00 PM",
+     "Friday: 11:00 AM – 2:00 AM",
+     "Saturday: 11:00 AM – 2:00 AM",
+     "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "primaryType": "chicken_wings_restaurant",
+   "reviews": [
+    {
+     "name": "places/ChIJPX-LyYOvEmsRARGze1O4Uu0/reviews/Ci9DQUlRQUNvZENodHljRjlvT21adFUwOU5SbWxLU2t4NFlqZENTV1JrTUY4d1VrRRAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 1,
+     "text": {
+      "text": "Genuinely one of the most disappointing fast food experiences I’ve had in Sydney. Wingstop Kings Cross had been on my radar for a while given the hype, but this visit put that to bed permanently.\n\nThe space itself looks ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Lachlan Mcdermid"
+     }
+    },
+    {
+     "name": "places/ChIJPX-LyYOvEmsRARGze1O4Uu0/reviews/Ci9DQUlRQUNvZENodHljRjlvT21SS2VETXpOa2sxUzNGUlRGY3RabmcxTjJ4TE9YYxAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 4,
+     "text": {
+      "text": "We recently checked out Wingstop in Kings Cross, and it definitely lived up to the hype. The place has a great, high-energy vibe, though it can get incredibly busy, so be prepared for a bit of a wait during peak hours.\n\n",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Simba XX"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "servesCocktails": false
+  },
+  {
+   "id": "ChIJVQabi2muEmsRWNBCrgYzza8",
+   "types": [
+    "hamburger_restaurant",
+    "american_restaurant",
+    "bar",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.863968,
+    "longitude": 151.21193399999999
+   },
+   "rating": 4.5,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 16,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:00 AM – 9:00 PM",
+     "Tuesday: 11:00 AM – 9:00 PM",
+     "Wednesday: 11:00 AM – 9:00 PM",
+     "Thursday: 11:00 AM – 9:30 PM",
+     "Friday: 11:00 AM – 10:00 PM",
+     "Saturday: 12:00 – 10:00 PM",
+     "Sunday: 12:00 – 4:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T06:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 4812,
+   "displayName": {
+    "text": "Bar Luca",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 16,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:00 AM – 9:00 PM",
+     "Tuesday: 11:00 AM – 9:00 PM",
+     "Wednesday: 11:00 AM – 9:00 PM",
+     "Thursday: 11:00 AM – 9:30 PM",
+     "Friday: 11:00 AM – 10:00 PM",
+     "Saturday: 12:00 – 10:00 PM",
+     "Sunday: 12:00 – 4:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T06:00:00Z"
+   },
+   "primaryType": "hamburger_restaurant",
+   "editorialSummary": {
+    "text": "Smart space with comfy leather booths, a wood floor and a terrace, for creative burgers & drinks.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJVQabi2muEmsRWNBCrgYzza8/reviews/Ci9DQUlRQUNvZENodHljRjlvT2pkRlgzQnRSWFZFWTBKQ2VFdHBXRmROT1hWSFRFRRAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 5,
+     "text": {
+      "text": "Have heard about this place for a long time bcz of its famous burget. First time came, I didnt need to wait for table - maybe lucky cause normally need to wait. The place was quite busy but the speed of food off is very ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Nguyệt Anh Hoàng"
+     }
+    },
+    {
+     "name": "places/ChIJVQabi2muEmsRWNBCrgYzza8/reviews/Ci9DQUlRQUNvZENodHljRjlvT25oSFgwOURVakV6ZUZKWlVXeFJiRzQwYm1kMGQzYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 3,
+     "text": {
+      "text": "The burger had great potential, but unfortunately the beef patty was disappointing. It lacked seasoning and was quite bland, which took away from the overall experience. The flavour of the patty simply wasn't very enjoya",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Kino"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJV2sXvWmuEmsR9DXeaaPw1u4",
+   "types": [
+    "steak_house",
+    "bar_and_grill",
+    "wine_bar",
+    "bar",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.864709399999995,
+    "longitude": 151.2102818
+   },
+   "rating": 4.4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 10:00 PM",
+     "Tuesday: 12:00 – 10:00 PM",
+     "Wednesday: 12:00 – 10:00 PM",
+     "Thursday: 12:00 – 10:00 PM",
+     "Friday: 12:00 – 10:00 PM",
+     "Saturday: 12:00 – 10:00 PM",
+     "Sunday: 12:00 – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_EXPENSIVE",
+   "userRatingCount": 2977,
+   "displayName": {
+    "text": "The Meat & Wine Co Circular Quay - O'Connell St",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 10:00 PM",
+     "Tuesday: 12:00 – 10:00 PM",
+     "Wednesday: 12:00 – 10:00 PM",
+     "Thursday: 12:00 – 10:00 PM",
+     "Friday: 12:00 – 10:00 PM",
+     "Saturday: 12:00 – 10:00 PM",
+     "Sunday: 12:00 – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "primaryType": "steak_house",
+   "editorialSummary": {
+    "text": "Steaks, ribs & skewers, plus a long wine list, in a sophisticated, Afro-centric chophouse.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJV2sXvWmuEmsR9DXeaaPw1u4/reviews/Ci9DQUlRQUNvZENodHljRjlvT213emRXTm5ZVVYzUWxneUxVcEZNM0ZoVm1KblpXYxAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 5,
+     "text": {
+      "text": "That was an amazing lunch!\nThe best chicken wings I’ve ever had. My husband rated his barramundi up with the best he’s ever had.\nGreat cocktails, lovely service.\nI also loved the African decor and fire burning in the mid",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Deb Smith"
+     }
+    },
+    {
+     "name": "places/ChIJV2sXvWmuEmsR9DXeaaPw1u4/reviews/Ci9DQUlRQUNvZENodHljRjlvT2psSGJVRjBkVzVxY2w5ME5VTjRVVlpMTFZGSWVGRRAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Celebrated my birthday here and had such a great experience! The Safari Bread was sooo good, and every dish we ordered was amazing. The rib-eye steak was definitely the highlight!! it was perfectly cooked, super juicy, a",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Aira Mae Mendiola"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "60"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "180"
+    }
+   }
+  },
+  {
+   "id": "ChIJ2fYBWjyuEmsR2jTFaL64TNc",
+   "types": [
+    "fast_food_restaurant",
+    "hamburger_restaurant",
+    "family_restaurant",
+    "breakfast_restaurant",
+    "cafe",
+    "meal_takeaway",
+    "american_restaurant",
+    "food_store",
+    "store",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8753728,
+    "longitude": 151.2067834
+   },
+   "rating": 3.6,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: Open 24 hours",
+     "Tuesday: Open 24 hours",
+     "Wednesday: Open 24 hours",
+     "Thursday: Open 24 hours",
+     "Friday: Open 24 hours",
+     "Saturday: Open 24 hours",
+     "Sunday: Open 24 hours"
+    ]
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_INEXPENSIVE",
+   "userRatingCount": 3661,
+   "displayName": {
+    "text": "McDonald's Plaza Metro George St",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "servesBeer": false,
+   "servesWine": false,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: Open 24 hours",
+     "Tuesday: Open 24 hours",
+     "Wednesday: Open 24 hours",
+     "Thursday: Open 24 hours",
+     "Friday: Open 24 hours",
+     "Saturday: Open 24 hours",
+     "Sunday: Open 24 hours"
+    ]
+   },
+   "primaryType": "fast_food_restaurant",
+   "editorialSummary": {
+    "text": "Classic, long-running fast-food chain known for its burgers & fries.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJ2fYBWjyuEmsR2jTFaL64TNc/reviews/Ci9DQUlRQUNvZENodHljRjlvT2taRE5uaDNaMkZsUkZCUVpWZ3lURzg1ZVhOSFRsRRAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 5,
+     "text": {
+      "text": "I have never seen such a beautiful McDonald’s in my life! I had to visit it just for the stunning architecture. The food, of course, never disappoints.\n\nThe building itself looks like a palace, making it so much more tha",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Sharon Sebastian"
+     }
+    },
+    {
+     "name": "places/ChIJ2fYBWjyuEmsR2jTFaL64TNc/reviews/Ci9DQUlRQUNvZENodHljRjlvT21neVlVWTVXbWh5Y1cwM1NIWkJUMHQxZVc5eVJHYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 1,
+     "text": {
+      "text": "I can’t believe I ordered a meal through the Macca’s app last night. Everything in my order was correct except for the burger. It came with only one patty and a bun, and it had Big Mac sauce instead of mustard. It was co",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Jasie"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "1"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    }
+   }
+  },
+  {
+   "id": "ChIJ6-90-heuEmsRYDLbI65_yMM",
+   "types": [
+    "asian_fusion_restaurant",
+    "asian_restaurant",
+    "fusion_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8789358,
+    "longitude": 151.2107284
+   },
+   "rating": 4.1,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 11:00 PM",
+     "Tuesday: 12:00 – 11:00 PM",
+     "Wednesday: 12:00 – 11:00 PM",
+     "Thursday: 12:00 – 11:00 PM",
+     "Friday: 12:00 – 11:00 PM",
+     "Saturday: 12:00 – 11:00 PM",
+     "Sunday: 12:00 – 9:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_EXPENSIVE",
+   "userRatingCount": 4011,
+   "displayName": {
+    "text": "Chin Chin",
+    "languageCode": "en"
+   },
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 11:00 PM",
+     "Tuesday: 12:00 – 11:00 PM",
+     "Wednesday: 12:00 – 11:00 PM",
+     "Thursday: 12:00 – 11:00 PM",
+     "Friday: 12:00 – 11:00 PM",
+     "Saturday: 12:00 – 11:00 PM",
+     "Sunday: 12:00 – 9:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:00:00Z"
+   },
+   "primaryType": "asian_fusion_restaurant",
+   "reviews": [
+    {
+     "name": "places/ChIJ6-90-heuEmsRYDLbI65_yMM/reviews/Ci9DQUlRQUNvZENodHljRjlvT25BemVWTjNlVnBVUVRnM00xbEdaME5LVm0xcE5sRRAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Fantastic experience dining at Chin Chin. Our waiter Tom was exceptional. We were a large group and chose the banquet menu.  All the food was delicious and there was plenty of it. They catered for all our parties food al",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Veronica Laurikainen"
+     }
+    },
+    {
+     "name": "places/ChIJ6-90-heuEmsRYDLbI65_yMM/reviews/Ci9DQUlRQUNvZENodHljRjlvT2sxS1QwWktaMlEzVlZoNldsTjRiR05rY1hCZmJHYxAB",
+     "relativePublishTimeDescription": "6 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Fantastic meal, great fresh Asian flavours in a cool environment with great staff to help. An extensive wine list is also on offer. We went for the classics fixed menu, it gave a perfect range of dishes. From the kingfis",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Bryan Middleton"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "60"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "160"
+    }
+   }
+  },
+  {
+   "id": "ChIJi6C1MxquEmsRP3l2oXb357Y",
+   "types": [
+    "irish_pub",
+    "pub",
+    "european_restaurant",
+    "live_music_venue",
+    "event_venue",
+    "bar",
+    "restaurant",
+    "food",
+    "service",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8688161,
+    "longitude": 151.2054207
+   },
+   "rating": 4.2,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 13,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 23,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 23,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 23,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 1,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 1,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 13,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 1,
+       "minute": 30
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 11:30 PM",
+     "Tuesday: 12:00 – 11:30 PM",
+     "Wednesday: 12:00 – 11:30 PM",
+     "Thursday: 12:00 PM – 1:00 AM",
+     "Friday: 12:00 PM – 1:30 AM",
+     "Saturday: 1:00 PM – 1:30 AM",
+     "Sunday: 1:00 PM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 3288,
+   "displayName": {
+    "text": "P.J.O'Brien's",
+    "languageCode": "en"
+   },
+   "takeout": false,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 1,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 0,
+       "hour": 13,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 23,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 23,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 23,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 1,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 1,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 13,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 11:30 PM",
+     "Tuesday: 12:00 – 11:30 PM",
+     "Wednesday: 12:00 – 11:30 PM",
+     "Thursday: 12:00 PM – 1:00 AM",
+     "Friday: 12:00 PM – 1:30 AM",
+     "Saturday: 1:00 PM – 1:30 AM",
+     "Sunday: 1:00 PM – 12:00 AM"
+    ],
+    "nextCloseTime": "2026-09-13T14:00:00Z"
+   },
+   "primaryType": "irish_pub",
+   "editorialSummary": {
+    "text": "Old-fashioned watering hole with Guinness on tap, classic grub & regular Irish music gigs.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJi6C1MxquEmsRP3l2oXb357Y/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwaWQwaG5XVVl0YlhaME5rTjJYMFIzTWpGR1JWRRAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 4,
+     "text": {
+      "text": "Lively pub with great selection of meals available on the menu. Decided on a simple fish and chips meal. Fish was fresh and portions generous. Chips were great too, ordered an extra portion to go with sauce dips. More se",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Keith Yeo"
+     }
+    },
+    {
+     "name": "places/ChIJi6C1MxquEmsRP3l2oXb357Y/reviews/Ci9DQUlRQUNvZENodHljRjlvT21KMmFuQjJWemhRTWxaVGFGbzVOVTFwWjJSclYwRRAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We came without reservation on Sunday evening thinking oh well who will be there on Sunday evening! Wrong thinking :) lots of people\nAnd we found only one table available on 2 floor! So reserve the table! They have live ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Julia Helland"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJmeGK8KCvEmsRh4jgnachMrU",
+   "types": [
+    "korean_barbecue_restaurant",
+    "asian_restaurant",
+    "buffet_restaurant",
+    "korean_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.876754,
+    "longitude": 151.20435899999998
+   },
+   "rating": 4.6,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 10:00 PM",
+     "Tuesday: 11:30 AM – 10:00 PM",
+     "Wednesday: 11:30 AM – 10:00 PM",
+     "Thursday: 11:30 AM – 10:00 PM",
+     "Friday: 11:30 AM – 11:00 PM",
+     "Saturday: 11:30 AM – 11:00 PM",
+     "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 5204,
+   "displayName": {
+    "text": "Butchers Buffet Chinatown",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 10:00 PM",
+     "Tuesday: 11:30 AM – 10:00 PM",
+     "Wednesday: 11:30 AM – 10:00 PM",
+     "Thursday: 11:30 AM – 10:00 PM",
+     "Friday: 11:30 AM – 11:00 PM",
+     "Saturday: 11:30 AM – 11:00 PM",
+     "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "primaryType": "korean_barbecue_restaurant",
+   "editorialSummary": {
+    "text": "Spacious Korean restaurant specialising in BBQ dishes & Wagyu beef, with a lively vibe.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJmeGK8KCvEmsRh4jgnachMrU/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xSa1NsVmlabFY1TUV0MFFXUkZaa3R0ZVV3eVVYYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Cheapest, quality buffet in the CBD $55.99!!\n\nAbsolutely loved the vibes in here and the blue lighting, large venue with a great selection of hot food options and generous amount of different meats and seafoods available",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Alexandra Lalaneats"
+     }
+    },
+    {
+     "name": "places/ChIJmeGK8KCvEmsRh4jgnachMrU/reviews/Ci9DQUlRQUNvZENodHljRjlvT2kxRmMzZ3RZMHBPUVRWUVpFWm1TVUpYTFVKZmJVRRAB",
+     "relativePublishTimeDescription": "4 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Had such a great experience at Butchers Buffet in Haymarket! The lunch buffet is seriously good value, especially considering the quality of the meat — the cuts were premium, fresh and marinated really well!! - something",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Kara Lai"
+     }
+    }
+   ],
+   "servesCocktails": false,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "60"
+    }
+   }
+  },
+  {
+   "id": "ChIJs3cv0KuvEmsRHcXYwNJ6GU0",
+   "types": [
+    "italian_restaurant",
+    "european_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8701437,
+    "longitude": 151.2056158
+   },
+   "rating": 4.8,
+   "regularOpeningHours": {
+    "openNow": false,
+    "periods": [
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 21,
+       "minute": 30
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 9:00 PM",
+     "Tuesday: 11:30 AM – 9:00 PM",
+     "Wednesday: 11:30 AM – 9:00 PM",
+     "Thursday: 11:30 AM – 9:00 PM",
+     "Friday: 11:30 AM – 9:30 PM",
+     "Saturday: 11:30 AM – 9:30 PM",
+     "Sunday: Closed"
+    ],
+    "nextOpenTime": "2026-09-14T01:30:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 4738,
+   "displayName": {
+    "text": "Primi Italian",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": false,
+    "periods": [
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 9:00 PM",
+     "Tuesday: 11:30 AM – 9:00 PM",
+     "Wednesday: 11:30 AM – 9:00 PM",
+     "Thursday: 11:30 AM – 9:00 PM",
+     "Friday: 11:30 AM – 9:30 PM",
+     "Saturday: 11:30 AM – 9:30 PM",
+     "Sunday: Closed"
+    ],
+    "nextOpenTime": "2026-09-14T01:30:00Z"
+   },
+   "primaryType": "italian_restaurant",
+   "editorialSummary": {
+    "text": "Pizza, pasta & hearty Italian entrees served in a spacious dining room with a laid-back atmosphere.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJs3cv0KuvEmsRHcXYwNJ6GU0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xGekxVWkhialY1ZHpGUU5WSm5OVUZaVURnM1VsRRAB",
+     "relativePublishTimeDescription": "3 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We were looking for a special place to celebrate a birthday dinner, and we definitely made the right choice by coming here.\n\nFrom the moment we arrived, Aurora and Emanuele provided exceptional service. They were friendl",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "nuch jira"
+     }
+    },
+    {
+     "name": "places/ChIJs3cv0KuvEmsRHcXYwNJ6GU0/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xKVFYxOHhXRzVuU0hCa2VUQlVOSE5vVmtweGVtYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 4,
+     "text": {
+      "text": "We visited to celebrate our 25th wedding anniversary and to relive the unforgettable memories of the pizza and pasta we enjoyed during our European travels.\nThe restaurant truly made us feel as though we were in Italy.\n\n",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "J Jenny"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "80"
+    }
+   }
+  },
+  {
+   "id": "ChIJ9-f5iduvEmsRkmdRGkGNCQk",
+   "types": [
+    "ramen_restaurant",
+    "japanese_restaurant",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8696428,
+    "longitude": 151.2065571
+   },
+   "rating": 4.6,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 1,
+       "hour": 14,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 14,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 14,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 14,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 14,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 17,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 21,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 21,
+       "minute": 30
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Tuesday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Wednesday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Thursday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Friday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Saturday: 11:30 AM – 9:30 PM",
+     "Sunday: 11:30 AM – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 3355,
+   "displayName": {
+    "text": "MENSHO TOKYO Sydney",
+    "languageCode": "en"
+   },
+   "dineIn": true,
+   "reservable": false,
+   "servesBeer": true,
+   "servesWine": false,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 14,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 14,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 14,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 14,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 14,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 17,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 21,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Tuesday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Wednesday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Thursday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Friday: 11:30 AM – 2:30 PM, 5:00 – 9:30 PM",
+     "Saturday: 11:30 AM – 9:30 PM",
+     "Sunday: 11:30 AM – 9:30 PM"
+    ],
+    "nextCloseTime": "2026-09-13T11:30:00Z"
+   },
+   "primaryType": "ramen_restaurant",
+   "reviews": [
+    {
+     "name": "places/ChIJ9-f5iduvEmsRkmdRGkGNCQk/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xwbmRVbFlSRjgxU0dsRGVrOTJXR1o2V2tSVk0yYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "I finally got to try the famous Lobster Bisque Ramen, and it absolutely lived up to the hype! A rainy day and a steaming bowl of ramen are the perfect combination, and this was exactly what I needed.\n\nThe Lobster Bisque ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "rakhi sinha"
+     }
+    },
+    {
+     "name": "places/ChIJ9-f5iduvEmsRkmdRGkGNCQk/reviews/Ci9DQUlRQUNvZENodHljRjlvT2toaWFuSldWRTVaVUZkMmJqaG5MV2hDY1ZGWVEzYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "For my first visit to Mensho Ramen Sydney, I could immediately see why there’s almost always a queue. Conveniently located in the heart of Sydney CBD, this popular ramen spot has built quite a reputation—and after trying",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Al So"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": false,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    }
+   }
+  },
+  {
+   "id": "ChIJpzp690auEmsRFbBffxTpVhI",
+   "types": [
+    "steak_house",
+    "bar_and_grill",
+    "wine_bar",
+    "australian_restaurant",
+    "family_restaurant",
+    "cocktail_bar",
+    "bar",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.863498,
+    "longitude": 151.2016157
+   },
+   "rating": 4.4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 30
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 30
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 10:00 PM",
+     "Tuesday: 12:00 – 10:00 PM",
+     "Wednesday: 12:00 – 10:00 PM",
+     "Thursday: 12:00 – 10:00 PM",
+     "Friday: 12:00 – 10:30 PM",
+     "Saturday: 12:00 – 10:30 PM",
+     "Sunday: 12:00 – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_EXPENSIVE",
+   "userRatingCount": 4099,
+   "displayName": {
+    "text": "The Meat & Wine Co Barangaroo",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 22,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 12,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 22,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 10:00 PM",
+     "Tuesday: 12:00 – 10:00 PM",
+     "Wednesday: 12:00 – 10:00 PM",
+     "Thursday: 12:00 – 10:00 PM",
+     "Friday: 12:00 – 10:30 PM",
+     "Saturday: 12:00 – 10:30 PM",
+     "Sunday: 12:00 – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "primaryType": "steak_house",
+   "editorialSummary": {
+    "text": "Steaks, ribs & skewers, plus a long wine list, in a sophisticated, Afro-centric chophouse.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJpzp690auEmsRFbBffxTpVhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT25sWVgyOWtRbVptZG1ob2RHaDNOWFF6WmpWM1YzYxAB",
+     "relativePublishTimeDescription": "2 months ago",
+     "rating": 5,
+     "text": {
+      "text": "Firstly the staff services were very nice and friendly. Recently went to The Meat & Wine Co in Barangaroo for a team lunch, and it was a fantastic experience from start to finish. If you are looking for a venue that perf",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "A Y"
+     }
+    },
+    {
+     "name": "places/ChIJpzp690auEmsRFbBffxTpVhI/reviews/Ci9DQUlRQUNvZENodHljRjlvT2sxWE4yRlFlRlZJT0hSU1ZqbEpSekIzWldRNFUwRRAB",
+     "relativePublishTimeDescription": "4 months ago",
+     "rating": 5,
+     "text": {
+      "text": "We really enjoyed our experience at The Meat & Wine Co Barangaroo. It was recommended to us as a great spot to try kangaroo, and while we managed to get a table without a booking, I would definitely recommend making a re",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Karolina Emilia Michałowska"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "60"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "160"
+    }
+   }
+  },
+  {
+   "id": "ChIJTRnbxc6vEmsRnUOl_URYSvs",
+   "types": [
+    "italian_restaurant",
+    "wine_bar",
+    "european_restaurant",
+    "bar",
+    "food_store",
+    "store",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8669714,
+    "longitude": 151.20812709999998
+   },
+   "rating": 4.4,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30
+      },
+      "close": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 12:00 AM",
+     "Tuesday: 11:30 AM – 12:00 AM",
+     "Wednesday: 11:30 AM – 12:00 AM",
+     "Thursday: 11:30 AM – 12:00 AM",
+     "Friday: 11:30 AM – 12:00 AM",
+     "Saturday: 11:30 AM – 12:00 AM",
+     "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_MODERATE",
+   "userRatingCount": 2286,
+   "displayName": {
+    "text": "Ragazzi",
+    "languageCode": "en"
+   },
+   "dineIn": true,
+   "reservable": true,
+   "servesBeer": true,
+   "servesWine": true,
+   "servesVegetarianFood": true,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 0,
+       "hour": 22,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 5,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 5,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 18
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 0,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 6,
+       "hour": 11,
+       "minute": 30,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 11:30 AM – 12:00 AM",
+     "Tuesday: 11:30 AM – 12:00 AM",
+     "Wednesday: 11:30 AM – 12:00 AM",
+     "Thursday: 11:30 AM – 12:00 AM",
+     "Friday: 11:30 AM – 12:00 AM",
+     "Saturday: 11:30 AM – 12:00 AM",
+     "Sunday: 11:30 AM – 10:00 PM"
+    ],
+    "nextCloseTime": "2026-09-13T12:00:00Z"
+   },
+   "primaryType": "italian_restaurant",
+   "editorialSummary": {
+    "text": "Cosy, relaxed eatery specialising in Italian offerings, plus share plates & a robust wine list.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJTRnbxc6vEmsRnUOl_URYSvs/reviews/Ci9DQUlRQUNvZENodHljRjlvT2psRlNHSlphUzFTVnpab2EzSkxWMUJmT0dOMWNXYxAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 5,
+     "text": {
+      "text": "Over the years we had been to many fine dinning restaurants and always like to try different places.\n\nRagazzi has awesome flavours with there meals, service from the staff was really good and even though it is a small pl",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Michael_W _Downunder"
+     }
+    },
+    {
+     "name": "places/ChIJTRnbxc6vEmsRnUOl_URYSvs/reviews/Ci9DQUlRQUNvZENodHljRjlvT2kwd01VeFdkVFJOVDNsZmIwWndkblpNVVhSWlozYxAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 4,
+     "text": {
+      "text": "Great place for some authentic Italian food and wine. Place was tucked in in Angel place. It is a smal and aesthic restaurant. Staff were very friendly, accommodating and knew the menu. Ordered their pansotti prawn. The ",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Jeramie Amancio"
+     }
+    }
+   ],
+   "outdoorSeating": true,
+   "servesCocktails": true,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "40"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "120"
+    }
+   }
+  },
+  {
+   "id": "ChIJdfj4NjyuEmsR_3_uTOgmN0U",
+   "types": [
+    "chicken_restaurant",
+    "fast_food_restaurant",
+    "family_restaurant",
+    "meal_takeaway",
+    "restaurant",
+    "food",
+    "point_of_interest",
+    "establishment"
+   ],
+   "location": {
+    "latitude": -33.8745397,
+    "longitude": 151.2065255
+   },
+   "rating": 3.5,
+   "regularOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 1,
+       "hour": 9,
+       "minute": 0
+      },
+      "close": {
+       "day": 2,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 9,
+       "minute": 0
+      },
+      "close": {
+       "day": 3,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 9,
+       "minute": 0
+      },
+      "close": {
+       "day": 4,
+       "hour": 2,
+       "minute": 0
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 9,
+       "minute": 0
+      },
+      "close": {
+       "day": 1,
+       "hour": 2,
+       "minute": 0
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 2:00 AM, 9:00 AM – 2:00 AM",
+     "Tuesday: 9:00 AM – 2:00 AM",
+     "Wednesday: 9:00 AM – 2:00 AM",
+     "Thursday: 9:00 AM – 12:00 AM",
+     "Friday: Open 24 hours",
+     "Saturday: Open 24 hours",
+     "Sunday: Open 24 hours"
+    ],
+    "nextCloseTime": "2026-09-13T16:00:00Z"
+   },
+   "businessStatus": "OPERATIONAL",
+   "priceLevel": "PRICE_LEVEL_INEXPENSIVE",
+   "userRatingCount": 3998,
+   "displayName": {
+    "text": "KFC George Street Sydney",
+    "languageCode": "en"
+   },
+   "takeout": true,
+   "dineIn": true,
+   "reservable": false,
+   "servesBeer": false,
+   "servesWine": false,
+   "currentOpeningHours": {
+    "openNow": true,
+    "periods": [
+     {
+      "open": {
+       "day": 0,
+       "hour": 0,
+       "minute": 0,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 13
+       }
+      },
+      "close": {
+       "day": 1,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 1,
+       "hour": 9,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 14
+       }
+      },
+      "close": {
+       "day": 2,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 2,
+       "hour": 9,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 15
+       }
+      },
+      "close": {
+       "day": 3,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 3,
+       "hour": 9,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 16
+       }
+      },
+      "close": {
+       "day": 4,
+       "hour": 2,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      }
+     },
+     {
+      "open": {
+       "day": 4,
+       "hour": 9,
+       "minute": 0,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 17
+       }
+      },
+      "close": {
+       "day": 6,
+       "hour": 23,
+       "minute": 59,
+       "truncated": true,
+       "date": {
+        "year": 2026,
+        "month": 9,
+        "day": 19
+       }
+      }
+     }
+    ],
+    "weekdayDescriptions": [
+     "Monday: 12:00 – 2:00 AM, 9:00 AM – 2:00 AM",
+     "Tuesday: 9:00 AM – 2:00 AM",
+     "Wednesday: 9:00 AM – 2:00 AM",
+     "Thursday: 9:00 AM – 12:00 AM",
+     "Friday: Open 24 hours",
+     "Saturday: Open 24 hours",
+     "Sunday: Open 24 hours"
+    ],
+    "nextCloseTime": "2026-09-13T16:00:00Z"
+   },
+   "primaryType": "meal_takeaway",
+   "editorialSummary": {
+    "text": "Restaurant chain known for its buckets of fried chicken, plus combo meals & sides.",
+    "languageCode": "en"
+   },
+   "reviews": [
+    {
+     "name": "places/ChIJdfj4NjyuEmsR_3_uTOgmN0U/reviews/Ci9DQUlRQUNvZENodHljRjlvT204MFl5MXFXa0Z3VFhwUVpGbGpNbm93WHpaR1RrRRAB",
+     "relativePublishTimeDescription": "a month ago",
+     "rating": 4,
+     "text": {
+      "text": "⭐⭐⭐⭐☆\n\nTried the KFC Hot & Crispy and Wicked Boneless. Both had a nice crispy coating with plenty of seasoning and were juicy on the inside. The spicy kick was enjoyable without being too overwhelming. They were a bit gr",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Zachary Brandon"
+     }
+    },
+    {
+     "name": "places/ChIJdfj4NjyuEmsR_3_uTOgmN0U/reviews/Ci9DQUlRQUNvZENodHljRjlvT2xWa1NqaGpNekYzZDNwNGVYQkZZM1ZOTlZKUFMyYxAB",
+     "relativePublishTimeDescription": "5 months ago",
+     "rating": 4,
+     "text": {
+      "text": "It is weird but true. The spicy crispy chicken is only available in Sydney CBD STORES!\n\nchips are quite good!\ncrispy chicken are crunchy outside\nN quite juicy inside.",
+      "languageCode": "en"
+     },
+     "authorAttribution": {
+      "displayName": "Herlina C"
+     }
+    }
+   ],
+   "outdoorSeating": false,
+   "servesCocktails": false,
+   "priceRange": {
+    "startPrice": {
+     "currencyCode": "AUD",
+     "units": "1"
+    },
+    "endPrice": {
+     "currencyCode": "AUD",
+     "units": "20"
+    }
+   }
+  }
+ ],
+ "routingSummaries": [
+  {
+   "legs": [
+    {
+     "duration": "351s",
+     "distanceMeters": 455
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "837s",
+     "distanceMeters": 1033
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "537s",
+     "distanceMeters": 706
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "386s",
+     "distanceMeters": 479
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1326s",
+     "distanceMeters": 1641
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1042s",
+     "distanceMeters": 1292
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "946s",
+     "distanceMeters": 1172
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1192s",
+     "distanceMeters": 1517
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1490s",
+     "distanceMeters": 1649
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "577s",
+     "distanceMeters": 710
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "503s",
+     "distanceMeters": 639
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "740s",
+     "distanceMeters": 899
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1114s",
+     "distanceMeters": 1324
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "287s",
+     "distanceMeters": 352
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "1042s",
+     "distanceMeters": 1302
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "432s",
+     "distanceMeters": 529
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "289s",
+     "distanceMeters": 359
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "968s",
+     "distanceMeters": 1224
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "253s",
+     "distanceMeters": 338
+    }
+   ]
+  },
+  {
+   "legs": [
+    {
+     "duration": "706s",
+     "distanceMeters": 852
+    }
+   ]
+  }
+ ]
+}

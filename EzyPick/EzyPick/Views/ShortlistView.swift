@@ -1,5 +1,4 @@
 import SwiftUI
-import EzypickCore
 
 /// The end of the trip: a named suggestion with its reason, and two alternatives.
 ///
@@ -41,8 +40,12 @@ struct ShortlistView: View {
         switch stoppedBecause {
         case .fewEnoughLeft:
             questionsAsked == 0 ? "Only these fit what you told me." : "Narrowed down in \(questionsAsked) question\(questionsAsked == 1 ? "" : "s")."
-        case .questionLimitReached: "That's as far as I'll ask — these are the best fits."
+        case .questionLimitReached: "That's as far as I'll ask. These are the best fits."
         case .nothingLeftToAsk: "These are alike enough that another question wouldn't help."
+        // Never drawn: without a question service the search stops on its own screen and no
+        // shortlist is assembled. Named rather than defaulted so that adding a reason to the domain
+        // makes the compiler ask what the diner should be told.
+        case .noQuestionService: nil
         case nil: nil
         }
     }
@@ -66,7 +69,7 @@ struct ShortlistView: View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(candidate.restaurant.name).font(.headline)
-                Text("\(candidate.restaurant.cuisine.rawValue.capitalized) · $\(candidate.restaurant.pricePerHead) · \(candidate.restaurant.walkingMinutes) min")
+                Text("\(candidate.restaurant.cuisine.spokenName) · $\(candidate.restaurant.pricePerHead) · \(candidate.restaurant.walkingMinutes) min")
                     .font(.caption).foregroundStyle(.secondary)
             }
             Spacer()
@@ -100,6 +103,31 @@ struct NothingFitsView: View {
             Text(howToFixIt).font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
             Button("Spend a bit more today", action: searchAgainAllowingOverBudget)
                 .buttonStyle(.borderedProminent).tint(.red).padding(.top, 8)
+            Spacer()
+        }
+        .padding(.horizontal, 32)
+    }
+}
+
+/// What the diner sees when the app found them places but cannot narrow them down.
+///
+/// Deliberately not `NothingFitsView`, which was what this reused at first. That screen is headed
+/// "Nothing fits today" and offers to spend more, and both were false here: twelve places fitted,
+/// and no budget raise will conjure a question service. A screen that reports a real number of real
+/// restaurants as "nothing" and offers a fix for a problem the diner does not have is the same
+/// defect as a summary true of anywhere.
+struct NotSetUpView: View {
+    let placesFound: Int
+    let problem: String
+    let howToFixIt: String
+
+    var body: some View {
+        VStack(spacing: 16) {
+            Spacer()
+            Text(placesFound == 1 ? "Found 1 place, can't narrow it" : "Found \(placesFound) places, can't narrow them")
+                .font(.title2.bold()).multilineTextAlignment(.center)
+            Text(problem).multilineTextAlignment(.center)
+            Text(howToFixIt).font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
             Spacer()
         }
         .padding(.horizontal, 32)

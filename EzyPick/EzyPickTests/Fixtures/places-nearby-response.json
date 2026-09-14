@@ -1,0 +1,150 @@
+{
+  "places": [
+    {
+      "id": "ChIJN1t_tDeuEmsRUsoyG83frY4",
+      "displayName": { "text": "Kingsleys Steak & Crabhouse", "languageCode": "en" },
+      "primaryType": "steak_house",
+      "types": ["steak_house", "seafood_restaurant", "restaurant", "food", "point_of_interest"],
+      "priceLevel": "PRICE_LEVEL_EXPENSIVE",
+      "priceRange": { "startPrice": { "currencyCode": "AUD", "units": "60" } },
+      "rating": 4.1,
+      "userRatingCount": 2310,
+      "businessStatus": "CLOSED_TEMPORARILY",
+      "location": { "latitude": -33.8619, "longitude": 151.2095 },
+      "dineIn": true,
+      "takeout": false,
+      "reservable": true,
+      "outdoorSeating": true,
+      "servesBeer": true,
+      "servesWine": true
+    },
+    {
+      "id": "ChIJJ_iexRyvEmsRDszlhtBpDUQ",
+      "displayName": { "text": "Bar Totti's", "languageCode": "en" },
+      "primaryType": "italian_restaurant",
+      "types": ["italian_restaurant", "cocktail_bar", "european_restaurant", "bar", "restaurant", "food", "point_of_interest"],
+      "priceLevel": "PRICE_LEVEL_MODERATE",
+      "priceRange": {
+        "startPrice": { "currencyCode": "AUD", "units": "40" },
+        "endPrice": { "currencyCode": "AUD", "units": "80" }
+      },
+      "rating": 4.4,
+      "userRatingCount": 4456,
+      "businessStatus": "OPERATIONAL",
+      "location": { "latitude": -33.8709, "longitude": 151.2069 },
+      "regularOpeningHours": {
+        "openNow": true,
+        "periods": [
+          { "open": { "day": 3, "hour": 12, "minute": 0 }, "close": { "day": 3, "hour": 23, "minute": 0 } },
+          { "open": { "day": 4, "hour": 12, "minute": 0 }, "close": { "day": 4, "hour": 23, "minute": 0 } },
+          { "open": { "day": 5, "hour": 12, "minute": 0 }, "close": { "day": 5, "hour": 23, "minute": 0 } },
+          { "open": { "day": 6, "hour": 12, "minute": 0 }, "close": { "day": 6, "hour": 23, "minute": 0 } },
+          { "open": { "day": 0, "hour": 12, "minute": 0 }, "close": { "day": 0, "hour": 23, "minute": 0 } },
+          { "open": { "day": 1, "hour": 12, "minute": 0 }, "close": { "day": 1, "hour": 23, "minute": 0 } },
+          { "open": { "day": 2, "hour": 12, "minute": 0 }, "close": { "day": 2, "hour": 23, "minute": 0 } }
+        ]
+      },
+      "editorialSummary": {
+        "text": "Laid-back neighbourhood joint serving Italian-style small plates, plus wines & cocktails.",
+        "languageCode": "en"
+      },
+      "reviews": [
+        {
+          "rating": 5,
+          "relativePublishTimeDescription": "2 months ago",
+          "text": { "text": "The wood-fired focaccia is the reason to come and the reason to come back. We were seated on time, the room is loud in a good way, and the staff kept an eye on the table without hovering over it once.", "languageCode": "en" },
+          "authorAttribution": { "displayName": "R. Whitfield" }
+        },
+        {
+          "rating": 4,
+          "relativePublishTimeDescription": "6 months ago",
+          "text": { "text": "Good pasta, fair prices for the location. Bar seats turn over quickly at lunch.", "languageCode": "en" },
+          "authorAttribution": { "displayName": "M. Okafor" }
+        }
+      ],
+      "dineIn": true,
+      "takeout": true,
+      "reservable": true,
+      "outdoorSeating": false,
+      "servesVegetarianFood": true,
+      "servesBeer": true,
+      "servesWine": true,
+      "servesCocktails": true
+    },
+    {
+      "id": "ChIJq6qqKhuvEmsR1LPnPRyQFsc",
+      "displayName": { "text": "Chat Thai", "languageCode": "en" },
+      "primaryType": "thai_restaurant",
+      "types": ["thai_restaurant", "restaurant", "food", "point_of_interest"],
+      "priceLevel": "PRICE_LEVEL_INEXPENSIVE",
+      "rating": 4.2,
+      "userRatingCount": 6218,
+      "businessStatus": "OPERATIONAL",
+      "location": { "latitude": -33.8778, "longitude": 151.2063 },
+      "editorialSummary": {
+        "text": "Long-running Thai canteen known for late-night noodles and street-food snacks.",
+        "languageCode": "en"
+      },
+      "dineIn": true,
+      "takeout": true,
+      "reservable": false,
+      "outdoorSeating": true,
+      "servesVegetarianFood": true
+    },
+    {
+      "id": "ChIJ8T1GpMXLEmsRUsoyG83frY4",
+      "displayName": { "text": "Morso Espresso Bar", "languageCode": "en" },
+      "primaryType": "coffee_shop",
+      "types": ["coffee_shop", "cafe", "restaurant", "food", "point_of_interest"],
+      "rating": 4.6,
+      "userRatingCount": 312,
+      "businessStatus": "OPERATIONAL",
+      "location": { "latitude": -33.8656, "longitude": 151.2107 },
+      "dineIn": true,
+      "takeout": true,
+      "outdoorSeating": true
+    },
+    {
+      "id": "ChIJr7uwwMXLEmsRYKPGtRYUhSU",
+      "displayName": { "text": "Gandhi's Kitchen", "languageCode": "en" },
+      "primaryType": "indian_restaurant",
+      "types": ["indian_restaurant", "halal_restaurant", "restaurant", "food", "point_of_interest"],
+      "priceRange": {
+        "startPrice": { "currencyCode": "AUD", "units": "20" },
+        "endPrice": { "currencyCode": "AUD", "units": "40" }
+      },
+      "rating": 4.5,
+      "userRatingCount": 894,
+      "businessStatus": "OPERATIONAL",
+      "location": { "latitude": -33.8741, "longitude": 151.2112 },
+      "editorialSummary": { "text": "Counter-service curries and biryani near Central.", "languageCode": "en" },
+      "dineIn": true,
+      "takeout": true,
+      "reservable": false,
+      "outdoorSeating": false,
+      "servesVegetarianFood": false
+    }
+  ],
+  "routingSummaries": [
+    {
+      "legs": [{ "duration": "912s", "distanceMeters": 1184 }],
+      "directionsUri": "https://www.google.com/maps/dir/"
+    },
+    {
+      "legs": [{ "duration": "351s", "distanceMeters": 455 }],
+      "directionsUri": "https://www.google.com/maps/dir/"
+    },
+    {
+      "legs": [{ "duration": "537s", "distanceMeters": 706 }],
+      "directionsUri": "https://www.google.com/maps/dir/"
+    },
+    {
+      "legs": [{ "duration": "120s", "distanceMeters": 154 }],
+      "directionsUri": "https://www.google.com/maps/dir/"
+    },
+    {
+      "legs": [{ "duration": "244s", "distanceMeters": 318 }],
+      "directionsUri": "https://www.google.com/maps/dir/"
+    }
+  ]
+}
